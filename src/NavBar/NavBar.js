@@ -1,9 +1,9 @@
 import Navigation from "./Navigation";
 import MobileNavigation from "./MobileNavigation";
-
+import './NavBar.css'
 function NavBar(){
     return(
-        <div className="NavBar">
+        <div className="navbar">
         <Navigation/>
         <MobileNavigation/>
         </div>

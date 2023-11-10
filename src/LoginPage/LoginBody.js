@@ -1,13 +1,12 @@
-import NavBar from "./NavBar";
 import LoginWindow from "./LoginWindow";
 import MobileLoginWindow from "./MobileLoginWindow";
-
-function HomePage(){
+import './LoginPage.css'
+function LoginBody(){
     return(
-        <body>
-            <NavBar/>
+        <div className="login-body">
             <LoginWindow/>
             <MobileLoginWindow/>
-        </body>
+        </div>
     );
 }
+export default LoginBody

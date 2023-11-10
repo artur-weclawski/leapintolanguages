@@ -1,6 +1,7 @@
+import './NavBar.css'
 function MobileNavigation(){
     return(
-        <div className="MobileNavigation">
+        <div className="mobile-navigation">
 
         </div>
     );

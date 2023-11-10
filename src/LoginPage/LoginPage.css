@@ -1,0 +1,14 @@
+.login-body {
+    margin-top: 80px;
+    width: 100%;
+}
+.login-window{
+    display: flex;
+    width: inherit;
+}
+.login-window .left-section{
+    min-width: 33%;
+}
+.login-window .right-section{
+    min-width: 66%;
+}
