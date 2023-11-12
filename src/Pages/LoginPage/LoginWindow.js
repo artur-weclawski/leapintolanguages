@@ -1,5 +1,5 @@
-import ReportBug from "../ReportBug";
-import Accesibilities from "../Accesibilities";
+import ReportBug from "../../ReportBug";
+import Accesibilities from "../../Accesibilities";
 
 function LoginWindow(){
     return(
