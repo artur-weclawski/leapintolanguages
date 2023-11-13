@@ -19,11 +19,12 @@ function LoginWindow(){
                         <label>Password</label>
                         <input type="text" name="password" required/>
                     </div>
+                    <a href="#">Register here.</a>
                     <div className="submit-button">
                         <input type="submit"/>
                     </div>
                 </form>
-                    <a href="#">Register here.</a>
+
                 </div>
             </div>
         </div>

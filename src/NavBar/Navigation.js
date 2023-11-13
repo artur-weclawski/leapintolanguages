@@ -6,10 +6,15 @@ import './NavBar.css'
 function Navigation(){
     return(
         <div className="navigation">
-            <HomeButton/>
-            <PageStatus/>
-            <LanguageDropdownList/>
-            <AccountDropdownList/>
+            <div className="left-section">
+                <HomeButton/>
+            </div>
+            <div className="right-section">
+                <PageStatus/>
+                <LanguageDropdownList/>
+                <AccountDropdownList/>
+            </div>
+
         </div>
     );
 }

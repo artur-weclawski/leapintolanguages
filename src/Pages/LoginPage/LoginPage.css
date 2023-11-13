@@ -1,5 +1,10 @@
+body{
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
 .login-body {
-    margin-top: 80px;
+    margin-top: 110px;
     width: 100%;
 }
 .login-window{
@@ -11,4 +16,8 @@
 }
 .login-window .right-section{
     min-width: 66%;
+}
+
+.mobile-section {
+    visibility: hidden;
 }
