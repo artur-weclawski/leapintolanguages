@@ -9,8 +9,11 @@ function LoginWindow(){
                 <Accesibilities/>
             </div>
             <div className="right-section">
+                <div className="cover"/>
+                <span className="shadow"></span>
                 <div className="login-form">
                 <form>
+                    <h1>Logowanie</h1>
                     <div className="input">
                         <label>Username</label>
                         <input type="text" name="username" required/>
@@ -21,8 +24,13 @@ function LoginWindow(){
                     </div>
                     <a href="#">Register here.</a>
                     <div className="submit-button">
-                        <input type="submit"/>
+                        <input type="submit" value="Zaloguj się"/>
+                        <span className="login-form-ribbon-wrap">
+                        <span className="login-form-ribbon"></span>
+                        </span>
                     </div>
+
+
                 </form>
 
                 </div>
