@@ -155,3 +155,157 @@
     font-weight: bold;
     color: #880e23;
 }
+
+.accesibilities{
+    width: 260px;
+    height: 60px;
+    background-color: #880e23;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));
+}
+
+.accesibilities-wrap{
+    position: absolute;
+    width: 260px;
+    height: 60px;
+    bottom: 50px;
+    left: 140px;
+    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
+
+}
+.accesibilities-btn{
+    min-width: 260px;
+    min-height: 60px;
+    position: relative;
+    border: none;
+    margin-left: 0;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    color: white;
+    font-weight: bold;
+}
+.accesibilities-window{
+        border: 5px dashed #880e23;
+        background-color: white;
+        visibility: hidden;
+        min-width: 260px;
+        min-height: 100px;
+        position: absolute;
+        bottom: 110px;
+        left: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 10;
+}
+.accesibilities-window-text-size{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 260px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -5px;
+}
+.accesibilities-window-typ{
+    height: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.accesibilities-window-kontrast{
+    height: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 25px;
+}
+.accesibilities-window-contrast{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 260px;
+    border-top: 5px dashed #880e23;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    top: 10px;
+    margin-bottom: -5px;
+}
+
+.accesibilities-windows-text-small .radio,.accesibilities-windows-text-medium .radio, .accesibilities-windows-text-big .radio{
+    color: #880e23;
+    font: inherit;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 0px 0px 0px 2px #880e23,inset 0px 0px 0px 5px white;
+
+}
+.accesibilities-windows-text-small .radio:checked, .accesibilities-windows-text-medium .radio:checked, .accesibilities-windows-text-big .radio:checked {
+    box-shadow: inset 0px 0px 0px 2px #880e23,inset 0px 0px 0px 5px white, inset 20px 20px #880e23;
+}
+.accesibilities-windows-text-small label, .accesibilities-windows-text-medium label, .accesibilities-windows-text-big label{
+    position: relative;
+    bottom: 4px;
+    font-weight: bold;
+
+}
+
+.accesibilities-windows-contrast-normal .radio,.accesibilities-windows-contrast-black .radio, .accesibilities-windows-contrast-yellow .radio{
+    color: #880e23;
+    font: inherit;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 0px 0px 0px 2px #880e23,inset 0px 0px 0px 5px white;
+
+}
+.accesibilities-windows-contrast-normal .radio:checked, .accesibilities-windows-contrast-yellow .radio:checked, .accesibilities-windows-contrast-black .radio:checked {
+    box-shadow: inset 0px 0px 0px 2px #880e23,inset 0px 0px 0px 5px white, inset 20px 20px #880e23;
+}
+.accesibilities-windows-contrast-normal label, .accesibilities-windows-contrast-yellow label, .accesibilities-windows-contrast-black label{
+    position: relative;
+    bottom: 4px;
+    font-weight: bold;
+}
+.accesibilities-windows-contrast-normal,.accesibilities-windows-contrast-yellow, .accesibilities-windows-contrast-black{
+    display: flex;
+}
+.accesibilities-windows-contrast-normal label{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    top:2px;
+}
+
+.accesibilities-windows-contrast-yellow label{
+    border: 1px solid gold;
+    background-color: gold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    top:2px;
+}
+
+.accesibilities-windows-contrast-black label{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    top:2px;
+}
+

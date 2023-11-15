@@ -1,6 +1,6 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-
+import LoginModel from "../../Components/Models/LoginModel";
 function LoginWindow(){
     return(
         <div className="login-window">
