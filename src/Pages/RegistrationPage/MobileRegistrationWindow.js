@@ -1,6 +1,6 @@
 function MobileRegistrationWindow(){
     return(
-        <div className="mobile-Section">
+        <div className="mobile-section">
             <div className="registration-form">
                 <form>
                     <div className="input">

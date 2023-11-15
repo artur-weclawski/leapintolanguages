@@ -309,3 +309,7 @@
     top:2px;
 }
 
+.accesibilities-wrap:hover .accesibilities{
+    width: 300px;
+}
+
