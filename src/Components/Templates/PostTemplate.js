@@ -1,17 +1,19 @@
 import Variables from "../Globals/Variables";
 import {useEffect, useState} from "react";
+import {useLocalStorage} from "../LocalStorage/HandleLocalStorage";
 
 
 
-const PostTemplate = (id, token, data) => {
+const PostTemplate = (data, endpoint) => {
 
-    const endpoint = Variables.API + "" + id; // TODO: Koncówka endpointa
+    // const endpoint = Variables.API + ""; // TODO: Koncówka endpointa
 
     const [error, setError] = useState(null);
     const [isSent, setIsSent] = useState(false);
-    const [message, setMessage] = useState(null)
+    const [message, setMessage] = useState(null);
+    const [token, setToken] = useLocalStorage("token", null);
     const handlePost = () => {
-        fetch(Variables.API + "/games", {
+        fetch(Variables.API + endpoint, {
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + token,

@@ -2,18 +2,12 @@
 
 
 class User {
-    id;
-    username;
-    password;
-    email;
-
     constructor(id, username, password, email) {
         this._id = id;
         this._username = username;
         this._password = password;
         this._email = email;
     }
-
 
     get id() {
         return this._id;
@@ -46,6 +40,15 @@ class User {
     set email(value) {
         this._email = value;
     }
+
+    toJSON(){
+        return {
+            id: this._id,
+            username: this._username,
+            password: this._password,
+            email: this._email
+        };
+    }
 }
 
-export default User();
+export default User;

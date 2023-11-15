@@ -58,6 +58,7 @@ const UpdateTemplate = (id, token, data) => {
             )
     }, [id])
 
+
     if (error) {
         return <div>Error: {error.message}</div>;
     }
