@@ -1,5 +1,6 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
+import LoginModel from "../../Components/Models/LoginModel";
 
 function LoginWindow(){
     return(
@@ -12,7 +13,7 @@ function LoginWindow(){
                 <div className="cover"/>
                 <span className="shadow"></span>
                 <div className="login-form">
-                <form>
+                <form onSubmit={LoginModel.handleLogin}>
                     <h1>Logowanie</h1>
                     <div className="input">
                         <label>Username</label>
@@ -20,7 +21,7 @@ function LoginWindow(){
                     </div>
                     <div className="input">
                         <label>Password</label>
-                        <input type="text" name="password" required/>
+                        <input type="password" name="password" required/>
                     </div>
                     <a href="#">Register here.</a>
                     <div className="submit-button">

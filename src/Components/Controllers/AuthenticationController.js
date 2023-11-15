@@ -1,16 +1,14 @@
 import PostTemplate from "../Templates/PostTemplate";
-import User from "../Entites/User";
 import Variables from "../Globals/Variables";
 
 class AuthenticationController{
-
-    login(obj){
-        let user = new User(null, obj.username, obj.password, null)
+    static login(user){
         return(PostTemplate(user, Variables.API + "login"))
     }
 
-    register(obj){
-        let user = new User(null, obj.username, obj.password, obj.email)
+    static register(user){
         PostTemplate(user, Variables.API + "register");
     }
 }
+
+export default AuthenticationController
