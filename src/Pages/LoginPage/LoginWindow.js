@@ -12,7 +12,7 @@ function LoginWindow(){
                 <div className="cover"/>
                 <span className="shadow"></span>
                 <div className="login-form">
-                <form>
+                <form onSubmit={LoginModel.handleLogin}>
                     <h1>Logowanie</h1>
                     <div className="input">
                         <label>Username</label>
