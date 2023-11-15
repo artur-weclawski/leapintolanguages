@@ -1,3 +1,4 @@
+import "./Accesibilities.css"
 function Accesibilities(){
     return(
         <div></div>

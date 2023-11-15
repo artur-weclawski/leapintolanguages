@@ -17,10 +17,12 @@ function LoginWindow(){
                     <div className="input">
                         <label>Username</label>
                         <input type="text" name="username" required/>
+                        <div className="username-error"> error</div>
                     </div>
                     <div className="input">
                         <label>Password</label>
                         <input type="text" name="password" required/>
+                        <div className="username-error"> error</div>
                     </div>
                     <a href="#">Register here.</a>
                     <div className="submit-button">
