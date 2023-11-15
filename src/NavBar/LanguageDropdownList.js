@@ -1,17 +1,22 @@
 import './NavBar.css';
+import peepo_polska from "./peepo_polska.png"
 function LanguageDropdownList(){
     return(
-        <div className="dropdown">
-            <button class="dropbtn">
-                <div className="language">Jezyk</div>
-                <div className="image">[img]</div>
+        <div className="dropdown dropdown-language">
+            <span className="dropbtn-wrap">
+            <button className="dropbtn">
+                <div className="language">Polski</div>
+                <img className="image" src={peepo_polska}></img>
                 <div className="vbtn"> V </div>
             </button>
+            </span>
+            <span className="dropdown-content-wrap">
             <div className="dropdown-content">
-                <a> Jezyk 1 </a>
-                <a> Jezyk 2 </a>
-                <a> Jezyk 3 </a>
+                <a> Polski </a>
+                <a> Angielski </a>
+                <a> Hiszpański </a>
             </div>
+            </span>
         </div>
     );
 }

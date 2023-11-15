@@ -19,11 +19,12 @@ function MobileRegistrationWindow(){
                         <label>Repeat Password</label>
                         <input type="text" name="repeat-password" required/>
                     </div>
+                    <a href="#">Login here.</a>
                     <div className="submit-button">
                         <input type="submit"/>
                     </div>
                 </form>
-                <a href="#">Login here.</a>
+
             </div>
         </div>
     );

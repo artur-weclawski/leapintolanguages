@@ -1,10 +1,24 @@
+
+.left-section {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+.right-section {
+    width: 66%;
+    display: flex;
+}
 .navbar {
     position: absolute;
     min-width: 100%;
     min-height: 80px;
+    z-index: 1;
     left: 0;
     top: 0;
+    border-top: solid 11px rgba(11, 11, 14, 0.9);
+    box-shadow: inset -1px 2px 2px #282c34;
 }
+
 
 .navigation {
     display: flex;
@@ -13,59 +27,151 @@
     min-width: inherit;
 }
 .mobile-navigation {
-    visibility: hidden;
+    display: none
+}
+.home-btn-wrap, page-status-wrap {
+    width: 90%;
+    height: 110px;
+    filter: drop-shadow(6px 6px 4px rgba(21, 1, 1, 0.6));
+}
+.home-btn, .page-status {
+    min-width: 450px;
+    /*width: 90%;*/
+    max-width: 450px;
+    height: 110px;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(96% 0, 100% 10px, 96% 10px, 96% 100%, 48% 75%, 0 100%, 0 0);
+    border-top-left-radius: 4px;
+    box-shadow: inset -18px 0px 1px rgba(51, 3, 3, 0.75);
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+}
+.page-status{
+    margin-left:80px;
+    max-width: 450px;
+    box-shadow: inset -18px 0px 1px rgba(51, 3, 3, 0.75);
+}
+.home-btn:hover, .home-btn-wrap:hover{
+    height: 140px;
+    background-position-y: 30px;
+}
+.home-btn:hover > h2{
+    margin: 40px;
+}
+.home-btn > h2, .page-status > h2 {
+    margin: 15px;
+    color: white;
+
 }
 .dropbtn {
-    background-color: #04AA6D;
     color: white;
     font-size: 16px;
     border: none;
-    display: flex;
+    display: grid;
+    grid-auto-columns: calc(175px/3);
     justify-content: center;
     min-width: 175px;
-    min-height: 50px;
+    min-height: 110px;
+    margin-top: -10px;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(94% 0, 100% 10px, 94% 10px, 94% 75%, 47% 100%, 0 75%, 0 0);
+    border-top-left-radius: 4px;
+    box-shadow: inset -11px 0px 1px rgba(51, 3, 3, 0.75);
 }
-.dropbtn .language{
-
+.dropbtn-wrap {
+    min-width: 175px;
+    min-height: 110px;;
+    filter: drop-shadow(6px 6px 4px rgba(21, 1, 1, 0.6));
+}
+.dropbtn .language, .dropbtn .account-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 17px;
+    grid-column: 1/3;
+    grid-row:1/3;
 }
 .dropbtn .image{
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+    grid-column: 3/3;
+    grid-row: 1/3;
+    filter: drop-shadow(6px 6px 4px rgba(21, 1, 1, 0.6));
+
 }
 .dropbtn .vbtn{
-
+    width: 70px;
+    height: 25px;
+    position: relative;
+    right: 11px;
+    top:8px;
+    background-color: white;
+    clip-path: polygon(50% 45%, 100% 0, 100% 55%, 50% 100%, 0 55%, 0 0);
+    grid-column: 2/3;
+    grid-row: 3/3;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 0;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
 
+    min-width: 176px;
+    min-height: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 60px;
+}
+.dropdown-content-wrap{
+    position: relative;
+    top: -110px;
+    min-width: 165px;
+    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));
+}
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;color: black}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    background-position-y: 50px;
+}
 
+.dropdown-account{
+    right: 10px;
+    position: absolute;
+}
+.dropdown-language {
+    position: relative;
+    margin-left: auto;
+    margin-right: 240px;
+}
