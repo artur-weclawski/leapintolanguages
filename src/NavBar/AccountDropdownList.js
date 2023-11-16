@@ -12,8 +12,7 @@ function AccountDropdownList(){
             <span className="dropdown-content-wrap">
             <div className="dropdown-content">
                 <a> Konto </a>
-                <a> Kursy </a>
-                <a> Baza wiedzy </a>
+                <a> Baza wiedzy</a>
                 <a> Wyloguj się </a>
             </div>
             </span>
