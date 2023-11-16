@@ -138,6 +138,22 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     top: 60px;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+
+    min-width: 176px;
+    min-height: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 60px;
+}
+.dropdown-content-account{
+    height: 240px;
+}
 .dropdown-content-wrap{
     position: relative;
     top: -110px;
