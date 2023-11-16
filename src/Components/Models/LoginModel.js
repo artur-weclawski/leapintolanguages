@@ -13,11 +13,9 @@ function LoginModel() {
     }
     const handleLogin = (event) => {
         event.preventDefault()
-        let username = event.target.username.value
-        let password = event.target.password.value
-        console.log(event.target)
-        // event.target.error = "Podano zle dane"
-        let user = new User(null, username, password, null)
+        const username = event.target.username.value
+        const password = event.target.password.value
+        const user = new User(null, username, password, null)
         // let response = AuthenticationController.login(user)
         // TODO: handleresponse jak już będzie backend
 
