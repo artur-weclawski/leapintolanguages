@@ -66,7 +66,7 @@ function AccountWindow(){
                     <div className="account-content-right">
                             <span className="account-content-right-progress-wrap" id="account-content-right-progress">
                         <div className="account-content-right-progress">
-                            <h1>Kursy</h1>
+                            <h1>Kurs angielskiego po polsku</h1>
                             <div className="account-content-right-progress-beginner">
                             <h2>Początkujacy</h2>
                                 <div className="progresses">
@@ -119,6 +119,10 @@ function AccountWindow(){
                                 </div>
                             </div>
                         </div>
+                                <button className="progress-btn-ang-pol">Kurs angielskiego po polsku</button>
+                                <button className="progress-btn-pol-ang">Kurs polskiego po angielsku</button>
+                                <button className="progress-btn-spn-pol">Kurs hiszpańskiego po polsku</button>
+                                <button className="progress-btn-pol-spn">Kurs polskiego po hiszpansku</button>
                             </span>
                         <div className="edit-password-form" id="edit-password-form">
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
