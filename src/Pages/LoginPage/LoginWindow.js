@@ -1,8 +1,11 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import LoginModel from "../../Components/Models/LoginModel";
-import {useEffect} from "react";
 function LoginWindow(){
+    const {
+        error,
+        handleLogin
+    } = LoginModel()
     return(
         <div className="login-window">
             <div className="left-section">
@@ -13,17 +16,16 @@ function LoginWindow(){
                 <div className="cover"/>
                 <span className="shadow"></span>
                 <div className="login-form">
-                <form onSubmit={LoginModel.handleLogin}>
+                <form onSubmit={handleLogin}>
                     <h1>Logowanie</h1>
                     <div className="input">
                         <label>Username</label>
                         <input type="text" name="username" required/>
-                        <div className="username-error"> error</div>
                     </div>
                     <div className="input">
                         <label>Password</label>
-                        <input type="text" id="password-input" name="password" required/>
-                        <div className="username-error"> error</div>
+                        <input type="text" name="password" required/>
+                        <div className="username-error">{error.visible ? error.message : ""}</div>
                     </div>
                     <a href="#">Register here.</a>
                     <div className="submit-button">

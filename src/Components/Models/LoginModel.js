@@ -1,20 +1,32 @@
 import User from "../Entites/User";
 import AuthenticationController from "../Controllers/AuthenticationController";
+import {useState} from "react";
 
-class LoginModel {
-    // emailRegex =
-    //     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+function LoginModel() {
+    const [error, setError] = useState({message: "Podano złe dane", visible: false})
 
-
-    static handleLogin = (event) => {
+    const handleError = (message, visible) =>{
+        setError(error =>({
+            ...error,
+            ...{message, visible}
+        }))
+    }
+    const handleLogin = (event) => {
         event.preventDefault()
-        let username = event.target.username.value
-        let password = event.target.password.value
-        console.log(event.target)
-        event.target.error = "Podano zle dane"
-        let user = new User(null, username, password, null)
+        const username = event.target.username.value
+        const password = event.target.password.value
+        const user = new User(null, username, password, null)
         // let response = AuthenticationController.login(user)
         // TODO: handleresponse jak już będzie backend
+
+        if(true){
+            handleError(error.message, true)
+        }
+    }
+
+    return{
+        error,
+        handleLogin
     }
 }
 
