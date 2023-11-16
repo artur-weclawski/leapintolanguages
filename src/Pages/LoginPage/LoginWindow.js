@@ -1,6 +1,7 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import LoginModel from "../../Components/Models/LoginModel";
+import {useEffect} from "react";
 function LoginWindow(){
     return(
         <div className="login-window">
@@ -21,7 +22,7 @@ function LoginWindow(){
                     </div>
                     <div className="input">
                         <label>Password</label>
-                        <input type="text" name="password" required/>
+                        <input type="text" id="password-input" name="password" required/>
                         <div className="username-error"> error</div>
                     </div>
                     <a href="#">Register here.</a>
