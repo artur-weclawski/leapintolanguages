@@ -2,7 +2,7 @@ import User from "../Entites/User";
 import AuthenticationController from "../Controllers/AuthenticationController";
 import {useState} from "react";
 
-function LoginModel() {
+function LoginHook() {
     const [error, setError] = useState({message: "Podano złe dane", visible: false})
 
     const handleError = (message, visible) =>{
@@ -30,4 +30,4 @@ function LoginModel() {
     }
 }
 
-export default LoginModel
+export default LoginHook

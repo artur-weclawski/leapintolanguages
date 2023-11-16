@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import User from "../Entites/User";
 
-const RegisterModel = () => {
+const RegisterHook = () => {
     const [errors, setErrors] = useState(
         [
             {type: "username", message: "", visible: false},
@@ -89,4 +89,4 @@ const RegisterModel = () => {
     }
 };
 
-export default RegisterModel;
+export default RegisterHook;

@@ -1,7 +1,7 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import "./AccountPage.css"
-import LoginModel from "../../Components/Models/LoginModel";
+import LoginModel from "../../Components/Models/LoginHook";
 import report_bug_btn_image from "../../report-bug-btn.png";
 import ReactDOM from "react-dom";
 function AccountWindow(){

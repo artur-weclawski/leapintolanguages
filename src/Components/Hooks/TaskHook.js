@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const TaskModel = () => {
+const TaskHook = () => {
     const [data, setData] = useState(null)
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
@@ -23,4 +23,4 @@ const TaskModel = () => {
     }
 };
 
-export default TaskModel;
+export default TaskHook;

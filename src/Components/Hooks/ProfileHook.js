@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const ProfileModel = () => {
+const ProfileHook = () => {
     const [data, setData] = useState(null)
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
@@ -22,4 +22,4 @@ const ProfileModel = () => {
     }
 };
 
-export default ProfileModel;
+export default ProfileHook;
