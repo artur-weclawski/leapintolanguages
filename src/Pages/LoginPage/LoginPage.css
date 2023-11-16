@@ -82,10 +82,9 @@ display: none}
      margin-top: 50px;
      padding-bottom: 50px;
  }
- form a{
-     margin-top: -40px;
-     margin-bottom: 50px;
- }
+ .login-form form a{
+     margin-top: -10px;
+     margin-bottom: 50px; }
 
  form .input{
      display: flex;
@@ -162,7 +161,7 @@ form a{
     margin-top: -20px;
 }
 form .submit-button input:hover + .login-form-ribbon-wrap .login-form-ribbon{
-    height: 700px;
+    height: 650px;
     background-position-y: 150px;
 }
 

@@ -13,7 +13,7 @@ function RegistrationWindow(){
                 <span className="shadow"></span>
                 <div className="registration-form">
                     <form>
-                        <h1 style={{marginBottom:"-10px"}}>Rejestrowanie</h1>
+                        <h1 style={{marginBottom:"-10px"}}>Rejestracja</h1>
                         <div className="input">
                             <label>Email</label>
                             <input type="text" name="email" required/>
