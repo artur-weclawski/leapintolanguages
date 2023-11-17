@@ -8,10 +8,10 @@ import {useState} from "react";
 
 const AccountWindow = () =>{
 
-    const [courseName, setCourseName] = useState({ courseName: "null" });
+    const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
 
     const changeLanguage = (name) => {
-        setCourseName({ courseName: name });
+        setCourseName(name);
     }
     const openEditForm = () =>{
         let element = document.getElementById('edit-password-form')
@@ -73,7 +73,7 @@ const AccountWindow = () =>{
                     <div className="account-content-right">
                             <span className="account-content-right-progress-wrap" id="account-content-right-progress">
                         <div className="account-content-right-progress">
-                            <h1>{courseName.courseName}</h1>
+                            <h1>{courseName}</h1>
                             <div className="account-content-right-progress-beginner">
                             <h2>Początkujacy</h2>
                                 <div className="progresses">

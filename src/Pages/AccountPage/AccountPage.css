@@ -482,34 +482,56 @@ body{
     max-width: 150px;
     height: 50px;
     position: absolute;
-    border: 2px solid black;
+    background-color: #880e23;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    border: none;
     right: 0px;
     bottom: 500px;
+    color: white;
 }
 .progress-btn-pol-ang{
     min-width: 150px;
     max-width: 150px;
     height: 50px;
     position: absolute;
-    border: 2px solid black;
+    background-color: #880e23;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    border: none;
     bottom: 390px;
     right: 0px;
+    color: white;
 }
 .progress-btn-spn-pol{
     min-width: 150px;
     max-width: 150px;
     height: 50px;
     position: absolute;
-    border: 2px solid black;
+    background-color: #880e23;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    border: none;
     bottom: 285px;
     right: 0px;
+    color: white;
 }
 .progress-btn-pol-spn{
     min-width: 150px;
     max-width: 150px;
     height: 50px;
     position: absolute;
-    border: 2px solid black;
+    background-color: #880e23;
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    border: none;
     bottom: 180px;
     right: 0px;
+    color: white;
+}
+
+.progress-btn-ang-pol:hover, .progress-btn-pol-ang:hover, .progress-btn-pol-spn:hover, .progress-btn-spn-pol:hover{
+    min-width: 160px;
+    max-width: 160px;
+    right: -10px;
 }
