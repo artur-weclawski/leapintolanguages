@@ -23,10 +23,8 @@ body{
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
-
 }
 .account-window .right-section{
-
     min-width: 66%;
     max-width: 66%;
     min-height: 100%;
@@ -133,7 +131,6 @@ body{
     bottom: 10px;
     left: -30px;
     filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
-
 }
 .approve-delete-form-no-btn{
     min-width: 260px;

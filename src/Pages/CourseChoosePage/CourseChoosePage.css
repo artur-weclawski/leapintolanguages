@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
+.course-choose-body {
+    margin-top: 110px;
+    width: 100%;
+    height: 76vh;
+}
+.course-choose-window{
+    width: 100%;
+    height: 90%;
+    margin-top: 110px;
+    display: flex;
+    width: inherit;
+}
+.course-choose-window .left-section{
+    min-width: 33%;
+    max-width: 33%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.course-choose-window .right-section{
+    min-width: 66%;
+    max-width: 66%;
+    min-height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-section{
+    display: none;
+}
+.course-choose-content{
+
+    width: 100%;
+    height: 100%;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.english-courses{
+    width: 80%;
+    height: 49%;
+}
+.spanish-courses{
+    width: 80%;
+    height: 49%;
+}
+
+.pol-eng-btn{
+    min-width: 100%;
+    min-height: 50%;
+    position: relative;
+    border: none;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 0% 50%, 10% 0);
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pol-eng-btn-wrap{
+    position: relative;
+    width: 260px;
+    height: 60px;
+    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
+}
+
+.eng-pol-btn{
+    min-width: 100%;
+    min-height: 50%;
+    position: relative;
+    border: none;
+    background-color: #880e23;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.eng-pol-btn-wrap{
+    position: relative;
+    width: 260px;
+    height: 60px;
+    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
+}
+
+.eng-pol-btn-wrap:hover .eng-pol-btn{
+    width: calc(100% + 20px);
+}
+
+.pol-eng-btn-wrap:hover .pol-eng-btn{
+    width: calc(100% + 20px);
+    right: 20px;
+}
