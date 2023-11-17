@@ -4,7 +4,15 @@ import "./AccountPage.css"
 import LoginModel from "../../Components/Models/LoginModel";
 import report_bug_btn_image from "../../report-bug-btn.png";
 import ReactDOM from "react-dom";
-function AccountWindow(){
+import {useState} from "react";
+
+const AccountWindow = () =>{
+
+    const [courseName, setCourseName] = useState({ courseName: "null" });
+
+    const changeLanguage = (name) => {
+        setCourseName({ courseName: name });
+    }
     const openEditForm = () =>{
         let element = document.getElementById('edit-password-form')
         let element2 = document.getElementById('approve-delete-form')
@@ -18,7 +26,6 @@ function AccountWindow(){
             ReactDOM.findDOMNode(element3).style.display = "flex"
         }
     }
-
     const openDeleteForm = () =>{
         let element = document.getElementById('edit-password-form')
         let element2 = document.getElementById('approve-delete-form')
@@ -66,7 +73,7 @@ function AccountWindow(){
                     <div className="account-content-right">
                             <span className="account-content-right-progress-wrap" id="account-content-right-progress">
                         <div className="account-content-right-progress">
-                            <h1>Kurs angielskiego po polsku</h1>
+                            <h1>{courseName.courseName}</h1>
                             <div className="account-content-right-progress-beginner">
                             <h2>Początkujacy</h2>
                                 <div className="progresses">
@@ -119,10 +126,10 @@ function AccountWindow(){
                                 </div>
                             </div>
                         </div>
-                                <button className="progress-btn-ang-pol">Kurs angielskiego po polsku</button>
-                                <button className="progress-btn-pol-ang">Kurs polskiego po angielsku</button>
-                                <button className="progress-btn-spn-pol">Kurs hiszpańskiego po polsku</button>
-                                <button className="progress-btn-pol-spn">Kurs polskiego po hiszpansku</button>
+                                <button className="progress-btn-ang-pol" onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>Kurs angielskiego po polsku</button>
+                                <button className="progress-btn-pol-ang" onClick={() =>changeLanguage("Kurs języka polskiego po angielsku.")}>Kurs polskiego po angielsku</button>
+                                <button className="progress-btn-spn-pol" onClick={() =>changeLanguage("Kurs języka hiszpańskiego po polsku.")}>Kurs hiszpańskiego po polsku</button>
+                                <button className="progress-btn-pol-spn" onClick={() =>changeLanguage("Kurs języka polskiego po hiszpańsku.")}>Kurs polskiego po hiszpansku</button>
                             </span>
                         <div className="edit-password-form" id="edit-password-form">
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
