@@ -1,11 +1,11 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-import LoginModel from "../../Components/Models/LoginModel";
+import LoginHook from "../../Components/Hooks/LoginHook";
 function LoginWindow(){
     const {
         error,
         handleLogin
-    } = LoginModel()
+    } = LoginHook()
     return(
         <div className="login-window">
             <div className="left-section">

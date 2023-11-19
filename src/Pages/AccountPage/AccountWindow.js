@@ -1,10 +1,27 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import "./AccountPage.css"
-import LoginModel from "../../Components/Models/LoginHook";
 import report_bug_btn_image from "../../report-bug-btn.png";
 import ReactDOM from "react-dom";
+import ProfileHook from "../../Components/Hooks/ProfileHook";
 function AccountWindow(){
+
+    localStorage.setItem("profile", JSON.stringify({id: 1, username: "Dzban", email: "dzban@dzban.dzban"}))
+    // localStorage.setItem("profile", "dzban")
+
+
+    const {
+        coursesData,
+        message,
+        error,
+        profileData,
+        handleEditProfile,
+        handleDeleteProfile,
+        // handleGetCoursesProgress,
+        isLoaded
+    } = ProfileHook()
+
+
     const openEditForm = () =>{
         let element = document.getElementById('edit-password-form')
         let element2 = document.getElementById('approve-delete-form')
@@ -44,11 +61,11 @@ function AccountWindow(){
                     <div className="account-content-userinfo">
                         <div className="email-info">
                             <h1>Email:</h1>
-                            <h2>dupa@gmail.com</h2>
+                            <h2>{profileData.email}</h2>
                         </div>
                         <div className="username-info">
                             <h1>Username:</h1>
-                            <h2>Peepo</h2>
+                            <h2>{profileData.username}</h2>
                         </div>
                     </div>
                         <span className="account-content-edit-password-wrap">

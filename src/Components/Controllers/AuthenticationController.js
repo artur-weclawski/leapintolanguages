@@ -1,13 +1,26 @@
 import PostTemplate from "../Templates/PostTemplate";
 import Variables from "../Globals/Variables";
 
-class AuthenticationController{
-    static login(user){
-        return(PostTemplate(user, Variables.API + "login"))
+const AuthenticationController = () =>{
+
+    const {
+        isSent,
+        handlePost
+    } = PostTemplate()
+
+    const login = (user) =>{
+
     }
 
-    static register(user){
-        PostTemplate(user, Variables.API + "register");
+    const register = (user) =>{
+        const response = handlePost(user, "auth/signup")
+        console.log(response)
+    }
+
+    return {
+        login,
+        register,
+        PostTemplate
     }
 }
 

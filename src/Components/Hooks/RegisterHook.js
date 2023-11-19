@@ -1,7 +1,15 @@
 import React, {useState} from 'react';
 import User from "../Entites/User";
+import AuthenticationController from "../Controllers/AuthenticationController";
 
 const RegisterHook = () => {
+    const {
+        login,
+        register,
+        PostTemplate
+    } = AuthenticationController()
+
+
     const [errors, setErrors] = useState(
         [
             {type: "username", message: "", visible: false},
@@ -78,7 +86,7 @@ const RegisterHook = () => {
         })
         if(errors.map(e => e.visible)){
             const user = new User(null, username, password, email)
-
+            register(user);
         }
 
     }

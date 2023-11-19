@@ -1,15 +1,15 @@
 import Variables from "../Globals/Variables";
 import {useEffect, useState} from "react";
+import {useLocalStorage} from "../LocalStorage/HandleLocalStorage";
 
 
 
-const GetTemplate = (id, token) => {
-
-    const endpoint = Variables.API + "" + id; // TODO: Koncówka endpointa
+const GetTemplate = (endpoint) => {
 
     const [error, setError] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     const [data, setData] = useState(null)
+    const [token, setToken] = useLocalStorage("token", null)
 
     useEffect(() => {
         fetch(endpoint, {
@@ -29,19 +29,8 @@ const GetTemplate = (id, token) => {
                     setError(error);
                 }
             )
-    }, [id]);
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-    if (!isLoaded) {
-        return <div>Loading...</div>;
-    }
-
-    if (data) {
-        return (
-            <div>Dane</div>
-        );
-    }
+    }, []);
+    // return res;
 
 }
 export default GetTemplate;
