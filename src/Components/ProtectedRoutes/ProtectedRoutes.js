@@ -6,7 +6,7 @@ const ProtectedRoute = ({
                             children,
                         }) => {
     if (!user) {
-        return <Navigate to={redirectPath}  = {true}/>;
+        return <Navigate to={redirectPath} replace={true}/>;
     }
 
     return children ? children : <Outlet/>;
