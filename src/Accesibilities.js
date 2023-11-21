@@ -37,7 +37,7 @@ function Accesibilities() {
                         <label> A </label>
                     </div>
                     <div className="accesibilities-windows-contrast-yellow">
-                        <input type="radio" id="100%" value="100%" name="contrast" className="radio"/>
+                        <input type="radio" id="yellow" value="yellow" name="contrast" className="radio"/>
                         <label> A </label>
                     </div>
                     <div className="accesibilities-windows-contrast-black">

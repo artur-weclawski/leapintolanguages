@@ -13,7 +13,6 @@ body{
     height: 90%;
     margin-top: 110px;
     display: flex;
-    width: inherit;
 }
 .registration-window .left-section{
     min-width: 33%;
@@ -44,7 +43,7 @@ body{
 }
 .right-section .shadow{
     margin-top: 94px;
-    width: 0px;
+    width: 0;
     height: calc(90% - 70px);
     background-color: white;
     position: relative;
@@ -97,7 +96,7 @@ body{
     background-image: url("https://www.transparenttextures.com/patterns/snow.png");
     clip-path: polygon(94% 0, 100% 10px, 94% 10px, 94% 75%, 47% 90%, 0 75%, 0 0);
     border-top-left-radius: 5px;
-    box-shadow: inset -16px 0px 1px rgba(51, 3, 3, 0.75);
+    box-shadow: inset -16px 0 1px rgba(51, 3, 3, 0.75);
     margin-left: -27px;
 }
 .registration-form-ribbon-wrap{

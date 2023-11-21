@@ -13,7 +13,6 @@ body{
     height: 90%;
     margin-top: 110px;
     display: flex;
-    width: inherit;
 }
 .course-choose-window .left-section{
     min-width: 33%;
