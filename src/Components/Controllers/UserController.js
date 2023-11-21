@@ -1,6 +1,6 @@
-import UpdateTemplate from "../Templates/UpdateTemplate";
+import TUpdate from "../CRUD/Secure/TUpdate";
 import User from "../Entites/User";
-import PostTemplate from "../Templates/PostTemplate";
+import Create from "../CRUD/Insecure/Create";
 import Variables from "../Globals/Variables";
 
 
@@ -9,7 +9,7 @@ class UserController {
 
     }
     editUser(user){
-        UpdateTemplate()
+        TUpdate()
     }
 
 }

@@ -86,7 +86,13 @@ const RegisterHook = () => {
         })
         if(errors.map(e => e.visible)){
             const user = new User(null, username, password, email)
-            register(user);
+            const response = register(user);
+            //TODO: Server Errors
+            if(true){
+
+            }
+            // localStorage.setItem("profile", JSON.stringify(id:))
+
         }
 
     }

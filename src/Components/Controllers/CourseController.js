@@ -1,9 +1,9 @@
-import GetTemplate from "../Templates/GetTemplate";
+import TRead from "../CRUD/Secure/TRead";
 
 
 class CourseController  {
     // static getCoursesProgressByUser(userId){
-    //     GetTemplate( ,)
+    //     TRead( ,)
     // }
 }
 

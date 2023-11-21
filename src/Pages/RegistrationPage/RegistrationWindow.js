@@ -2,11 +2,13 @@ import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import AuthenticationController from "../../Components/Controllers/AuthenticationController";
 import RegisterHook from "../../Components/Hooks/RegisterHook";
+import {useEffect} from "react";
 
 function RegistrationWindow(){
     const{
         handleRegister
     } = RegisterHook()
+
 
     return(
         <div className="registration-window">
