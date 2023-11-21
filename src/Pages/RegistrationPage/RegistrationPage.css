@@ -69,25 +69,25 @@ body{
     align-content: center;
     z-index: 1;
 }
-h1 {
+.registration-form form h1 {
     color: white;
     margin-top: 50px;
     padding-bottom: 50px;
 }
-form a{
+.registration-form form a{
     margin-top: -40px;
     margin-bottom: 50px;
 }
-form .input{
+.registration-form form .registration-input{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-form .submit-button{
+.registration-form form .registration-submit-button{
     display: flex;
 }
 
-form .registration-form-ribbon{
+.registration-form form .registration-form-ribbon{
     position: relative;
     z-index: -1;
     width: 260px;
@@ -107,7 +107,7 @@ form .registration-form-ribbon{
     min-width: 165px;
     filter: drop-shadow(7px 6px 5px rgba(21, 1, 1, 0.6));
 }
-form .submit-button input{
+.registration-form form .registration-submit-button input{
     height: 50px;
     width: 200px;
     border-radius: 5px;
@@ -120,7 +120,7 @@ form .submit-button input{
     outline: none;
     border: none;
 }
-form .submit-button input:hover{
+.registration-form form .registration-submit-button input:hover{
     border: white solid 1px;
     outline: white;
     background-color: rgba(21,1,1,0.1);
@@ -129,7 +129,7 @@ form .submit-button input:hover{
 form a{
     color: white;
 }
-.input input{
+.registration-form .registration-input input{
     display: block;
     height: 50px;
     width: 100%;
@@ -141,22 +141,22 @@ form a{
     font-weight: 300;
     margin-left: -15px;
 }
-.input input:focus{
+.registration-form .registration-input input:focus{
     outline: white  solid 1px;
     background-color: rgba(21,1,1,0.1);
     color: white;
 }
-.input label{
+.registration-form .registration-input label{
     color: white;
     margin-left: -10px;
     margin-bottom: -5px;
     margin-top: -20px;
 }
-form .submit-button input:hover + .registration-form-ribbon-wrap .registration-form-ribbon{
+.registration-form form .registration-submit-button input:hover + .registration-form-ribbon-wrap .registration-form-ribbon{
     height: 801px;
     background-position-y: 150px;
 }
 .mobile-section{display: none}
-.submit-button{
+.registration-form form .registration-submit-button{
     margin-top: -28px;
 }

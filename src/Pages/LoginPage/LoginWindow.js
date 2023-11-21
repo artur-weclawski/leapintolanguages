@@ -18,17 +18,17 @@ function LoginWindow(){
                 <div className="login-form">
                 <form onSubmit={handleLogin}>
                     <h1>Logowanie</h1>
-                    <div className="input">
+                    <div className="login-input">
                         <label>Username</label>
                         <input type="text" name="username" required/>
                     </div>
-                    <div className="input">
+                    <div className="login-input">
                         <label>Password</label>
                         <input type="text" name="password" required/>
                         <div className="username-error">{error.visible ? error.message : ""}</div>
                     </div>
                     <a href="#">Register here.</a>
-                    <div className="submit-button">
+                    <div className="login-submit-button">
                         <input type="submit" value="Zaloguj się"/>
                         <span className="login-form-ribbon-wrap">
                         <span className="login-form-ribbon"></span>

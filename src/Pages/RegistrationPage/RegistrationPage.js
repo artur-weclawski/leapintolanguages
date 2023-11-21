@@ -1,7 +1,5 @@
 import NavBar from "../../NavBar/NavBar";
 import RegistrationBody from "./RegistrationBody";
-
-
 function RegistrationPage(){
     return(
         <body>

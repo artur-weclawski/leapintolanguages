@@ -77,7 +77,7 @@ display: none}
     align-content: center;
     z-index: 1;
 }
- h1 {
+.login-form form h1 {
      color: white;
      margin-top: 50px;
      padding-bottom: 50px;
@@ -86,15 +86,15 @@ display: none}
      margin-top: -10px;
      margin-bottom: 50px; }
 
- form .input{
+.login-form form .login-input{
      display: flex;
      flex-direction: column;
      margin-bottom: 40px;
  }
- form .submit-button{
+.login-form form .login-submit-button{
      display: flex;
  }
-form .login-form-ribbon{
+.login-form form .login-form-ribbon{
     position: relative;
     z-index: -1;
     width: 260px;
@@ -114,7 +114,7 @@ form .login-form-ribbon{
     min-width: 165px;
     filter: drop-shadow(7px 6px 5px rgba(21, 1, 1, 0.6));
 }
-form .submit-button input{
+.login-form form .login-submit-button input{
      height: 50px;
      width: 200px;
      border-radius: 5px;
@@ -127,16 +127,16 @@ form .submit-button input{
     outline: none;
     border: none;
 }
-form .submit-button input:hover{
+.login-form form .login-submit-button input:hover{
     border: white solid 1px;
     outline: white;
     background-color: rgba(21,1,1,0.1);
     color: white;
 }
-form a{
+.login-form form a{
     color: white;
 }
-.input input{
+.login-form form .login-input input{
      display: block;
      height: 50px;
      width: 100%;
@@ -149,18 +149,18 @@ form a{
      margin-left: -15px;
 }
 
-.input input:focus{
+.login-form form .login-input input:focus{
     outline: white  solid 1px;
     background-color: rgba(21,1,1,0.1);
     color: white;
 }
-.input label{
+.login-form form .login-input label{
     color: white;
     margin-left: -10px;
     margin-bottom: -5px;
     margin-top: -20px;
 }
-form .submit-button input:hover + .login-form-ribbon-wrap .login-form-ribbon{
+.login-form form .login-submit-button input:hover + .login-form-ribbon-wrap .login-form-ribbon{
     height: 650px;
     background-position-y: 150px;
 }

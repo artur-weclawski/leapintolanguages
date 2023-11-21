@@ -1,7 +1,6 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import "./AccountPage.css"
-import report_bug_btn_image from "../../report-bug-btn.png";
 import ReactDOM from "react-dom";
 import {useState} from "react";
 import ProfileHook from "../../Components/Hooks/ProfileHook";
@@ -12,9 +11,9 @@ const AccountWindow = () => {
 
     const changeLanguage = (name) => {
         setCourseName(name);
+    }
 
-
-        localStorage.setItem("profile", JSON.stringify({id: 1, username: "Dzban", email: "dzban@dzban.dzban"}))
+        localStorage.setItem("profile", JSON.stringify({id: 1, username: "Pepe", email: "pepe@pepe.pepe"}))
         // localStorage.setItem("profile", "dzban")
 
 
@@ -166,17 +165,17 @@ const AccountWindow = () => {
                             <div className="edit-password-form" id="edit-password-form">
                                 <button className="edit-password-form-close" onClick={openEditForm}>X</button>
                                 <form>
-                                    <div className="input">
+                                    <div className="edit-password-form-input">
                                         <label>Stare hasło</label>
                                         <input type="text" id="old-password-input" name="old-password" required/>
                                         <div className="username-error"> error</div>
                                     </div>
-                                    <div className="input">
+                                    <div className="edit-password-form-input">
                                         <label>Nowe hasło</label>
                                         <input type="text" id="new-password-input" name="new-password" required/>
                                         <div className="username-error"> error</div>
                                     </div>
-                                    <div className="submit-button">
+                                    <div className="edit-password-form-submit-button">
                                         <input type="submit" value="Zmień hasło"/>
                                     </div>
                                 </form>
@@ -199,6 +198,5 @@ const AccountWindow = () => {
                 </div>
             </div>
         );
-    }
 }
 export default AccountWindow;
