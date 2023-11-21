@@ -4,7 +4,7 @@ import ReportBugController from "../Controllers/ReportBugController";
 
 import React, {useState} from 'react';
 
-const ReportBugModel = () => {
+const ReportBugHook = () => {
     const [message, setMessage] = useState("")
 
     const handleReportBug = (event) => {
@@ -23,4 +23,4 @@ const ReportBugModel = () => {
     }
 };
 
-export default ReportBugModel;
+export default ReportBugHook;

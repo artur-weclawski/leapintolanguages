@@ -1,13 +1,24 @@
-import PostTemplate from "../Templates/PostTemplate";
-import Variables from "../Globals/Variables";
+import Create from "../CRUD/Insecure/Create";
 
-class AuthenticationController{
-    static login(user){
-        return(PostTemplate(user, Variables.API + "login"))
+const AuthenticationController = () =>{
+
+    const {
+        isSent,
+        handleCreate
+    } = Create()
+
+    const login = async (user) =>{
+        return await handleCreate(user, "auth/login")
     }
 
-    static register(user){
-        PostTemplate(user, Variables.API + "register");
+    const register = async (user) =>{
+        return await handleCreate(user, "auth/signup")
+    }
+
+    return {
+        login,
+        register,
+        PostTemplate: Create
     }
 }
 

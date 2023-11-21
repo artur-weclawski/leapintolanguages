@@ -1,7 +1,15 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
+import AuthenticationController from "../../Components/Controllers/AuthenticationController";
+import RegisterHook from "../../Components/Hooks/RegisterHook";
+import {useEffect} from "react";
 
 function RegistrationWindow(){
+    const{
+        handleRegister
+    } = RegisterHook()
+
+
     return(
         <div className="registration-window">
             <div className="left-section">
@@ -12,7 +20,7 @@ function RegistrationWindow(){
                 <div className="cover"/>
                 <span className="shadow"></span>
                 <div className="registration-form">
-                    <form>
+                    <form onSubmit={handleRegister}>
                         <h1 style={{marginBottom:"-10px"}}>Rejestracja</h1>
                         <div className="input">
                             <label>Email</label>

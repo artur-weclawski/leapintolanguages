@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
-const CourseModel = () => {
+const ExamHook = () => {
     const [data, setData] = useState(null)
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
 
 
-    const handleGetCourse = () => {
+    const handleGetExam = () => {
 
     }
 
@@ -15,8 +15,8 @@ const CourseModel = () => {
         data,
         message,
         error,
-        handleGetCourse,
+        handleGetExam,
     }
 };
 
-export default CourseModel;
+export default ExamHook;

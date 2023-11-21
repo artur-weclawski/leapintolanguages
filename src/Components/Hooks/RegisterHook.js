@@ -1,7 +1,15 @@
 import React, {useState} from 'react';
 import User from "../Entites/User";
+import AuthenticationController from "../Controllers/AuthenticationController";
 
-const RegisterModel = () => {
+const RegisterHook = () => {
+    const {
+        login,
+        register,
+        PostTemplate
+    } = AuthenticationController()
+
+
     const [errors, setErrors] = useState(
         [
             {type: "username", message: "", visible: false},
@@ -78,6 +86,12 @@ const RegisterModel = () => {
         })
         if(errors.map(e => e.visible)){
             const user = new User(null, username, password, email)
+            const response = register(user);
+            //TODO: Server Errors
+            if(true){
+
+            }
+            // localStorage.setItem("profile", JSON.stringify(id:))
 
         }
 
@@ -89,4 +103,4 @@ const RegisterModel = () => {
     }
 };
 
-export default RegisterModel;
+export default RegisterHook;
