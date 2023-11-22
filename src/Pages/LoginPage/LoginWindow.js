@@ -27,7 +27,7 @@ function LoginWindow(){
                         <input type="text" name="password" required/>
                         <div className="username-error">{error.visible ? error.message : ""}</div>
                     </div>
-                    <a href="#">Register here.</a>
+                    <a href="/register">Register here.</a>
                     <div className="login-submit-button">
                         <input type="submit" value="Zaloguj się"/>
                         <span className="login-form-ribbon-wrap">

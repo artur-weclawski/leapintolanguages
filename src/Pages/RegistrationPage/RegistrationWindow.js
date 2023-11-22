@@ -42,7 +42,7 @@ function RegistrationWindow(){
                             <input type="text" name="repeat-password" required/>
                             <div className="username-error"> error</div>
                         </div>
-                        <a href="#" style={{marginTop:"-20px"}}>Login here.</a>
+                        <a href="/login" style={{marginTop:"-20px"}}>Login here.</a>
                         <div className="registration-submit-button">
                             <input type="submit" value="Zarejestruj się"/>
                             <span className="registration-form-ribbon-wrap">
