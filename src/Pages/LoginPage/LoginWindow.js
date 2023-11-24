@@ -1,11 +1,18 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import LoginHook from "../../Components/Hooks/LoginHook";
+import i18n from "../../i18n";
+import {useTranslation} from "react-i18next";
+
 function LoginWindow(){
     const {
         error,
         handleLogin
     } = LoginHook()
+
+    const {t, i18n} = useTranslation();
+    i18n.changeLanguage('pl')
+
     return(
         <div className="login-window">
             <div className="left-section">
@@ -17,13 +24,13 @@ function LoginWindow(){
                 <span className="shadow"></span>
                 <div className="login-form">
                 <form onSubmit={handleLogin}>
-                    <h1>Logowanie</h1>
+                    <h1>{t('loginPage.title')}</h1>
                     <div className="login-input">
-                        <label>Username</label>
+                        <label>{t('loginPage.username.name')}</label>
                         <input type="text" name="username" required/>
                     </div>
                     <div className="login-input">
-                        <label>Password</label>
+                        <label>{t('loginPage.password.name')}</label>
                         <input type="text" name="password" required/>
                         <div className="username-error">{error.visible ? error.message : ""}</div>
                     </div>
@@ -43,4 +50,4 @@ function LoginWindow(){
         </div>
     );
 }
-export default LoginWindow
+export default LoginWindow;

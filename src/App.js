@@ -6,6 +6,7 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
 import AccountPage from "./Pages/AccountPage/AccountPage";
 import CoursePage from "./Pages/CoursePage/CoursePage";
+import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
     const [user, setUser] = useState({id: 1, username: "Pepe", password: null, email: "pepe@pepe.pepe"})
@@ -20,6 +21,7 @@ const App = () => {
             <Route element={<ProtectedRoute user ={user}/>}>
                 <Route path="account" element={<AccountPage/>}/>
                 <Route path="course" element={<CoursePage/>}/>
+                <Route path="knowledgeBase" element={<KnowledgeBasePage/>}/>
             </Route>
             // TODO: Reszta
         </Routes>

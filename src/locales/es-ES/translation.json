@@ -1,0 +1,140 @@
+{
+  "loginPage": {
+    "title" : "Logowanie",
+    "username": {
+      "name": "Nazwa użytkownika",
+      "tooltip": "Podaj swoją Nazwe użytkownika"
+    },
+    "password": {
+      "name": "Hasło",
+      "tooltip": "Podaj swoje hasło"
+    },
+    "errors": {
+      "wrongData": "Błędne dane logowania",
+      "emptyData": "Pole nie może być puste"
+    },
+    "submit": "Zaloguj się",
+    "registerPageRedirect": "Nie masz konta?",
+    "registerPageLink": "Kliknij tutaj!"
+  },
+  "registerPage": {
+    "title" : "Rejestracja",
+    "email": {
+      "name": "Email",
+      "tooltip": "Podaj swój email"
+    },
+    "username": {
+      "name": "Nazwa użytkownika",
+      "tooltip": "Nazwa użytkownika musi zawierać 8-12 znaków"
+    },
+    "password": {
+      "name": "Hasło",
+      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny"
+    },
+    "errors": {
+      "usernameIsUsed": "Użytkownik o takej nazwie już istnieje",
+      "emailIsUsed": "Ten adres email jest już w użyciu",
+      "wrongUsername": "Ta nazwa użytkownika jest niepoprawna",
+      "wrongPassword": "To hasło jest niepoprawne",
+      "wrongEmail": "To nie jest prawdziwy email",
+      "emptyData": "Pole nie może być puste"
+    },
+    "submit": "Zarejstruj się",
+    "loginPageRedirect": "Masz już konto?",
+    "loginPageLink": "Kliknij tutaj!"
+  },
+  "accountPage": {
+    "Username": "Nazwa użytkownika",
+    "changePassword":{
+      "button": "Zmień hasło",
+      "oldPassword": "Stare hasło",
+      "newPassword": "Nowe hasło",
+      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny",
+      "errors": {
+        "emptyData": "Pole nie może być puste",
+        "wrongPassword": "To hasło jest niepoprawne",
+        "badOldPassword": "To nie jest twoje hasło"
+      },
+      "submit": "Zmień hasło"
+    },
+    "deleteAccount":{
+      "button": "Usuń konto",
+      "title": "Czy na pewno chcesz usunąć konto?",
+      "submit": "Tak",
+      "cancel": "Nie"
+    },
+    "coursesProgress": {
+      "polishToEnglish": "Kurs angielskiego po polsku",
+      "polishToSpanish": "Kurs hiszpańskiego po polsku",
+      "englishToPolish": "Kurs polskiego po angielsku",
+      "spanishToPolish": "Kurs polskiego po hiszpańsku",
+      "beginner": "Początkujący",
+      "medium": "Średni",
+      "advanced": "Zaawansowany",
+      "images": "Obrazki",
+      "puzzle": "Układanki",
+      "tasks": "Zadania"
+    }
+  },
+  "coursePage": {
+    "toolBar": {
+      "beginner": "Początkujący",
+      "medium": "Średni",
+      "advanced": "Zaawansowany",
+      "images": "Obrazki",
+      "puzzle": "Układanki",
+      "tasks": "Zadania"
+    },
+    "images": {
+      "task": ""
+    },
+    "puzzle": {
+      "task": "Uporzątkuj słowa w odpowiedniej kolejności"
+    },
+    "tasks": {
+      "task": ""
+    },
+    "submit": "Pzejdź dalej"
+  },
+  "knowledgeBasePage": {
+    "title": "Baza wiedzy",
+    "polish": {
+      "title": "Polski"
+    },
+    "english": {
+      "title": "Angielski"
+    },
+    "spanish": {
+      "title": "Hiszpański"
+    }
+  },
+  "reportBug": {
+    "title": "Zgłoś błąd",
+    "subject": "Temat",
+    "content": "Opisz problem",
+    "submit": "Prześlij zgłoszenie"
+  },
+  "accessibility": {
+    "title": "Dostępności",
+    "fontSize": "Rozmiar tekstu",
+    "contrast": "Kontrast",
+    "sizes": {
+      "small": "Mały",
+      "medium": "Średni",
+      "big": "Duży"
+    }
+  },
+  "Navbar": {
+    "account": "Konto",
+    "courses": "Kursy",
+    "knowledgeBase": "Baza wiedzy",
+    "login": "Zaloguj się",
+    "register": "Zarejestruj się",
+    "logout": "Wyloguj się",
+    "localization": {
+      "polish": "Polski",
+      "english": "Angielski",
+      "spanish": "Hiszpański"
+    }
+  }
+}

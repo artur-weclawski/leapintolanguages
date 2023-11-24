@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import LoginPage from "./Pages/LoginPage/LoginPage";
-import AccountPage from "./Pages/AccountPage/AccountPage";
-import RegistrationWindow from "./Pages/RegistrationPage/RegistrationWindow";
-import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
 import {BrowserRouter} from "react-router-dom";
+import './i18n';
+
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -15,7 +13,6 @@ import {BrowserRouter} from "react-router-dom";
 //         <RegistrationPage/>
 //     </React.StrictMode>
 // );
-
 ReactDOM.render(
     <BrowserRouter>
         <App/>
