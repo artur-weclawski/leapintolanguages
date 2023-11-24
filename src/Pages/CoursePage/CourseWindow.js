@@ -115,6 +115,35 @@ function CourseWindow(){
             </div>
         )
     }
+    const listeningContent = () =>{
+        const readImage = () =>{
+            const msg = new SpeechSynthesisUtterance()
+            msg.text = "There is no evidence that the famous painter knew."
+            window.speechSynthesis.speak(msg)
+        }
+        return(
+            <div className="listen-content">
+                <div className="listen-and-info">
+                    <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
+                    <div className="info">
+                        <h2>Napisz usłyszane zdanie po angielsku.</h2>
+                        <div className="username-error">error</div>
+                    </div>
+
+                </div>
+                <span className="image-content-form-btn-wrap">
+                    <form className="image-content-form">
+                        <div className="image-content-input">
+                            <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
+                        </div>
+                        <div className="image-content-submit-button">
+                            <input type="submit" value="Przejdź dalej"/>
+                        </div>
+                    </form>
+                </span>
+            </div>
+        )
+    }
     const radioContent = () =>{
         const handleSubmit = (event) => {
             event.preventDefault();
@@ -255,7 +284,8 @@ function CourseWindow(){
             <div className="right-section">
                 {/*{imageContent()}*/}
                 {/*{radioContent()}*/}
-                {puzzleContent()}
+                {/*{puzzleContent()}*/}
+                {listeningContent()}
             </div>
         </div>
     )
