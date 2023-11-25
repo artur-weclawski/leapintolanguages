@@ -1,10 +1,14 @@
 import NavBar from "../../NavBar/NavBar";
 import CourseChooseBody from "./CourseChooseBody";
 import "./CourseChoosePage.css"
-function CourseChoosePage(){
+import {useEffect, useState} from "react";
+const CourseChoosePage = ({routeName, setRouteName}) =>{
+    useEffect(() => {
+        setRouteName('Wybór kursu')
+    }, []);
     return(
         <body>
-            <NavBar/>
+            <NavBar routeName={routeName} setRouteName={setRouteName}/>
             <CourseChooseBody/>
         </body>
     )

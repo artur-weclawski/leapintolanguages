@@ -1,7 +1,7 @@
 import CourseWindow from "./CourseWindow";
 import MobileCourseWindow from "./MobileCourseWindow";
 
-function CourseBody(){
+const CourseBody=()=>{
     return(
         <div className="course-body">
             <CourseWindow/>

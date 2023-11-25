@@ -1,10 +1,14 @@
 import NavBar from "../../NavBar/NavBar";
 import KnowledgeBaseBody from "./KnowledgeBaseBody";
+import {useEffect} from "react";
 
-function KnowledgeBasePage () {
+const KnowledgeBasePage =({routeName, setRouteName}) =>{
+    useEffect(() => {
+        setRouteName('Baza wiedzy');
+    }, []);
     return(
         <body>
-        <NavBar/>
+        <NavBar routeName={routeName} setRouteName={setRouteName}/>
         <KnowledgeBaseBody/>
         </body>
     )

@@ -1,10 +1,14 @@
 import NavBar from "../../NavBar/NavBar";
 import LoginBody from "./LoginBody";
 import "./LoginPage.css"
-function LoginPage(){
+import {useEffect} from "react";
+function LoginPage({routeName, setRouteName}){
+    useEffect(() => {
+        setRouteName('Logowanie');
+    }, []);
     return(
         <body>
-            <NavBar/>
+            <NavBar routeName={routeName} setRouteName={setRouteName}/>
             <LoginBody/>
         </body>
     );

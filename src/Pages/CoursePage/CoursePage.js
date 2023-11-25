@@ -1,10 +1,14 @@
 import NavBar from "../../NavBar/NavBar";
 import CourseBody from "./CourseBody";
+import {useEffect} from "react";
 
-function CoursePage(){
+const CoursePage = ({routeName, setRouteName})=>{
+    useEffect(() => {
+        setRouteName('Kurs')
+    }, []);
     return(
         <body>
-        <NavBar/>
+        <NavBar routeName={routeName} setRouteName={setRouteName}/>
         <CourseBody/>
         </body>
     )
