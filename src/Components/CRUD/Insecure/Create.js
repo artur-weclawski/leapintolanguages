@@ -17,14 +17,12 @@ const Create = () => {
                 body: JSON.stringify(data)
             });
             const res = await response.json()
-            console.log(res)
-            console.log(response)
             if (!response.ok){
-                throw new Error('Error')
+                throw new Error(res)
             }
-            return response
+            return res
         } catch (error){
-            console.error(error)
+            console.log(error)
             return error
         }
 

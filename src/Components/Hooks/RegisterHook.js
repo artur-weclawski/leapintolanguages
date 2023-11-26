@@ -4,9 +4,7 @@ import AuthenticationController from "../Controllers/AuthenticationController";
 
 const RegisterHook = () => {
     const {
-        login,
-        register,
-        PostTemplate
+        register
     } = AuthenticationController()
 
 
@@ -36,7 +34,7 @@ const RegisterHook = () => {
             handleErrors(type, "", false)
     }
 
-    const handleRegister = (event) => {
+    const handleRegister = async (event) => {
         //Email Regex
         const emailRegex =
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -86,10 +84,13 @@ const RegisterHook = () => {
         })
         if(errors.map(e => e.visible)){
             const user = new User(null, username, password, email)
-            const response = register(user);
-            //TODO: Server Errors
-            if(true){
-
+            const response = await register(user);
+            console.log(response)
+            if(response.hasOwnProperty("jwt")){
+                user.id = response.user_id
+                return user
+            } else{
+                console.log("eo")
             }
             // localStorage.setItem("profile", JSON.stringify(id:))
 

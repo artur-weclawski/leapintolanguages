@@ -3,7 +3,6 @@ import Create from "../CRUD/Insecure/Create";
 const AuthenticationController = () =>{
 
     const {
-        isSent,
         handleCreate
     } = Create()
 

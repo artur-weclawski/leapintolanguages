@@ -22,9 +22,7 @@ const App = () => {
             <Route path="*" element={<p>Nic tu nie ma gałganie</p>}/>
             // Po zalogowaniu
             <Route element={<ProtectedRoute user ={user}/>}>
-                <Route path="account" element={<AccountPage/>}/>
-                <Route path="course" element={<CoursePage/>}/>
-                <Route path="knowledgeBase" element={<KnowledgeBasePage/>}/>
+                <Route path="knowledgeBase" element={<KnowledgeBasePage routeName={routeName} setRouteName={setRouteName}/>}/>
                 <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName}/>}/>
                 <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName}/>}/>
                 <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName}/> }/>
