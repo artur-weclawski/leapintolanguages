@@ -6,6 +6,8 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
 import AccountPage from "./Pages/AccountPage/AccountPage";
 import CoursePage from "./Pages/CoursePage/CoursePage";
+import CourseChoosePage from "./Pages/CourseChoosePage/CourseChoosePage";
+import CourseDifficultyPage from "./Pages/CourseDifficultyPage/CourseDifficultyPage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
     const [user, setUser] = useState({id: 1, username: "Pepe", password: null, email: "pepe@pepe.pepe"})
@@ -20,6 +22,8 @@ const App = () => {
             // Po zalogowaniu
             <Route element={<ProtectedRoute user ={user}/>}>
                 <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName}/>}/>
+                <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName}/>}/>
+                <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName}/> }/>
                 <Route path="course" element={<CoursePage routeName={routeName} setRouteName={setRouteName}/>}/>
             </Route>
             // TODO: Reszta

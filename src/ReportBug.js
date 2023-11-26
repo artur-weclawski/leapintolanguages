@@ -12,7 +12,6 @@ function ReportBug(){
         }
     }
     const closeForm = () =>{
-        console.log(123)
         let element = document.getElementById('report-bug-form')
         ReactDOM.findDOMNode(element).style.visibility = "hidden"
     }

@@ -1,7 +1,6 @@
 import "./Accesibilities.css"
 import ReactDOM from "react-dom";
 const openAccesibilities = () =>{
-    console.log(123)
     let element = document.getElementById('accesibilities-window')
     if(ReactDOM.findDOMNode(element).style.visibility === "hidden"){
         ReactDOM.findDOMNode(element).style.visibility = "visible"
@@ -12,7 +11,7 @@ const openAccesibilities = () =>{
 function Accesibilities() {
     return (
         <div>
-            <div className="accesibilities-window" id={"accesibilities-window"}>
+            <div className="accesibilities-window" id="accesibilities-window">
                 <div className="accesibilities-window-typ">Rozmiar tekstu</div>
                 <div className="accesibilities-window-text-size">
 

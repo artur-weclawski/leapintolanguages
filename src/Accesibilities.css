@@ -96,9 +96,13 @@
     background-position-x: 30px;
 }
 
-.zawartosc-error{visibility: hidden;
-    margin-bottom:15px;}
-.temat-error{visibility: hidden}
+.zawartosc-error{
+    visibility: hidden;
+    margin-bottom:15px;
+}
+.temat-error{
+    visibility: hidden
+}
 .report-bug-btn{
     min-width: 80px;
     min-height: 64px;
@@ -191,8 +195,8 @@
 }
 .accesibilities-window{
         border: 5px dashed #880e23;
-        background-color: white;
         visibility: hidden;
+        background-color: white;
         min-width: 260px;
         min-height: 100px;
         position: absolute;

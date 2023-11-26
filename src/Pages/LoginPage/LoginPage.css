@@ -35,8 +35,9 @@ body{
     align-items: center;
 }
 
-.mobile-section {
-display: none}
+.login-window .mobile-section {
+    display: none
+}
 
 
 .right-section .cover{
@@ -167,4 +168,45 @@ display: none}
 .username-error{
     color: white;
     visibility: hidden;
+}
+@media only screen and (max-width: 1400px) {
+    .login-window .left-section, .login-window .right-section{
+        display: none;
+    }
+    .login-window{
+        display: none;
+    }
+    .mobile-login-window .mobile-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .mobile-login-window{
+        width: 100%;
+        height: 100%;
+        margin-top: 110px;
+        display: flex;
+    }
+    .login-form{
+        display: flex;
+        background-color: white;
+        width: 50%;
+        height: 80%;
+        box-shadow: 13px 13px 16px 7px rgba(0, 0, 0, 0.2);
+    }
+    .login-form form{
+        position: relative;
+    }
+    .login-form-ribbon{
+        position: absolute;
+        top:-10px;
+    }
+    .login-form-ribbon-wrap{
+        position: absolute;
+        top: 0;
+    }
 }

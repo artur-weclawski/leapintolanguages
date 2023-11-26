@@ -102,3 +102,31 @@ body{
     width: calc(100% + 20px);
     right: 20px;
 }
+@media only screen and (max-width: 1400px) {
+    .course-difficulty-window .left-section, .course-difficulty-window .right-section{
+        display: none;
+    }
+    .course-difficulty-window{
+        display: none;
+    }
+    .mobile-course-difficulty-window{
+        width: 100%;
+        height: 90%;
+        margin-top: 110px;
+        display: flex;
+    }
+    .mobile-course-difficulty-window .mobile-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .mobile-section .course-difficulty-window{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+}
