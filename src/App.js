@@ -1,7 +1,7 @@
 import './App.css';
 import {Link, Route, Routes} from "react-router-dom";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoutes";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
 import AccountPage from "./Pages/AccountPage/AccountPage";
@@ -11,19 +11,22 @@ import CourseDifficultyPage from "./Pages/CourseDifficultyPage/CourseDifficultyP
 import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
-    const [user, setUser] = useState({id: 1, username: "Pepe", password: null, email: "pepe@pepe.pepe"})
+
+    const [user, setUser] = useState(null)
+    const [token, setToken] = useState(null);
     const [routeName, setRouteName] = useState("login");
     return(
         <Routes>
-            <Route index element={<LoginPage/>}/>
+            <Route index element={<LoginPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
             // Dostępne
-            <Route path="login" element={<LoginPage routeName={routeName} setRouteName={setRouteName}/>}/>
-            <Route path="register" element={<RegistrationPage routeName={routeName} setRouteName={setRouteName}/>}/>
+            <Route path="login" element={<LoginPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
+            <Route path="register" element={<RegistrationPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
             <Route path="*" element={<p>Nic tu nie ma gałganie</p>}/>
             // Po zalogowaniu
             <Route element={<ProtectedRoute user ={user}/>}>
+                <Route index element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
                 <Route path="knowledgeBase" element={<KnowledgeBasePage routeName={routeName} setRouteName={setRouteName}/>}/>
-                <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName}/>}/>
+                <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
                 <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName}/>}/>
                 <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName}/> }/>
                 <Route path="course" element={<CoursePage routeName={routeName} setRouteName={setRouteName}/>}/>

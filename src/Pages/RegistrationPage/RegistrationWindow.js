@@ -4,10 +4,11 @@ import AuthenticationController from "../../Components/Controllers/Authenticatio
 import RegisterHook from "../../Components/Hooks/RegisterHook";
 import {useEffect} from "react";
 import "./RegistrationPage.css"
-function RegistrationWindow(){
+function RegistrationWindow({token, setToken, user, setUser}){
+    // console.log(token)
     const{
         handleRegister
-    } = RegisterHook()
+    } = RegisterHook(token, setToken, user, setUser)
 
 
     return(
@@ -20,7 +21,7 @@ function RegistrationWindow(){
                 <div className="cover"/>
                 <span className="shadow"></span>
                 <div className="registration-form">
-                    <form onSubmit={handleRegister}>
+                    <form onSubmit={handleRegister }>
                         <h1 style={{marginBottom:"-10px"}}>Rejestracja</h1>
                         <div className="registration-input">
                             <label>Email</label>

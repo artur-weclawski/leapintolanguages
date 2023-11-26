@@ -3,6 +3,7 @@ import Accesibilities from "../../Accesibilities";
 import LoginHook from "../../Components/Hooks/LoginHook";
 import i18n from "../../i18n";
 import {useTranslation} from "react-i18next";
+import {useEffect} from "react";
 
 function LoginWindow(){
     const {
@@ -11,7 +12,9 @@ function LoginWindow(){
     } = LoginHook()
 
     const {t, i18n} = useTranslation();
-    i18n.changeLanguage('pl')
+    useEffect(() => {
+        i18n.changeLanguage('pl')
+    }, []);
 
     return(
         <div className="login-window">

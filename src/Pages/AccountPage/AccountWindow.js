@@ -5,17 +5,16 @@ import ReactDOM from "react-dom";
 import {useState} from "react";
 import ProfileHook from "../../Components/Hooks/ProfileHook";
 
-const AccountWindow = () => {
+const AccountWindow = ({token, setToken, user, setUser}) => {
+
+    console.log(user)
+    console.log(token)
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
 
     const changeLanguage = (name) => {
         setCourseName(name);
     }
-
-        localStorage.setItem("profile", JSON.stringify({id: 1, username: "Pepe", email: "pepe@pepe.pepe"}))
-        // localStorage.setItem("profile", "dzban")
-
 
         const {
             coursesData,
@@ -67,11 +66,11 @@ const AccountWindow = () => {
                             <div className="account-content-userinfo">
                                 <div className="email-info">
                                     <h1>Email:</h1>
-                                    <h2>{profileData.email}</h2>
+                                    <h2>{user.username}</h2>
                                 </div>
                                 <div className="username-info">
                                     <h1>Username:</h1>
-                                    <h2>{profileData.username}</h2>
+                                    <h2>{user.username}</h2>
                                 </div>
                             </div>
                             <span className="account-content-edit-password-wrap">

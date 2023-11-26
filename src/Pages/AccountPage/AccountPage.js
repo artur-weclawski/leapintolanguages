@@ -2,14 +2,19 @@ import NavBar from "../../NavBar/NavBar";
 import AccountBody from "./AccountBody";
 import "./AccountPage.css"
 import {useEffect} from "react";
-const AccountPage = ({routeName, setRouteName}) =>{
+import AccountWindow from "./AccountWindow";
+import MobileAccountWindow from "./MobileAccountWindow";
+const AccountPage = ({routeName, setRouteName, token, setToken, user, setUser}) =>{
     useEffect(() => {
         setRouteName('Konto')
     }, []);
     return(
         <body>
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
-            <AccountBody/>
+            <div className="account-body">
+                <AccountWindow token={token} setToken={setToken} user={user} setUser={setUser}/>
+                <MobileAccountWindow token={token} setToken={setToken} user={user} setUser={setUser}/>
+            </div>
         </body>
     );
 

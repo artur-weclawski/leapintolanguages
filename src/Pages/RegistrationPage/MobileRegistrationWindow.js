@@ -2,7 +2,7 @@ import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import RegisterHook from "../../Components/Hooks/RegisterHook";
 
-function MobileRegistrationWindow(){
+function MobileRegistrationWindow({token,setToken,user,setUser}){
     const{
         handleRegister
     } = RegisterHook()

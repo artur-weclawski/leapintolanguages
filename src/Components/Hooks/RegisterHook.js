@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 import User from "../Entites/User";
 import AuthenticationController from "../Controllers/AuthenticationController";
+import {Navigate} from "react-router-dom";
 
-const RegisterHook = () => {
+const RegisterHook = (token, setToken, user, setUser) => {
+    console.log(token)
+    console.log(user)
+
     const {
         register
     } = AuthenticationController()
@@ -83,12 +87,15 @@ const RegisterHook = () => {
             handleRegexError(value.regex, value.value, value.id, value.ERRORS.Regex)
         })
         if(errors.map(e => e.visible)){
-            const user = new User(null, username, password, email)
-            const response = await register(user);
+            const _user = new User(null, username, password, email)
+            const response = await register(_user);
             console.log(response)
             if(response.hasOwnProperty("jwt")){
-                user.id = response.user_id
-                return user
+                _user.id = response.user_id
+                setToken(response.jwt)
+                setUser(_user)
+                window.location.href = '/account'
+
             } else{
                 console.log("eo")
             }
