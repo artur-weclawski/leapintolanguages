@@ -1,5 +1,4 @@
 import NavBar from "../../NavBar/NavBar";
-import RegistrationBody from "./RegistrationBody";
 import RegistrationWindow from "./RegistrationWindow";
 import MobileRegistrationWindow from "./MobileRegistrationWindow";
 function RegistrationPage({routeName, setRouteName, token, setToken, user, setUser}){

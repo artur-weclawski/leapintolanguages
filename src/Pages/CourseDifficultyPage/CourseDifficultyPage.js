@@ -1,7 +1,8 @@
 import "./CourseDifficultyPage.css"
 import NavBar from "../../NavBar/NavBar";
-import CourseDifficultyBody from "./CourseDifficultyBody";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import CourseDifficultyWindow from "./CourseDifficultyWindow";
+import MobileCourseDifficultyWindow from "./MobileCourseDifficultyWindow";
 const CourseDifficultyPage=({routeName, setRouteName})=>{
     useEffect(() => {
         setRouteName('Wybór trudności kursu')
@@ -9,7 +10,10 @@ const CourseDifficultyPage=({routeName, setRouteName})=>{
     return(
         <body>
         <NavBar routeName={routeName} setRouteName={setRouteName}/>
-        <CourseDifficultyBody/>
+        <div className="course-difficulty-body">
+            <CourseDifficultyWindow/>
+            <MobileCourseDifficultyWindow/>
+        </div>
         </body>
     );
 }

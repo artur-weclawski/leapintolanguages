@@ -12,7 +12,7 @@ import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
 
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(true)
     const [token, setToken] = useState(null);
     const [routeName, setRouteName] = useState("login");
     return(

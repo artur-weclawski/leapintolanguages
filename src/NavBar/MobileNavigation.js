@@ -2,7 +2,7 @@ import './NavBar.css'
 import peepo_polska from "./peepo_polska.png";
 import ReactDOM from "react-dom";
 const MobileNavigation = ({routeName, setRouteName}) =>{
-    if(routeName === 'Kursy')
+    if(routeName === 'Kurs')
     {
         return(
             <div className="mobile-navigation">

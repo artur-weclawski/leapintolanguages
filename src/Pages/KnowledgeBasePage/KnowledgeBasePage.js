@@ -1,6 +1,7 @@
 import NavBar from "../../NavBar/NavBar";
-import KnowledgeBaseBody from "./KnowledgeBaseBody";
 import {useEffect} from "react";
+import KnowledgeBaseWindow from "./KnowledgeBaseWindow";
+import MobileKnowledgeBaseWindow from "./MobileKnowledgeBaseWindow";
 
 const KnowledgeBasePage =({routeName, setRouteName}) =>{
     useEffect(() => {
@@ -8,8 +9,11 @@ const KnowledgeBasePage =({routeName, setRouteName}) =>{
     }, []);
     return(
         <body>
-        <NavBar routeName={routeName} setRouteName={setRouteName}/>
-        <KnowledgeBaseBody/>
+            <NavBar routeName={routeName} setRouteName={setRouteName}/>
+            <div className="knowledge-base-body">
+                <KnowledgeBaseWindow/>
+                <MobileKnowledgeBaseWindow/>
+            </div>
         </body>
     )
 }

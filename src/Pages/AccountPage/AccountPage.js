@@ -1,5 +1,4 @@
 import NavBar from "../../NavBar/NavBar";
-import AccountBody from "./AccountBody";
 import "./AccountPage.css"
 import {useEffect} from "react";
 import AccountWindow from "./AccountWindow";

@@ -1,6 +1,7 @@
 import NavBar from "../../NavBar/NavBar";
-import CourseBody from "./CourseBody";
 import {useEffect} from "react";
+import CourseWindow from "./CourseWindow";
+import MobileCourseWindow from "./MobileCourseWindow";
 
 const CoursePage = ({routeName, setRouteName})=>{
     useEffect(() => {
@@ -9,7 +10,10 @@ const CoursePage = ({routeName, setRouteName})=>{
     return(
         <body>
         <NavBar routeName={routeName} setRouteName={setRouteName}/>
-        <CourseBody/>
+        <div className="course-body">
+            <CourseWindow/>
+            <MobileCourseWindow/>
+        </div>
         </body>
     )
 }

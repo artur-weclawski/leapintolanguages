@@ -564,3 +564,31 @@ body{
     max-width: 160px;
     right: -10px;
 }
+@media only screen and (max-width: 1400px) {
+    .account-window .left-section, .account-window .right-section{
+        display: none;
+    }
+    .account-window{
+        display: none;
+    }
+    .mobile-account-window{
+        width: 100%;
+        height: 90%;
+        margin-top: 110px;
+        display: flex;
+    }
+    .mobile-account-window .mobile-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .mobile-section .account-content{
+        width: 80%;
+        height: 80%;
+        display: flex;
+    }
+}

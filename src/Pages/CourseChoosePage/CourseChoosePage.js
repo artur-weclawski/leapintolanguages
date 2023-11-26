@@ -1,7 +1,8 @@
 import NavBar from "../../NavBar/NavBar";
-import CourseChooseBody from "./CourseChooseBody";
 import "./CourseChoosePage.css"
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import CourseChooseWindow from "./CourseChooseWindow";
+import MobileCourseChooseWindow from "./MobileCourseChooseWindow";
 const CourseChoosePage = ({routeName, setRouteName}) =>{
     useEffect(() => {
         setRouteName('Wybór kursu')
@@ -9,7 +10,10 @@ const CourseChoosePage = ({routeName, setRouteName}) =>{
     return(
         <body>
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
-            <CourseChooseBody/>
+            <div className="course-choose-body">
+                <CourseChooseWindow/>
+                <MobileCourseChooseWindow/>
+            </div>
         </body>
     )
 }
