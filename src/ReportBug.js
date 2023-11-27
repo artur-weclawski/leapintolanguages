@@ -4,20 +4,22 @@ import report_bug_btn_image from "./report-bug-btn.png"
 function ReportBug(){
     const openForm = () =>{
         console.log(123)
-        let element = document.getElementById('report-bug-form')
-        if(ReactDOM.findDOMNode(element).style.visibility === "hidden"){
-            ReactDOM.findDOMNode(element).style.visibility = "visible"
+        let element = document.getElementsByClassName('report-bug-form')
+        if(ReactDOM.findDOMNode(element[1]).style.visibility === "hidden"){
+            ReactDOM.findDOMNode(element[0]).style.visibility = 'visible'
+            ReactDOM.findDOMNode(element[1]).style.visibility = "visible"
         }else{
-            ReactDOM.findDOMNode(element).style.visibility = "hidden"
+            ReactDOM.findDOMNode(element[0]).style.visibility = 'hidden'
+            ReactDOM.findDOMNode(element[1]).style.visibility = "hidden"
         }
     }
     const closeForm = () =>{
-        let element = document.getElementById('report-bug-form')
-        ReactDOM.findDOMNode(element).style.visibility = "hidden"
+        let element = document.getElementsByClassName('report-bug-form')
+        ReactDOM.findDOMNode(element[1]).style.visibility = "hidden"
     }
     return(
         <div>
-            <div className="report-bug-form" id='report-bug-form'>
+            <div className="report-bug-form">
                 <div className="naglowek">
                     <h1>Zgłoś błąd</h1>
                     <button onClick={closeForm} className="report-bug-form-close">X</button>

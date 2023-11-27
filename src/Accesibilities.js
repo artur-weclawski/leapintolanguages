@@ -1,17 +1,21 @@
 import "./Accesibilities.css"
-import ReactDOM from "react-dom";
+import ReactDOM, {findDOMNode} from "react-dom";
+import {findRenderedDOMComponentWithClass} from "react-dom/test-utils";
 const openAccesibilities = () =>{
-    let element = document.getElementById('accesibilities-window')
-    if(ReactDOM.findDOMNode(element).style.visibility === "hidden"){
-        ReactDOM.findDOMNode(element).style.visibility = "visible"
+    let element = document.getElementsByClassName('accesibilities-window')
+    console.log(element)
+    if(ReactDOM.findDOMNode(element[1]).style.visibility === "hidden"){
+        ReactDOM.findDOMNode(element[0]).style.visibility = 'visible'
+        ReactDOM.findDOMNode(element[1]).style.visibility = "visible"
     }else{
-        ReactDOM.findDOMNode(element).style.visibility = "hidden"
+        ReactDOM.findDOMNode(element[0]).style.visibility = 'hidden'
+        ReactDOM.findDOMNode(element[1]).style.visibility = "hidden"
     }
 }
 function Accesibilities() {
     return (
         <div>
-            <div className="accesibilities-window" id="accesibilities-window">
+            <div className="accesibilities-window accesibilities-window">
                 <div className="accesibilities-window-typ">Rozmiar tekstu</div>
                 <div className="accesibilities-window-text-size">
 

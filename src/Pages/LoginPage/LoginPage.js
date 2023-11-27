@@ -7,27 +7,13 @@ function LoginPage({routeName, setRouteName}){
     useEffect(() => {
         setRouteName('Logowanie');
     }, []);
-    const changeWindows = () =>{
-        if(window.innerWidth > 1400){
-            return(
-                <div className="login-body">
-                    <LoginWindow/>
-                    <MobileLoginWindow/>
-                </div>
-            )
-        }else{
-            return(
-                <div className="login-body">
-                    <MobileLoginWindow/>
-                    <LoginWindow/>
-                </div>
-            )
-        }
-    }
     return(
         <body>
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
-            {changeWindows()}
+            <div className="login-body">
+                <LoginWindow/>
+                <MobileLoginWindow/>
+            </div>
         </body>
     );
 }
