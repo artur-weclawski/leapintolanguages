@@ -167,7 +167,6 @@ body{
 
 .username-error{
     color: white;
-    visibility: hidden;
 }
 @media only screen and (max-width: 1400px) {
     .login-window .left-section, .login-window .right-section{

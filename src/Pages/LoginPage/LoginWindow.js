@@ -5,11 +5,11 @@ import i18n from "../../i18n";
 import {useTranslation} from "react-i18next";
 import {useEffect} from "react";
 
-function LoginWindow(){
+function LoginWindow({token, setToken, user, setUser}){
     const {
         error,
         handleLogin
-    } = LoginHook()
+    } = LoginHook(token, setToken, user, setUser)
 
     const {t, i18n} = useTranslation();
     useEffect(() => {
@@ -35,7 +35,7 @@ function LoginWindow(){
                     <div className="login-input">
                         <label>{t('loginPage.password.name')}</label>
                         <input type="text" name="password" required/>
-                        <div className="username-error">{error.visible ? error.message : ""}</div>
+                        <div className="username-error">{error.visible ? t(error.message) : ""}</div>
                     </div>
                     <a href="/register">Register here.</a>
                     <div className="login-submit-button">

@@ -3,7 +3,7 @@ import "./LoginPage.css"
 import {useEffect} from "react";
 import LoginWindow from "./LoginWindow";
 import MobileLoginWindow from "./MobileLoginWindow";
-function LoginPage({routeName, setRouteName}){
+function LoginPage({routeName, setRouteName, token, setToken, user, setUser}){
     useEffect(() => {
         setRouteName('Logowanie');
     }, []);
@@ -11,8 +11,8 @@ function LoginPage({routeName, setRouteName}){
         <body>
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
             <div className="login-body">
-                <LoginWindow/>
-                <MobileLoginWindow/>
+                <LoginWindow token={token} setToken={setToken} user={user} setUser={setUser}/>
+                <MobileLoginWindow token={token} setToken={setToken} user={user} setUser={setUser}/>
             </div>
         </body>
     );

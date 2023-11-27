@@ -66,7 +66,7 @@ const AccountWindow = ({token, setToken, user, setUser}) => {
                             <div className="account-content-userinfo">
                                 <div className="email-info">
                                     <h1>Email:</h1>
-                                    <h2>{user.username}</h2>
+                                    <h2>{user.email}</h2>
                                 </div>
                                 <div className="username-info">
                                     <h1>Username:</h1>

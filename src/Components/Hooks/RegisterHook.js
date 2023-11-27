@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import User from "../Entites/User";
 import AuthenticationController from "../Controllers/AuthenticationController";
-import {Navigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const RegisterHook = (token, setToken, user, setUser) => {
     console.log(token)
     console.log(user)
+
+    const navigate = useNavigate();
 
     const {
         register
@@ -14,27 +16,26 @@ const RegisterHook = (token, setToken, user, setUser) => {
 
     const [errors, setErrors] = useState(
         [
-            {type: "username", message: "", visible: false},
-            {type: "password", message: "", visible: false},
-            {type: "email", message: "", visible: false},
+            {message: "", visible: false},
+            {message: "", visible: false},
+            {message: "", visible: false}
         ]
     )
 
-    const handleErrors = (type, message, visible) => {
-        errors.map(error =>{
-            if(error.type === type){
-                return {type, message, visible}
-            }
-            else
-                return error
+    const handleErrors = (id, message, visible) => {
+        const changeError = errors.map((error, index) =>{
+            if(index === id){
+                console.log("chuj")
+                return {message: message, visible: visible}
+            }else return error
         })
+        setErrors(changeError)
     }
 
     const handleRegexError = (regex, data, type, message) => {
-        if (!regex.test(data)){
+        if (!regex.test(data)) {
             handleErrors(type, message, true);
-        }
-        else
+        } else
             handleErrors(type, "", false)
     }
 
@@ -61,23 +62,23 @@ const RegisterHook = (token, setToken, user, setUser) => {
 
         const values = [
             {
-                id: "username", value: username, ERRORS: {
-                    Regex : USERNAME_REGEX_ERROR_MESSAGE,
-                    Server : USERNAME_SERVER_ERROR_MESSAGE
-            },
-                regex : usernameRegex
+                id: 0, value: username, ERRORS: {
+                    Regex: USERNAME_REGEX_ERROR_MESSAGE,
+                    Server: USERNAME_SERVER_ERROR_MESSAGE
+                },
+                regex: usernameRegex
             },
             {
-                id: "password", value: password, ERRORS: {
-                    Regex : PASSWORD_REGEX_ERROR_MESSAGE,
-                    Server : PASSWORD_SERVER_ERROR_MESSAGE
+                id: 1, value: password, ERRORS: {
+                    Regex: PASSWORD_REGEX_ERROR_MESSAGE,
+                    Server: PASSWORD_SERVER_ERROR_MESSAGE
                 },
                 regex: passwordRegex
             },
             {
-                id: "email", value: email, ERRORS: {
-                    Regex : EMAIL_REGEX_ERROR_MESSAGE,
-                    Server : EMAIL_SERVER_ERROR_MESSAGE
+                id: 2, value: email, ERRORS: {
+                    Regex: EMAIL_REGEX_ERROR_MESSAGE,
+                    Server: EMAIL_SERVER_ERROR_MESSAGE
                 },
                 regex: emailRegex
             },
@@ -86,26 +87,33 @@ const RegisterHook = (token, setToken, user, setUser) => {
         values.map(value => {
             handleRegexError(value.regex, value.value, value.id, value.ERRORS.Regex)
         })
-        if(errors.map(e => e.visible)){
+        if (errors.map(e => e.visible)) {
             const _user = new User(null, username, password, email)
             const response = await register(_user);
             console.log(response)
-            if(response.hasOwnProperty("jwt")){
+            if (response.hasOwnProperty("jwt")) {
                 _user.id = response.user_id
                 setToken(response.jwt)
                 setUser(_user)
-                window.location.href = '/account'
-
-            } else{
-                console.log("eo")
+                navigate('/account')
+            } else {
+                console.log(response)
+                response.messages.map(m => {
+                    if (m.includes("username")) {
+                        console.log("eo")
+                        handleErrors(0, m, true)
+                    }
+                    if (m.includes("email")) {
+                        handleErrors(2, m, true)
+                    }
+                })
             }
-            // localStorage.setItem("profile", JSON.stringify(id:))
 
         }
-
+        console.log(errors)
     }
 
-    return{
+    return {
         errors,
         handleRegister
     }

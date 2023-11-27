@@ -9,11 +9,12 @@ import CoursePage from "./Pages/CoursePage/CoursePage";
 import CourseChoosePage from "./Pages/CourseChoosePage/CourseChoosePage";
 import CourseDifficultyPage from "./Pages/CourseDifficultyPage/CourseDifficultyPage";
 import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
+import {useLocalStorage} from "./Components/LocalStorage/HandleLocalStorage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
 
-    const [user, setUser] = useState(true)
-    const [token, setToken] = useState(null);
+    const [user, setUser] = useLocalStorage("user", null)
+    const [token, setToken] = useLocalStorage("token", null)
     const [routeName, setRouteName] = useState("login");
     return(
         <Routes>

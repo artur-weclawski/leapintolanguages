@@ -2,7 +2,7 @@ import "./LoginPage.css"
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import LoginHook from "../../Components/Hooks/LoginHook";
-function MobileLoginWindow(){
+function MobileLoginWindow({token, setToken, user, setUser}){
     const {
         error,
         handleLogin
