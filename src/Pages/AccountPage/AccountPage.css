@@ -354,7 +354,7 @@ body{
     height: 80%;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative;
@@ -575,13 +575,14 @@ body{
     border: none;
     right: 5px;
     color: white;
+    margin-bottom: 10px;
 }
 
 .progress-btn-ang-pol:hover, .progress-btn-pol-ang:hover, .progress-btn-pol-spn:hover, .progress-btn-spn-pol:hover{
     min-width: 160px;
     max-width: 160px;
-    left:5px
 }
+
 @media only screen and (max-width: 1400px) {
     .account-window .left-section, .account-window .right-section{
         display: none;
