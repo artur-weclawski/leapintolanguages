@@ -282,10 +282,10 @@ function CourseWindow(){
                 </span>
             </div>
             <div className="right-section">
-                {/*{imageContent()}*/}
+                {imageContent()}
                 {/*{radioContent()}*/}
                 {/*{puzzleContent()}*/}
-                {listeningContent()}
+                {/*{listeningContent()}*/}
             </div>
         </div>
     )

@@ -8,34 +8,34 @@ function  MobileKnowledgeBaseWindow (){
         <div className="mobile-knowledge-base-window">
             <div className='mobile-section'>
                 <div className="right-section-content">
-                    <div id="Polski">Polski</div>
-                    <div id="Polski-Pierwsze">
+                    <div id="Polskim">Polski</div>
+                    <div id="Polski-Pierwszem">
                         {knowledge_content}
                     </div>
-                    <div id="Polski-Drugie">
+                    <div id="Polski-Drugiem">
                         {knowledge_content}
                     </div>
-                    <div id="Polski-Trzecie">
+                    <div id="Polski-Trzeciem">
                         {knowledge_content}
                     </div>
-                    <div id="Angielski">Angielski</div>
-                    <div id="Angielski-Pierwsze">
+                    <div id="Angielskim">Angielski</div>
+                    <div id="Angielski-Pierwszem">
                         {knowledge_content}
                     </div>
-                    <div id="Angielski-Drugie">
+                    <div id="Angielski-Drugiem">
                         {knowledge_content}
                     </div>
-                    <div id="Angielski-Trzecie">
+                    <div id="Angielski-Trzeciem">
                         {knowledge_content}
                     </div>
-                    <div id="Hiszpanski">Hiszpański</div>
-                    <div id="Hiszpanski-Pierwsze">
+                    <div id="Hiszpanskim">Hiszpański</div>
+                    <div id="Hiszpanski-Pierwszem">
                         {knowledge_content}
                     </div>
-                    <div id="Hiszpanski-Drugie">
+                    <div id="Hiszpanski-Drugiem">
                         {knowledge_content}
                     </div>
-                    <div id="Hiszpanski-Trzecie">
+                    <div id="Hiszpanski-Trzeciem">
                         {knowledge_content}
                     </div>
                 </div>

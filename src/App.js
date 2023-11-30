@@ -10,10 +10,11 @@ import CourseChoosePage from "./Pages/CourseChoosePage/CourseChoosePage";
 import CourseDifficultyPage from "./Pages/CourseDifficultyPage/CourseDifficultyPage";
 import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
 import {useLocalStorage} from "./Components/LocalStorage/HandleLocalStorage";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
 
-    const [user, setUser] = useLocalStorage("user", null)
+    const [user, setUser] = useLocalStorage("user", true)
     const [token, setToken] = useLocalStorage("token", null)
     const [routeName, setRouteName] = useState("login");
     return(
@@ -22,7 +23,7 @@ const App = () => {
             // Dostępne
             <Route path="login" element={<LoginPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
             <Route path="register" element={<RegistrationPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-            <Route path="*" element={<p>Nic tu nie ma gałganie</p>}/>
+            <Route path="*" element={<ErrorPage/>}/>
             // Po zalogowaniu
             <Route element={<ProtectedRoute user ={user}/>}>
                 <Route index element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>

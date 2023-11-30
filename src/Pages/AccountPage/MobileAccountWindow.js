@@ -27,29 +27,29 @@ function MobileAccountWindow({token, setToken, user, setUser}){
 
 
     const openEditForm = () => {
-        let element = document.getElementById('edit-password-form')
-        let element2 = document.getElementById('approve-delete-form')
-        let element3 = document.getElementById('account-content-right-progress')
-        if (ReactDOM.findDOMNode(element).style.display === "none") {
-            ReactDOM.findDOMNode(element2).style.display = "none"
-            ReactDOM.findDOMNode(element).style.display = "flex"
-            ReactDOM.findDOMNode(element3).style.display = "none"
+        let element = document.getElementsByClassName('edit-password-form')
+        let element2 = document.getElementsByClassName('approve-delete-form')
+        let element3 = document.getElementsByClassName('account-content-right-progress-wrap')
+        if (ReactDOM.findDOMNode(element[1]).style.display === "none") {
+            ReactDOM.findDOMNode(element2[1]).style.display = "none"
+            ReactDOM.findDOMNode(element[1]).style.display = "flex"
+            ReactDOM.findDOMNode(element3[1]).style.display = "none"
         } else {
-            ReactDOM.findDOMNode(element).style.display = "none"
-            ReactDOM.findDOMNode(element3).style.display = "flex"
+            ReactDOM.findDOMNode(element[1]).style.display = "none"
+            ReactDOM.findDOMNode(element3[1]).style.display = "flex"
         }
     }
     const openDeleteForm = () => {
-        let element = document.getElementById('edit-password-form')
-        let element2 = document.getElementById('approve-delete-form')
-        let element3 = document.getElementById('account-content-right-progress')
-        if (ReactDOM.findDOMNode(element2).style.display === "none") {
-            ReactDOM.findDOMNode(element).style.display = "none"
-            ReactDOM.findDOMNode(element2).style.display = "flex"
-            ReactDOM.findDOMNode(element3).style.display = "none"
+        let element = document.getElementsByClassName('edit-password-form')
+        let element2 = document.getElementsByClassName('approve-delete-form')
+        let element3 = document.getElementsByClassName('account-content-right-progress-wrap')
+        if (ReactDOM.findDOMNode(element2[1]).style.display === "none") {
+            ReactDOM.findDOMNode(element[1]).style.display = "none"
+            ReactDOM.findDOMNode(element2[1]).style.display = "flex"
+            ReactDOM.findDOMNode(element3[1]).style.display = "none"
         } else {
-            ReactDOM.findDOMNode(element2).style.display = "none"
-            ReactDOM.findDOMNode(element3).style.display = "flex"
+            ReactDOM.findDOMNode(element2[1]).style.display = "none"
+            ReactDOM.findDOMNode(element3[1]).style.display = "flex"
         }
     }
     return(
@@ -82,7 +82,7 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                     </div>
                     <span className="shadow"></span>
                     <div className="account-content-right">
-                            <span className="account-content-right-progress-wrap" id="account-content-right-progress">
+                            <span className="account-content-right-progress-wrap">
                         <div className="account-content-right-progress">
                             <h1>{courseName}</h1>
                             <div className="account-content-right-progress-beginner">
@@ -146,6 +146,7 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                                 </div>
                             </div>
                         </div>
+                                <div className="account-content-right-progress-buttons">
                                 <button className="progress-btn-ang-pol"
                                         onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>Kurs angielskiego po polsku</button>
                                 <button className="progress-btn-pol-ang"
@@ -154,8 +155,9 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                                         onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.")}>Kurs hiszpańskiego po polsku</button>
                                 <button className="progress-btn-pol-spn"
                                         onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.")}>Kurs polskiego po hiszpansku</button>
+                                </div>
                             </span>
-                        <div className="edit-password-form" id="edit-password-form">
+                        <div className="edit-password-form">
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
                             <form>
                                 <div className="edit-password-form-input">
@@ -173,7 +175,7 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                                 </div>
                             </form>
                         </div>
-                        <div className="approve-delete-form" id="approve-delete-form">
+                        <div className="approve-delete-form">
                             <h1>Czy na pewno chcesz usunąć konto?</h1>
                             <span className="approve-delete-form-no-wrap">
                     <div className="approve-delete-form-no">

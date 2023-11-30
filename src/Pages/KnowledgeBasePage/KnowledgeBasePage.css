@@ -95,6 +95,17 @@ a:visited, a:active{
     margin-left: 20px;
     margin-bottom: 10px;
 }
+#Polskim, #Angielskim, #Hiszpanskim{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#Polski-Pierwszem, #Angielski-Pierwszem, #Hiszpanski-Pierwszem, #Polski-Drugiem, #Angielski-Drugiem, #Hiszpanski-Drugiem, #Polski-Trzeciem, #Angielski-Trzeciem, #Hiszpanski-Trzeciem{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
 @media only screen and (max-width: 1400px) {
     .knowledge-base-window .left-section, .knowledge-base-window .right-section{
         display: none;

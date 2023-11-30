@@ -212,10 +212,10 @@ function MobileCourseWindow(){
     return(
      <div className="mobile-course-window">
          <div className="mobile-section">
-             {/*{imageContent()}*/}
+             {imageContent()}
              {/*{radioContent()}*/}
              {/*{puzzleContent()}*/}
-             {listeningContent()}
+             {/*{listeningContent()}*/}
          </div>
         <ReportBug/>
          <Accesibilities/>

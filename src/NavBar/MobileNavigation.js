@@ -104,25 +104,25 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <h2 style={{color: 'white'}}>{routeName}</h2>
                     <div className="left-contents">
                     <ul className="left-contents-ul">
-                        <li><a href="#Polski" style={{marginTop:'-20px'}}>Polski</a>
+                        <li><a href="#Polskim" style={{marginTop:'-20px'}}>Polski</a>
                         <ul>
-                            <li><a href="#Polski-Pierwsze">Pierwsze</a></li>
-                            <li><a href="#Polski-Drugie">Drugie</a></li>
-                            <li><a href="#Polski-Trzecie">Trzecie</a></li>
+                            <li><a href="#Polski-Pierwszem">Pierwsze</a></li>
+                            <li><a href="#Polski-Drugiem">Drugie</a></li>
+                            <li><a href="#Polski-Trzeciem">Trzecie</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Angielski">Angielski</a>
+                        <li><a href="#Angielskim">Angielski</a>
                         <ul>
-                            <li><a href="#Angielski-Pierwsze">First</a></li>
-                            <li><a href="#Angielski-Drugie">Second</a></li>
-                            <li><a href="#Angielski-Trzecie">Third</a></li>
+                            <li><a href="#Angielski-Pierwszem">First</a></li>
+                            <li><a href="#Angielski-Drugiem">Second</a></li>
+                            <li><a href="#Angielski-Trzeciem">Third</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Hiszpanski">Hiszpański</a>
+                        <li><a href="#Hiszpanskim">Hiszpański</a>
                         <ul>
-                            <li><a href="#Hiszpanski-Pierwsze">Primo</a></li>
-                            <li><a href="#Hiszpanski-Drugie">Drugie Primo</a></li>
-                            <li><a href="#Hiszpanski-Trzecie">Trzecie Primo</a></li>
+                            <li><a href="#Hiszpanski-Pierwszem">Primo</a></li>
+                            <li><a href="#Hiszpanski-Drugiem">Drugie Primo</a></li>
+                            <li><a href="#Hiszpanski-Trzeciem">Trzecie Primo</a></li>
                         </ul>
                         </li>
                     </ul>
