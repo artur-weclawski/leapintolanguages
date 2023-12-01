@@ -5,7 +5,6 @@ const Create = () => {
     const handleCreate = async (data, endpoint) => {
         const response = await fetch(Variables.API + endpoint, {
             method: 'POST',
-            // credentials: 'cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

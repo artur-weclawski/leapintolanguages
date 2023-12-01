@@ -14,8 +14,9 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
 
-    const [user, setUser] = useLocalStorage("user", true)
+    const [user, setUser] = useLocalStorage("user", null)
     const [token, setToken] = useLocalStorage("token", null)
+    const [course, setCourse] = useLocalStorage('course', {name: null, difficulty: null})
     const [routeName, setRouteName] = useState("login");
     return(
         <Routes>
@@ -29,9 +30,9 @@ const App = () => {
                 <Route index element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
                 <Route path="knowledgeBase" element={<KnowledgeBasePage routeName={routeName} setRouteName={setRouteName}/>}/>
                 <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-                <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName}/>}/>
-                <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName}/> }/>
-                <Route path="course" element={<CoursePage routeName={routeName} setRouteName={setRouteName}/>}/>
+                <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/>}/>
+                <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/> }/>
+                <Route path="course" element={<CoursePage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/>}/>
             </Route>
             // TODO: Reszta
         </Routes>

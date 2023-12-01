@@ -93,6 +93,7 @@ const RegisterHook = (token, setToken, user, setUser) => {
             console.log(response)
             if (response.hasOwnProperty("jwt")) {
                 _user.id = response.user_id
+                _user.password = null
                 setToken(response.jwt)
                 setUser(_user)
                 navigate('/account')

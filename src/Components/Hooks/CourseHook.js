@@ -1,21 +1,34 @@
 import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
-const CourseHook = () => {
-    const [data, setData] = useState(null)
-    const [message, setMessage] = useState("")
-    const [error, setError] = useState("")
+const CourseHook = (course, setCourse) => {
 
+    const navigate = useNavigate();
 
-    const handleGetCourse = () => {
+    const handleChangeCourse = (name) => {
+        setCourse({name: name, difficulty: course.difficulty})
+    }
 
+    const handleChangeDifficulty = (difficulty) => {
+        setCourse({name: course.name, difficulty: difficulty})
+    }
+
+    const handleSetCourse = (name) => {
+        console.log(course)
+        handleChangeCourse(name)
+        navigate('/difficultycourse')
+    }
+
+    const handleSetDifficulty = (difficulty) => {
+        console.log(difficulty)
+        handleChangeDifficulty(difficulty)
+        navigate('/course')
     }
 
 
     return{
-        data,
-        message,
-        error,
-        handleGetCourse,
+        handleSetDifficulty,
+        handleSetCourse
     }
 };
 

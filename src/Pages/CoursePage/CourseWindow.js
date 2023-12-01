@@ -3,7 +3,7 @@ import Accesibilities from "../../Accesibilities";
 import "./CoursePage.css"
 import fridge_img from "./fridge-img.webp"
 import {useEffect, useState} from "react";
-function CourseWindow(){
+function CourseWindow({task, setTask}){
     const [selectedRadio, setSelectedRadio] = useState('');
     const [puzzleAnswer, setPuzzleAnswer] = useState('')
     const [buttons, setButtons] = useState([])

@@ -1,25 +1,32 @@
-import React, {useState} from 'react';
+import TRead from "../CRUD/Secure/TRead";
 
-const TaskHook = () => {
-    const [data, setData] = useState(null)
-    const [message, setMessage] = useState("")
-    const [error, setError] = useState("")
+const TaskHook = (user, token, course, tasks, setTasks, currentTask, setCurrentTask) => {
+
+    const {
+        handleRead
+    } = TRead()
 
 
-    const handleGetTask = () => {
-
+    const handleCurrentTask = () => {
+        console.log(tasks.find(t => !t.isCompleted))
     }
 
-    const handlePostTask = () => {
+    const handleGetTasks = async () => {
+        const body = {user_id: user.id, course_name: course.name, difficulty: course.difficulty}
+        const tasks = await handleRead(token, body, "api/tasks")
+        console.log(tasks.tasksResponse)
+        return(tasks.tasksResponse)
+    }
+
+    const handlePostTask = async () => {
+
 
     }
 
     return{
-        data,
-        message,
-        error,
-        handleGetTask,
-        handlePostTask
+        handleGetTasks,
+        handlePostTask,
+        handleCurrentTask
     }
 };
 

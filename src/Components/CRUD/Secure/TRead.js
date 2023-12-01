@@ -4,31 +4,22 @@ import {useLocalStorage} from "../../LocalStorage/HandleLocalStorage";
 
 
 
-const TRead = (endpoint) => {
-    const [token, setToken] = useLocalStorage("token", null)
+const TRead = () => {
 
-    const handleRead = async (endpoint) => {
-        try{
-            const response = await fetch(Variables.API + endpoint, {
-                method: 'GET',
-                // credentials: 'cors',
-                headers: {
-                    'Authorization': 'Bearer ' + token,
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-            });
-            const res = await response.json()
-            console.log(res)
-            console.log(response)
-            if (!response.ok){
-                throw new Error('Error')
-            }
-            return response
-        } catch (error){
-            console.error(error)
-            return error
-        }
+
+    const handleRead = async (token, body, endpoint) => {
+        const response = await fetch(Variables.API + endpoint, {
+            method: 'POST',
+            // credentials: 'no-cors',
+            headers: {
+                'Authorization': 'Bearer ' + token,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+        console.log(response)
+        return await response.json()
     }
 
     return{
