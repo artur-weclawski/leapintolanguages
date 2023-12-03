@@ -1,4 +1,3 @@
-import "./CourseDifficultyPage.css"
 import NavBar from "../../NavBar/NavBar";
 import {useEffect} from "react";
 import CourseDifficultyWindow from "./CourseDifficultyWindow";

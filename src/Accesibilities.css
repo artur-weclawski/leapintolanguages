@@ -1,319 +1,319 @@
-.report-bug{
-    width: 80px;
-    height: 80px;
-    background-color: #880e23;
-    clip-path: polygon(100% 0%, 100% 80%, 50% 100%, 0% 80%, 0 0);
-    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-    display: flex;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
-    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));
-}
+/*.report-bug{*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    background-color: #880e23;*/
+/*    clip-path: polygon(100% 0%, 100% 80%, 50% 100%, 0% 80%, 0 0);*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/snow.png");*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    align-content: center;*/
+/*    justify-content: center;*/
+/*    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));*/
+/*}*/
 
-.report-bug-form{
-    border: 5px dashed #880e23;
-    background-color: white;
-    visibility: hidden;
-    min-width: 400px;
-    min-height: 400px;
-    position: absolute;
-    bottom: 110px;
-    left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 10;
-}
-.report-bug-form h1{
-    position: relative;
-    color: rgba(136,14,35,1);;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.bug-input-temat{
-    width: 395px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-}
-.bug-input-temat input{
-    width: 200px;
-    height: 30px;
-    border: 2px solid #880e23;
-    border-radius: 5px;
-}
+/*.report-bug-form{*/
+/*    border: 5px dashed #880e23;*/
+/*    background-color: white;*/
+/*    visibility: hidden;*/
+/*    min-width: 400px;*/
+/*    min-height: 400px;*/
+/*    position: absolute;*/
+/*    bottom: 110px;*/
+/*    left: 30px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    z-index: 10;*/
+/*}*/
+/*.report-bug-form h1{*/
+/*    position: relative;*/
+/*    color: rgba(136,14,35,1);;*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 0;*/
+/*}*/
+/*.bug-input-temat{*/
+/*    width: 395px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin-left: 5px;*/
+/*}*/
+/*.bug-input-temat input{*/
+/*    width: 200px;*/
+/*    height: 30px;*/
+/*    border: 2px solid #880e23;*/
+/*    border-radius: 5px;*/
+/*}*/
 
-.bug-input-zawartosc{
-    width: 395px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-}
-.bug-input-zawartosc textarea{
-    width: 380px;
-    height: 190px;
-    resize: none;
-    border: 2px solid #880e23;
-    border-radius: 5px;
+/*.bug-input-zawartosc{*/
+/*    width: 395px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin-left: 5px;*/
+/*}*/
+/*.bug-input-zawartosc textarea{*/
+/*    width: 380px;*/
+/*    height: 190px;*/
+/*    resize: none;*/
+/*    border: 2px solid #880e23;*/
+/*    border-radius: 5px;*/
 
-}
-.bug-submit-button input{
-    margin-bottom: 20px;
-    height: 30px;
-    width: 150px;
-    position: relative;
-    margin-left: 240px;
-    border-radius: 5px;
-    border: 2px solid #880e23;
-    color: #880e23;
-    background-color: white;
-    font-weight: bold;
-}
-.report-bug-form-ribbon{
-    position: absolute;
-    z-index: -1;
-    width: 450px;
-    min-height: 50px;
-    display: flex;
-    background-color: rgba(136,14,35,1);
-    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.report-bug-form-ribbon-wrap{
-    position: absolute;
-    z-index: -1;
-    min-width: 165px;
-    left: -10px;
-    bottom: 60px;
-    filter: drop-shadow(7px 7px 5px rgba(21, 1, 1, 0.6));
-}
-.bug-submit-button input:hover + .report-bug-form-ribbon-wrap .report-bug-form-ribbon{
-    width:480px;
-    background-position-x: 30px;
-}
+/*}*/
+/*.bug-submit-button input{*/
+/*    margin-bottom: 20px;*/
+/*    height: 30px;*/
+/*    width: 150px;*/
+/*    position: relative;*/
+/*    margin-left: 240px;*/
+/*    border-radius: 5px;*/
+/*    border: 2px solid #880e23;*/
+/*    color: #880e23;*/
+/*    background-color: white;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.report-bug-form-ribbon{*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    width: 450px;*/
+/*    min-height: 50px;*/
+/*    display: flex;*/
+/*    background-color: rgba(136,14,35,1);*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/snow.png");*/
+/*    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);*/
+/*    border-top-left-radius: 5px;*/
+/*    border-bottom-left-radius: 5px;*/
+/*}*/
+/*.report-bug-form-ribbon-wrap{*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    min-width: 165px;*/
+/*    left: -10px;*/
+/*    bottom: 60px;*/
+/*    filter: drop-shadow(7px 7px 5px rgba(21, 1, 1, 0.6));*/
+/*}*/
+/*.bug-submit-button input:hover + .report-bug-form-ribbon-wrap .report-bug-form-ribbon{*/
+/*    width:480px;*/
+/*    background-position-x: 30px;*/
+/*}*/
 
-.zawartosc-error{
-    visibility: hidden;
-    margin-bottom:15px;
-}
-.temat-error{
-    visibility: hidden
-}
-.report-bug-btn{
-    min-width: 80px;
-    min-height: 64px;
-    position: relative;
-    background-color: #880e23;
-    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-    border: none;
-}
-.report-bug-wrap{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    bottom: 30px;
-    left: 30px;
-    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
+/*.zawartosc-error{*/
+/*    visibility: hidden;*/
+/*    margin-bottom:15px;*/
+/*}*/
+/*.temat-error{*/
+/*    visibility: hidden*/
+/*}*/
+/*.report-bug-btn{*/
+/*    min-width: 80px;*/
+/*    min-height: 64px;*/
+/*    position: relative;*/
+/*    background-color: #880e23;*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/snow.png");*/
+/*    border: none;*/
+/*}*/
+/*.report-bug-wrap{*/
+/*    position: absolute;*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    bottom: 30px;*/
+/*    left: 30px;*/
+/*    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));*/
 
-}
+/*}*/
 
-.report-bug-wrap:hover .report-bug{
-    height: 100px;
-}
-.report-bug-btn img{
-    filter: invert(100%);
-    width: 50px;
-    height: 50px;
-}
+/*.report-bug-wrap:hover .report-bug{*/
+/*    height: 100px;*/
+/*}*/
+/*.report-bug-btn img{*/
+/*    filter: invert(100%);*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
 
-.naglowek{
-    display: flex;
-    flex-direction: row;
-}
-.report-bug-form-close{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    border: 2px solid #880e23;
-    background-color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 30px;
-    color: #880e23;
-}
+/*.naglowek{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+/*.report-bug-form-close{*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    position: absolute;*/
+/*    right: 10px;*/
+/*    top: 5px;*/
+/*    border: 2px solid #880e23;*/
+/*    background-color: white;*/
+/*    border-radius: 5px;*/
+/*    font-weight: bold;*/
+/*    font-size: 30px;*/
+/*    color: #880e23;*/
+/*}*/
 
-.report-bug-form-close:hover{
-    color: white;
-    border-color: white;
-    background-color: #880e23;
+/*.report-bug-form-close:hover{*/
+/*    color: white;*/
+/*    border-color: white;*/
+/*    background-color: #880e23;*/
 
-}
+/*}*/
 
-.report-bug-form-body label{
-    font-weight: bold;
-    color: #880e23;
-}
+/*.report-bug-form-body label{*/
+/*    font-weight: bold;*/
+/*    color: #880e23;*/
+/*}*/
 
-.accesibilities{
-    width: 260px;
-    height: 60px;
-    background-color: #880e23;
-    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);
-    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-    display: flex;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
-    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));
-}
+/*.accesibilities{*/
+/*    width: 260px;*/
+/*    height: 60px;*/
+/*    background-color: #880e23;*/
+/*    clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 0);*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/snow.png");*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    align-content: center;*/
+/*    justify-content: center;*/
+/*    filter: drop-shadow(7px 28px 5px rgba(21, 1, 1, 0.6));*/
+/*}*/
 
-.accesibilities-wrap{
-    position: absolute;
-    width: 260px;
-    height: 60px;
-    bottom: 50px;
-    left: 140px;
-    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));
+/*.accesibilities-wrap{*/
+/*    position: absolute;*/
+/*    width: 260px;*/
+/*    height: 60px;*/
+/*    bottom: 50px;*/
+/*    left: 140px;*/
+/*    filter: drop-shadow(6px 6px 5px rgba(21, 1, 1, 0.6));*/
 
-}
-.accesibilities-btn{
-    min-width: 260px;
-    min-height: 60px;
-    position: relative;
-    border: none;
-    margin-left: 0;
-    background-color: #880e23;
-    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-    color: white;
-    font-weight: bold;
-}
-.accesibilities-window{
-        border: 5px dashed #880e23;
-        visibility: hidden;
-        background-color: white;
-        min-width: 260px;
-        min-height: 100px;
-        position: absolute;
-        bottom: 110px;
-        left: 140px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        z-index: 10;
-}
-.accesibilities-window-text-size{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 260px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: -5px;
-}
-.accesibilities-window-typ{
-    height: 10px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.accesibilities-window-kontrast{
-    height: 10px;
-    font-weight: bold;
-    position: relative;
-    top: 25px;
-}
-.accesibilities-window-contrast{
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-    width: 260px;
-    border-top: 5px dashed #880e23;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    top: 10px;
-    margin-bottom: -5px;
-}
+/*}*/
+/*.accesibilities-btn{*/
+/*    min-width: 260px;*/
+/*    min-height: 60px;*/
+/*    position: relative;*/
+/*    border: none;*/
+/*    margin-left: 0;*/
+/*    background-color: #880e23;*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/snow.png");*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.accesibilities-window{*/
+/*        border: 5px dashed #880e23;*/
+/*        visibility: hidden;*/
+/*        background-color: white;*/
+/*        min-width: 260px;*/
+/*        min-height: 100px;*/
+/*        position: absolute;*/
+/*        bottom: 110px;*/
+/*        left: 140px;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        justify-content: flex-start;*/
+/*        align-items: center;*/
+/*        z-index: 10;*/
+/*}*/
+/*.accesibilities-window-text-size{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    height: 40px;*/
+/*    width: 260px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*    bottom: -5px;*/
+/*}*/
+/*.accesibilities-window-typ{*/
+/*    height: 10px;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+/*.accesibilities-window-kontrast{*/
+/*    height: 10px;*/
+/*    font-weight: bold;*/
+/*    position: relative;*/
+/*    top: 25px;*/
+/*}*/
+/*.accesibilities-window-contrast{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    height: 70px;*/
+/*    width: 260px;*/
+/*    border-top: 5px dashed #880e23;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-top: 10px;*/
+/*    top: 10px;*/
+/*    margin-bottom: -5px;*/
+/*}*/
 
-.accesibilities-windows-text-small .radio,.accesibilities-windows-text-medium .radio, .accesibilities-windows-text-big .radio{
-    color: #880e23;
-    font: inherit;
-    width: 20px;
-    height: 20px;
-    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white;
+/*.accesibilities-windows-text-small .radio,.accesibilities-windows-text-medium .radio, .accesibilities-windows-text-big .radio{*/
+/*    color: #880e23;*/
+/*    font: inherit;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white;*/
 
-}
-.accesibilities-windows-text-small .radio:checked, .accesibilities-windows-text-medium .radio:checked, .accesibilities-windows-text-big .radio:checked {
-    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white, inset 20px 20px #880e23;
-}
-.accesibilities-windows-text-small label, .accesibilities-windows-text-medium label, .accesibilities-windows-text-big label{
-    position: relative;
-    bottom: 4px;
-    font-weight: bold;
+/*}*/
+/*.accesibilities-windows-text-small .radio:checked, .accesibilities-windows-text-medium .radio:checked, .accesibilities-windows-text-big .radio:checked {*/
+/*    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white, inset 20px 20px #880e23;*/
+/*}*/
+/*.accesibilities-windows-text-small label, .accesibilities-windows-text-medium label, .accesibilities-windows-text-big label{*/
+/*    position: relative;*/
+/*    bottom: 4px;*/
+/*    font-weight: bold;*/
 
-}
+/*}*/
 
-.accesibilities-windows-contrast-normal .radio,.accesibilities-windows-contrast-black .radio, .accesibilities-windows-contrast-yellow .radio{
-    color: #880e23;
-    font: inherit;
-    width: 20px;
-    height: 20px;
-    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white;
+/*.accesibilities-windows-contrast-normal .radio,.accesibilities-windows-contrast-black .radio, .accesibilities-windows-contrast-yellow .radio{*/
+/*    color: #880e23;*/
+/*    font: inherit;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white;*/
 
-}
-.accesibilities-windows-contrast-normal .radio:checked, .accesibilities-windows-contrast-yellow .radio:checked, .accesibilities-windows-contrast-black .radio:checked {
-    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white, inset 20px 20px #880e23;
-}
-.accesibilities-windows-contrast-normal label, .accesibilities-windows-contrast-yellow label, .accesibilities-windows-contrast-black label{
-    position: relative;
-    bottom: 4px;
-    font-weight: bold;
-}
-.accesibilities-windows-contrast-normal,.accesibilities-windows-contrast-yellow, .accesibilities-windows-contrast-black{
-    display: flex;
-}
-.accesibilities-windows-contrast-normal label{
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    top:2px;
-}
+/*}*/
+/*.accesibilities-windows-contrast-normal .radio:checked, .accesibilities-windows-contrast-yellow .radio:checked, .accesibilities-windows-contrast-black .radio:checked {*/
+/*    box-shadow: inset 0 0 0 2px #880e23,inset 0 0 0 5px white, inset 20px 20px #880e23;*/
+/*}*/
+/*.accesibilities-windows-contrast-normal label, .accesibilities-windows-contrast-yellow label, .accesibilities-windows-contrast-black label{*/
+/*    position: relative;*/
+/*    bottom: 4px;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.accesibilities-windows-contrast-normal,.accesibilities-windows-contrast-yellow, .accesibilities-windows-contrast-black{*/
+/*    display: flex;*/
+/*}*/
+/*.accesibilities-windows-contrast-normal label{*/
+/*    border: 1px solid black;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    top:2px;*/
+/*}*/
 
-.accesibilities-windows-contrast-yellow label{
-    border: 1px solid gold;
-    background-color: gold;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    top:2px;
-}
+/*.accesibilities-windows-contrast-yellow label{*/
+/*    border: 1px solid gold;*/
+/*    background-color: gold;*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    top:2px;*/
+/*}*/
 
-.accesibilities-windows-contrast-black label{
-    border: 1px solid black;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    top:2px;
-}
+/*.accesibilities-windows-contrast-black label{*/
+/*    border: 1px solid black;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    top:2px;*/
+/*}*/
 
-.accesibilities-wrap:hover .accesibilities{
-    width: 300px;
-}
+/*.accesibilities-wrap:hover .accesibilities{*/
+/*    width: 300px;*/
+/*}*/
 

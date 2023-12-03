@@ -1,4 +1,3 @@
-import "./CoursePage.css"
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import {useEffect, useState} from "react";

@@ -1,6 +1,5 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-import "./AccountPage.css"
 import ReactDOM from "react-dom";
 import {useState} from "react";
 import ProfileHook from "../../Components/Hooks/ProfileHook";

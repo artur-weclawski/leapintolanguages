@@ -1,5 +1,4 @@
 import NavBar from "../../NavBar/NavBar";
-import "./LoginPage.css"
 import {useEffect} from "react";
 import LoginWindow from "./LoginWindow";
 import MobileLoginWindow from "./MobileLoginWindow";

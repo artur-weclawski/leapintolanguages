@@ -1,9 +1,6 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-import AuthenticationController from "../../Components/Controllers/AuthenticationController";
 import RegisterHook from "../../Components/Hooks/RegisterHook";
-import {useEffect} from "react";
-import "./RegistrationPage.css"
 import {useTranslation} from "react-i18next";
 function RegistrationWindow({token, setToken, user, setUser}){
     // console.log(token)

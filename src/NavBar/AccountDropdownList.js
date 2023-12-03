@@ -1,19 +1,19 @@
 import peepo_profile from "./pepe_profile.webp"
+import {Link} from "react-router-dom";
 function AccountDropdownList(){
     return(
         <div className="dropdown dropdown-account">
             <span className="dropbtn-wrap">
             <button className="dropbtn">
                 <div className="account-name">Peepo</div>
-                <img className="image" src={peepo_profile}></img>
                 <div className="vbtn"> V </div>
             </button>
             </span>
             <span className="dropdown-content-wrap">
             <div className="dropdown-content dropdown-content-account">
-                <a> Konto </a>
-                <a> Kursy </a>
-                <a> Baza wiedzy</a>
+                <Link to="/account"> Konto </Link>
+                <Link to="/choosecourse"> Kursy </Link>
+                <Link to="/knowledgeBase"> Baza wiedzy</Link>
                 <a> Wyloguj się </a>
             </div>
             </span>

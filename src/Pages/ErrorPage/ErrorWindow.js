@@ -7,7 +7,7 @@ const ErrorWindow = () =>{
                 <h1>Rączki do góry i wracamy.</h1>
             </div>
             <div className="image">
-                <img src={error_pepe}/>
+                <img src={error_pepe} alt={'error-img'}/>
             </div>
         </div>
     )

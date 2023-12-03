@@ -1,5 +1,4 @@
 import NavBar from "../../NavBar/NavBar";
-import "./CourseChoosePage.css"
 import {useEffect} from "react";
 import CourseChooseWindow from "./CourseChooseWindow";
 import MobileCourseChooseWindow from "./MobileCourseChooseWindow";

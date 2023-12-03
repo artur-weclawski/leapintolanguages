@@ -1,6 +1,4 @@
-import './NavBar.css'
-import peepo_polska from "./peepo_polska.png";
-import ReactDOM from "react-dom";
+import {Link} from "react-router-dom";
 const MobileNavigation = ({routeName, setRouteName}) =>{
     if(routeName === 'Kurs')
     {
@@ -133,9 +131,9 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <a> Angielski </a>
                 <a> Hiszpański </a>
                     </span>
-                <a> Konto </a>
-                <a> Kursy </a>
-                <a> Baza wiedzy </a>
+                <Link to="/account"> Konto </Link>
+                <Link to="/choosecourse"> Kursy </Link>
+                <Link to="/knowledgeBase"> Baza wiedzy</Link>
                 <a style={{marginBottom:'50px'}}> Wyloguj się </a>
             </div>
             </span>
@@ -220,9 +218,9 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <a> Angielski </a>
                 <a> Hiszpański </a>
                     </span>
-                <a> Konto </a>
-                <a> Kursy </a>
-                <a> Baza wiedzy </a>
+                <Link to="/account"> Konto </Link>
+                <Link to="/choosecourse"> Kursy </Link>
+                <Link to="/knowledgeBase"> Baza wiedzy</Link>
                 <a style={{marginBottom:'50px'}}> Wyloguj się </a>
             </div>
             </span>

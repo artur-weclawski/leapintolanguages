@@ -1,7 +1,5 @@
-import "./CourseDifficultyPage.css"
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-
 function CourseDifficultyWindow(){
     return(
         <div className="course-difficulty-window">

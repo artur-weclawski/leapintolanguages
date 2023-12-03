@@ -1,4 +1,3 @@
-import "./NavBar.css"
 const PageStatus = ({routeName, setRouteName}) =>{
     return(
         <span className="page-status-wrap">

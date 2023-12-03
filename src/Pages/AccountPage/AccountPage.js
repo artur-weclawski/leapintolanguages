@@ -1,5 +1,4 @@
 import NavBar from "../../NavBar/NavBar";
-import "./AccountPage.css"
 import {useEffect} from "react";
 import AccountWindow from "./AccountWindow";
 import MobileAccountWindow from "./MobileAccountWindow";

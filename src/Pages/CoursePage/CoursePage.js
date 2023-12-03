@@ -1,5 +1,5 @@
 import NavBar from "../../NavBar/NavBar";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import CourseWindow from "./CourseWindow";
 import MobileCourseWindow from "./MobileCourseWindow";
 

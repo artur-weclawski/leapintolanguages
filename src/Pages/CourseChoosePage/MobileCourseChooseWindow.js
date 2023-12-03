@@ -1,4 +1,3 @@
-import "./CourseChoosePage.css"
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 

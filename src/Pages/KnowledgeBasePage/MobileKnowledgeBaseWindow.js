@@ -1,4 +1,3 @@
-import "./KnowledgeBasePage.css"
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 function  MobileKnowledgeBaseWindow (){

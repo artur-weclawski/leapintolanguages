@@ -1,6 +1,5 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-import "./CoursePage.css"
 import fridge_img from "./fridge-img.webp"
 import {useEffect, useState} from "react";
 function CourseWindow(){
@@ -282,10 +281,10 @@ function CourseWindow(){
                 </span>
             </div>
             <div className="right-section">
-                {imageContent()}
+                {/*{imageContent()}*/}
                 {/*{radioContent()}*/}
                 {/*{puzzleContent()}*/}
-                {/*{listeningContent()}*/}
+                {listeningContent()}
             </div>
         </div>
     )
