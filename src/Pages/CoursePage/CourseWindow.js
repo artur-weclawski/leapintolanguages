@@ -3,7 +3,10 @@ import Accesibilities from "../../Accesibilities";
 import "./CoursePage.css"
 import fridge_img from "./fridge-img.webp"
 import {useEffect, useState} from "react";
-function CourseWindow({task, setTask}){
+import TaskHook from "../../Components/Hooks/TaskHook";
+function CourseWindow({token, user, currentTask, handleCheckTask, error}){
+
+
     const [selectedRadio, setSelectedRadio] = useState('');
     const [puzzleAnswer, setPuzzleAnswer] = useState('')
     const [buttons, setButtons] = useState([])
@@ -88,22 +91,22 @@ function CourseWindow({task, setTask}){
     const imageContent = () =>{
         const readImage = () =>{
             const msg = new SpeechSynthesisUtterance()
-            msg.text = "Fridge"
+            msg.text = currentTask.question
             window.speechSynthesis.speak(msg)
         }
         return(
             <div className="image-content">
                 <div className="image-and-info">
-                    <img src={fridge_img} title="fridge" alt="fridge" className="image"/>
+                    <img src={currentTask.pictureUrl} title={currentTask.question} alt={currentTask.question} className="image"/>
                     <div className="info">
                         <h2>Nazwij obiekt znajdujący się na obrazku po angielsku.</h2>
                         <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
-                        <div className="username-error">error</div>
+                        <div className="username-error">{error}</div>
                     </div>
 
                 </div>
                 <span className="image-content-form-btn-wrap">
-                    <form className="image-content-form">
+                    <form className="image-content-form" onSubmit={handleCheckTask}>
                         <div className="image-content-input">
                             <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
                         </div>
@@ -282,10 +285,11 @@ function CourseWindow({task, setTask}){
                 </span>
             </div>
             <div className="right-section">
-                {imageContent()}
-                {/*{radioContent()}*/}
-                {/*{puzzleContent()}*/}
-                {/*{listeningContent()}*/}
+                {currentTask.type === 'obraz' ? imageContent() : null}
+                {currentTask.type === 'radio' ? radioContent() : null}
+                {currentTask.type === 'listening' ? listeningContent() : null}
+                {currentTask.type === 'puzzle' ? puzzleContent() : null}
+                {currentTask === null ? imageContent() : null}
             </div>
         </div>
     )

@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import TRead from "../CRUD/Secure/TRead";
 
-const CourseHook = (course, setCourse) => {
+const CourseHook = (course, setCourse, token, user, courseProgress, setCourseProgress) => {
+
+    const {
+        handleRead
+    } = TRead()
 
     const navigate = useNavigate();
 
@@ -25,10 +30,15 @@ const CourseHook = (course, setCourse) => {
         navigate('/course')
     }
 
+    const handleGetCourseProgress = async () => {
+        setCourseProgress(await handleRead(token, {user_id : user.id, course_name: course.name}, "api/course"))
+    }
+
 
     return{
         handleSetDifficulty,
-        handleSetCourse
+        handleSetCourse,
+        handleGetCourseProgress
     }
 };
 

@@ -3,31 +3,20 @@ import Accesibilities from "../../Accesibilities";
 import "./AccountPage.css"
 import ReactDOM from "react-dom";
 import {useState} from "react";
-import ProfileHook from "../../Components/Hooks/ProfileHook";
 
-const AccountWindow = ({token, setToken, user, setUser}) => {
-
-    console.log(user)
-    console.log(token)
+const AccountWindow = ({
+        user,
+        coursesProgress,
+        handleDeleteProfile, handleEditProfile, error
+}) => {
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
+
+    console.log(coursesProgress)
 
     const changeLanguage = (name) => {
         setCourseName(name);
     }
-
-        const {
-            coursesData,
-            message,
-            error,
-            profileData,
-            handleEditProfile,
-            handleDeleteProfile,
-            // handleGetCoursesProgress,
-            isLoaded
-        } = ProfileHook()
-
-
         const openEditForm = () => {
             let element = document.getElementsByClassName('edit-password-form')
             let element2 = document.getElementsByClassName('approve-delete-form')
@@ -76,13 +65,13 @@ const AccountWindow = ({token, setToken, user, setUser}) => {
                             <span className="account-content-edit-password-wrap">
                     <div className="account-content-edit-password">
                         <button className="account-content-edit-password-btn"
-                                onClick={openEditForm}>Zmień hasło</button>
+                                onClick={() => openEditForm()}>Zmień hasło</button>
                     </div>
                             </span>
                             <span className="account-content-delete-account-wrap">
                     <div className="account-content-delete-account">
                         <button className="account-content-delete-account-btn"
-                                onClick={openDeleteForm}>Usuń konto</button>
+                                onClick={() => openDeleteForm()}>Usuń konto</button>
                     </div>
                         </span>
                         </div>
@@ -164,17 +153,16 @@ const AccountWindow = ({token, setToken, user, setUser}) => {
                                 </div>
                             </span>
                             <div className="edit-password-form">
-                                <button className="edit-password-form-close" onClick={openEditForm}>X</button>
-                                <form>
+                                <button className="edit-password-form-close" onClick={() => openEditForm()}>X</button>
+                                <form onSubmit={handleEditProfile}>
                                     <div className="edit-password-form-input">
                                         <label>Stare hasło</label>
-                                        <input type="text" id="old-password-input" name="old-password" required/>
-                                        <div className="username-error"> error</div>
+                                        <input type="password" id="old-password-input" name="oldPassword" required/>
                                     </div>
                                     <div className="edit-password-form-input">
                                         <label>Nowe hasło</label>
-                                        <input type="text" id="new-password-input" name="new-password" required/>
-                                        <div className="username-error"> error</div>
+                                        <input type="password" id="new-password-input" name="newPassword" required/>
+                                        <div className="username-error">{error}</div>
                                     </div>
                                     <div className="edit-password-form-submit-button">
                                         <input type="submit" value="Zmień hasło"/>
@@ -185,12 +173,15 @@ const AccountWindow = ({token, setToken, user, setUser}) => {
                                 <h1>Czy na pewno chcesz usunąć konto?</h1>
                                 <span className="approve-delete-form-no-wrap">
                     <div className="approve-delete-form-no">
-                        <button className="approve-delete-form-no-btn" onClick={openDeleteForm}>Nie</button>
+                        <button className="approve-delete-form-no-btn" onClick={() => openDeleteForm()}>Nie</button>
                     </div>
                         </span>
                                 <span className="approve-delete-form-yes-wrap">
                     <div className="approve-delete-form-yes">
-                        <button className="approve-delete-form-yes-btn">Tak</button>
+                        <button className="approve-delete-form-yes-btn" onClick={() => {
+                            console.log("eo1")
+                            handleDeleteProfile()
+                        }}>Tak</button>
                     </div>
                         </span>
                             </div>

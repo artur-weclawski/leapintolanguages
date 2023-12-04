@@ -25,7 +25,6 @@ const RegisterHook = (token, setToken, user, setUser) => {
     const handleErrors = (id, message, visible) => {
         const changeError = errors.map((error, index) =>{
             if(index === id){
-                console.log("chuj")
                 return {message: message, visible: visible}
             }else return error
         })
@@ -90,7 +89,6 @@ const RegisterHook = (token, setToken, user, setUser) => {
         if (errors.map(e => e.visible)) {
             const _user = new User(null, username, password, email)
             const response = await register(_user);
-            console.log(response)
             if (response.hasOwnProperty("jwt")) {
                 _user.id = response.user_id
                 _user.password = null
@@ -98,10 +96,8 @@ const RegisterHook = (token, setToken, user, setUser) => {
                 setUser(_user)
                 navigate('/account')
             } else {
-                console.log(response)
                 response.messages.map(m => {
                     if (m.includes("username")) {
-                        console.log("eo")
                         handleErrors(0, m, true)
                     }
                     if (m.includes("email")) {
@@ -109,9 +105,7 @@ const RegisterHook = (token, setToken, user, setUser) => {
                     }
                 })
             }
-
         }
-        console.log(errors)
     }
 
     return {

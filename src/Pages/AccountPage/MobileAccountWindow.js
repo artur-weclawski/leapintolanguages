@@ -5,8 +5,6 @@ import ProfileHook from "../../Components/Hooks/ProfileHook";
 import ReactDOM from "react-dom";
 
 function MobileAccountWindow({token, setToken, user, setUser}){
-    console.log(user)
-    console.log(token)
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
 
