@@ -25,11 +25,12 @@ function LoginHook(token, setToken, user, setUser) {
         const username = event.target.username.value
         const password = event.target.password.value
         const _user = new User(null, username, password, null)
-        const response = await handleCreate(_user, "auth/signup")
-
+        const response = await handleCreate(_user, "auth/login")
+        console.log(response)
         if(response.hasOwnProperty("jwt")){
-            _user.id = response.id
+            _user.id = response.user_id
             _user.email = response.email
+            _user.password = null
             setUser(_user)
             setToken(response.jwt)
             navigate('/account')

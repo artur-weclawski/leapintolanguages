@@ -6,8 +6,6 @@ import ReactDOM from "react-dom";
 import {useTranslation} from "react-i18next";
 
 function MobileAccountWindow({token, setToken, user, setUser}){
-    console.log(user)
-    console.log(token)
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
     const {t, i18n} = useTranslation();
