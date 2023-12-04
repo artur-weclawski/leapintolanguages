@@ -2,10 +2,13 @@ import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import {useEffect, useState} from "react";
 import fridge_img from "./fridge-img.webp";
+import {useTranslation} from "react-i18next";
 function MobileCourseWindow(){
     const [selectedRadio, setSelectedRadio] = useState('');
     const [puzzleAnswer, setPuzzleAnswer] = useState('')
-    const [buttons, setButtons] = useState([])
+    const [buttons, setButtons] = useState([]);
+    const {t, i18n} = useTranslation();
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Utworzone zdanie:',puzzleAnswer.trim());

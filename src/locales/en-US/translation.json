@@ -1,6 +1,6 @@
 {
   "loginPage": {
-    "title" : "Logowanie",
+    "title" : "Login",
     "username": {
       "name": "Nazwa użytkownika",
       "tooltip": "Podaj swoją Nazwe użytkownika"

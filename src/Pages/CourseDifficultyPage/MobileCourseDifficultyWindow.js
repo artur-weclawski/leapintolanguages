@@ -1,6 +1,8 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
+import {useTranslation} from "react-i18next";
 function MobileCourseDifficultyWindow(){
+    const {t, i18n} = useTranslation();
     return(
         <div className="mobile-course-difficulty-window">
             <div className="mobile-section">

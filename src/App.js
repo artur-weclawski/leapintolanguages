@@ -1,5 +1,5 @@
 import './App.css';
-import {Link, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoutes";
 import {useEffect, useState} from "react";
 import LoginPage from "./Pages/LoginPage/LoginPage";
@@ -11,9 +11,11 @@ import CourseDifficultyPage from "./Pages/CourseDifficultyPage/CourseDifficultyP
 import KnowledgeBasePage from "./Pages/KnowledgeBasePage/KnowledgeBasePage";
 import {useLocalStorage} from "./Components/LocalStorage/HandleLocalStorage";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import i18n from "./i18n";
+import {useTranslation} from "react-i18next";
+
 const App = () => {
     //TODO: Znaleść sposób na zalezienie usera tutaj
-
     const [user, setUser] = useLocalStorage("user", true)
     const [token, setToken] = useLocalStorage("token", null)
     const [routeName, setRouteName] = useState("login");
@@ -37,15 +39,5 @@ const App = () => {
         </Routes>
     )
 }
-
-/// Przykład nawigacji
-const Navigation = () => {
-    return (
-        <nav>
-            <Link to="/login">login</Link>
-            <Link to="/register">register</Link>
-        </nav>
-    );
-};
 
 export default App;

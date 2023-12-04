@@ -1,6 +1,7 @@
-import peepo_profile from "./pepe_profile.webp"
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 function AccountDropdownList(){
+    const {t, i18n} = useTranslation();
     return(
         <div className="dropdown dropdown-account">
             <span className="dropbtn-wrap">

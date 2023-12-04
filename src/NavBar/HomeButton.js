@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 function HomeButton(){
+    const {t, i18n} = useTranslation();
     return(
         <span className="home-btn-wrap">
         <div className="home-btn">

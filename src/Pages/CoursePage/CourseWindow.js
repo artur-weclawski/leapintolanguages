@@ -2,11 +2,12 @@ import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import fridge_img from "./fridge-img.webp"
 import {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
 function CourseWindow(){
     const [selectedRadio, setSelectedRadio] = useState('');
     const [puzzleAnswer, setPuzzleAnswer] = useState('')
     const [buttons, setButtons] = useState([])
-
+    const {t, i18n} = useTranslation();
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Utworzone zdanie:',puzzleAnswer.trim());
@@ -96,7 +97,7 @@ function CourseWindow(){
                     <img src={fridge_img} title="fridge" alt="fridge" className="image"/>
                     <div className="info">
                         <h2>Nazwij obiekt znajdujący się na obrazku po angielsku.</h2>
-                        <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
+                        <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="asdsad"/></button>
                         <div className="username-error">error</div>
                     </div>
 
@@ -123,7 +124,7 @@ function CourseWindow(){
         return(
             <div className="listen-content">
                 <div className="listen-and-info">
-                    <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
+                    <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="sadsada"/></button>
                     <div className="info">
                         <h2>Napisz usłyszane zdanie po angielsku.</h2>
                         <div className="username-error">error</div>
@@ -225,53 +226,38 @@ function CourseWindow(){
                                 <div className="beginner-progress-images"><div
                                     className="beginner-progress-images-bar"></div></div>
                             </div>
-                            <div className="progress-puzzle">
-                                <h4>Układanki</h4>
-                                <div className="beginner-progress-puzzle"><div
-                                    className="beginner-progress-puzzle-bar"></div></div>
-                            </div>
-                            <div className="progress-sentences">
-                                <h4>Zdania</h4>
-                                <div className="beginner-progress-sentences"><div
-                                    className="beginner-progress-sentences-bar"></div></div>
+                            <div className="progress-radio">
+                                <h4>Uzupełnianie</h4>
+                                <div className="beginner-progress-radio"><div
+                                    className="beginner-progress-radio-bar"></div></div>
                             </div>
                         </div>
                     </div>
                     <div className="course-progress-medium">
                         <h2>Średni</h2>
                         <div className="progresses">
-                            <div className="progress-images">
-                                <h4>Obrazki</h4>
-                                <div className="medium-progress-images"><div
-                                    className="medium-progress-images-bar"></div></div>
+                            <div className="progress-radio">
+                                <h4>Uzupełnianie</h4>
+                                <div className="medium-progress-radio"><div
+                                    className="medium-progress-radio-bar"></div></div>
                             </div>
                             <div className="progress-puzzle">
                                 <h4>Układanki</h4>
                                 <div className="medium-progress-puzzle"><div
                                     className="medium-progress-puzzle-bar"></div></div>
                             </div>
-                            <div className="progress-sentences">
-                                <h4>Zdania</h4>
-                                <div className="medium-progress-sentences"><div
-                                    className="medium-progress-sentences-bar"></div></div>
-                            </div>
                         </div>
                     </div>
                     <div className="course-progress-advanced">
                         <h2>Zaawansowany</h2>
                         <div className="progresses">
-                            <div className="progress-images">
-                                <h4>Obrazki</h4>
-                                <div className="advanced-progress-images"><div
-                                    className="advanced-progress-images-bar"></div></div>
-                            </div>
                             <div className="progress-puzzle">
                                 <h4>Układanki</h4>
                                 <div className="advanced-progress-puzzle"><div
                                     className="advanced-progress-puzzle-bar"></div></div>
                             </div>
                             <div className="progress-sentences">
-                                <h4>Zdania</h4>
+                                <h4>Słuchanie</h4>
                                 <div className="advanced-progress-sentences"><div
                                     className="advanced-progress-sentences-bar"></div></div>
                             </div>

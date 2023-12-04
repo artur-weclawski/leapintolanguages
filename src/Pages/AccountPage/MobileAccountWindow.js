@@ -3,13 +3,14 @@ import Accesibilities from "../../Accesibilities";
 import {useState} from "react";
 import ProfileHook from "../../Components/Hooks/ProfileHook";
 import ReactDOM from "react-dom";
+import {useTranslation} from "react-i18next";
 
 function MobileAccountWindow({token, setToken, user, setUser}){
     console.log(user)
     console.log(token)
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
-
+    const {t, i18n} = useTranslation();
     const changeLanguage = (name) => {
         setCourseName(name);
     }
@@ -87,63 +88,48 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                             <h1>{courseName}</h1>
                             <div className="account-content-right-progress-beginner">
                             <h2>Początkujacy</h2>
-                                <div className="progresses">
-                                <div className="progress-images">
-                                    <h4>Obrazki</h4>
-                                    <div className="beginner-progress-images"><div
-                                        className="beginner-progress-images-bar"></div></div>
-                                </div>
-                                <div className="progress-puzzle">
-                                    <h4>Układanki</h4>
-                                    <div className="beginner-progress-puzzle"><div
-                                        className="beginner-progress-puzzle-bar"></div></div>
-                                </div>
-                                <div className="progress-sentences">
-                                    <h4>Zdania</h4>
-                                    <div className="beginner-progress-sentences"><div
-                                        className="beginner-progress-sentences-bar"></div></div>
-                                </div>
-                                </div>
+                        <div className="progresses">
+                            <div className="progress-images">
+                                <h4>Obrazki</h4>
+                                <div className="beginner-progress-images"><div
+                                    className="beginner-progress-images-bar"></div></div>
+                            </div>
+                            <div className="progress-radio">
+                                <h4>Uzupełnianie</h4>
+                                <div className="beginner-progress-radio"><div
+                                    className="beginner-progress-radio-bar"></div></div>
+                            </div>
+                        </div>
                             </div>
                             <div className="account-content-right-progress-medium">
                             <h2>Średni</h2>
-                                <div className="progresses">
-                                <div className="progress-images">
-                                    <h4>Obrazki</h4>
-                                    <div className="medium-progress-images"><div
-                                        className="medium-progress-images-bar"></div></div>
-                                </div>
-                                <div className="progress-puzzle">
-                                    <h4>Układanki</h4>
-                                    <div className="medium-progress-puzzle"><div
-                                        className="medium-progress-puzzle-bar"></div></div>
-                                </div>
-                                <div className="progress-sentences">
-                                    <h4>Zdania</h4>
-                                    <div className="medium-progress-sentences"><div
-                                        className="medium-progress-sentences-bar"></div></div>
-                                </div>
-                                </div>
+                        <div className="progresses">
+                            <div className="progress-radio">
+                                <h4>Uzupełnianie</h4>
+                                <div className="medium-progress-radio"><div
+                                    className="medium-progress-radio-bar"></div></div>
+                            </div>
+                            <div className="progress-puzzle">
+                                <h4>Układanki</h4>
+                                <div className="medium-progress-puzzle"><div
+                                    className="medium-progress-puzzle-bar"></div></div>
+                            </div>
+                        </div>
                             </div>
                             <div className="account-content-right-progress-advanced">
                             <h2>Zaawansowany</h2>
-                                <div className="progresses">
-                                <div className="progress-images">
-                                    <h4>Obrazki</h4>
-                                    <div className="advanced-progress-images"><div
-                                        className="advanced-progress-images-bar"></div></div>
-                                </div>
-                                <div className="progress-puzzle">
-                                    <h4>Układanki</h4>
-                                    <div className="advanced-progress-puzzle"><div
-                                        className="advanced-progress-puzzle-bar"></div></div>
-                                </div>
-                                <div className="progress-sentences">
-                                    <h4>Zdania</h4>
-                                    <div className="advanced-progress-sentences"><div
-                                        className="advanced-progress-sentences-bar"></div></div>
-                                </div>
-                                </div>
+                        <div className="progresses">
+                            <div className="progress-puzzle">
+                                <h4>Układanki</h4>
+                                <div className="advanced-progress-puzzle"><div
+                                    className="advanced-progress-puzzle-bar"></div></div>
+                            </div>
+                            <div className="progress-sentences">
+                                <h4>Słuchanie</h4>
+                                <div className="advanced-progress-sentences"><div
+                                    className="advanced-progress-sentences-bar"></div></div>
+                            </div>
+                        </div>
                             </div>
                         </div>
                                 <div className="account-content-right-progress-buttons">

@@ -1,5 +1,8 @@
 import error_pepe from "./error-pepe.webp"
+import {useTranslation} from "react-i18next";
 const ErrorWindow = () =>{
+    const {t, i18n} = useTranslation();
+
     return(
         <div className="error-section">
             <div className="message">

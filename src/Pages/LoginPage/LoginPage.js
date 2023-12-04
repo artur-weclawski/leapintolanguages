@@ -2,6 +2,7 @@ import NavBar from "../../NavBar/NavBar";
 import {useEffect} from "react";
 import LoginWindow from "./LoginWindow";
 import MobileLoginWindow from "./MobileLoginWindow";
+import {useTranslation} from "react-i18next";
 function LoginPage({routeName, setRouteName, token, setToken, user, setUser}){
     useEffect(() => {
         setRouteName('Logowanie');

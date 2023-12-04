@@ -1,17 +1,20 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import LoginHook from "../../Components/Hooks/LoginHook";
+import {useTranslation} from "react-i18next";
+import {useEffect} from "react";
 function MobileLoginWindow({token, setToken, user, setUser}){
     const {
         error,
         handleLogin
     } = LoginHook()
+    const {t, i18n} = useTranslation();
     return(
         <div className="mobile-login-window">
             <div className="mobile-section">
                 <div className="login-form">
                     <form onSubmit={handleLogin}>
-                        <h1>Logowanie</h1>
+                        <h1>{t('loginPage.title')}</h1>
                         <div className="login-input">
                             <label>Username</label>
                             <input type="text" name="username" required/>
