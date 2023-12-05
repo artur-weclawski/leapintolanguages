@@ -7,7 +7,7 @@ const ErrorWindow = () =>{
         <div className="error-section">
             <div className="message">
                 <h1>404</h1>
-                <h1>Rączki do góry i wracamy.</h1>
+                <h1>{t('errorPage.message')}</h1>
             </div>
             <div className="image">
                 <img src={error_pepe} alt={'error-img'}/>

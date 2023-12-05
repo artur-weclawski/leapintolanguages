@@ -14,8 +14,7 @@
       "emptyData": "Pole nie może być puste"
     },
     "submit": "Zaloguj się",
-    "registerPageRedirect": "Nie masz konta?",
-    "registerPageLink": "Kliknij tutaj!"
+    "registerPageRedirect": "Zarejestruj się tutaj."
   },
   "registerPage": {
     "title" : "Rejestracja",
@@ -29,6 +28,7 @@
     },
     "password": {
       "name": "Hasło",
+      "repeatName": "Powtórz hasło",
       "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny"
     },
     "errors": {
@@ -40,11 +40,11 @@
       "emptyData": "Pole nie może być puste"
     },
     "submit": "Zarejstruj się",
-    "loginPageRedirect": "Masz już konto?",
-    "loginPageLink": "Kliknij tutaj!"
+    "loginPageRedirect": "Zaloguj się."
   },
   "accountPage": {
-    "Username": "Nazwa użytkownika",
+    "email": "Email:",
+    "userName": "Nazwa użytkownika:",
     "changePassword":{
       "button": "Zmień hasło",
       "oldPassword": "Stare hasło",
@@ -83,16 +83,30 @@
       "advanced": "Zaawansowany",
       "images": "Obrazki",
       "puzzle": "Układanki",
-      "tasks": "Zadania"
+      "sentences": "Słuchanie",
+      "radio": "Uzupełnianie",
+      "tasks": "Zadania",
+      "reset": "Reset",
+      "uporzadkuj": "Uporządkuj słowa w odpowiedniej kolejności.",
+      "przejdzDalej": "Przejdź dalej",
+      "nazwijObiekt": "Nazwij obiekt znajdujący się na obrazku."
     },
     "images": {
-      "task": ""
+      "task": "",
+      "imagesInfo": "Nazwij obiekt znajdujący się na obrazku."
     },
     "puzzle": {
-      "task": "Uporzątkuj słowa w odpowiedniej kolejności"
+      "task": "Uporzątkuj słowa w odpowiedniej kolejności",
+      "puzzleInfo": "Uporządkuj słowa w odpowiedniej kolejności."
     },
     "tasks": {
       "task": ""
+    },
+    "listen": {
+      "listenInfo": "Napisz usłyszane zdanie."
+    },
+    "radio": {
+      "radioChoose": "Wybierz właściwą odpowiedź"
     },
     "submit": "Pzejdź dalej"
   },
@@ -135,6 +149,10 @@
       "polish": "Polski",
       "english": "Angielski",
       "spanish": "Hiszpański"
-    }
+    },
+    "chooseLanguage": "Wybierz język"
+  },
+  "errorPage":{
+    "message": "Rączki do góry i wracamy."
   }
 }

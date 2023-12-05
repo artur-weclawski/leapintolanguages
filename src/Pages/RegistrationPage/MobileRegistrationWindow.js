@@ -11,30 +11,30 @@ function MobileRegistrationWindow({token,setToken,user,setUser}){
         <div className="mobile-section">
             <div className="registration-form">
                 <form onSubmit={handleRegister}>
-                    <h1 style={{marginTop:"20px", marginBottom:"-10px"}}>Rejestracja</h1>
+                    <h1 style={{marginTop:"20px", marginBottom:"-10px"}}>{t('registerPage.title')}</h1>
                     <div className="registration-input">
-                        <label>Email</label>
+                        <label>{t('registerPage.email.name')}</label>
                         <input type="text" name="email" required/>
                         <div className="username-error"> error</div>
                     </div>
                     <div className="registration-input">
-                        <label>Username</label>
+                        <label>{t('registerPage.username.name')}</label>
                         <input type="text" name="username" required/>
                         <div className="username-error"> error</div>
                     </div>
                     <div className="registration-input">
-                        <label>Password</label>
+                        <label>{t('registerPage.password.name')}</label>
                         <input type="text" name="password" required/>
                         <div className="username-error"> error</div>
                     </div>
                     <div className="registration-input">
-                        <label>Repeat Password</label>
+                        <label>{t('registerPage.password.repeatName')}</label>
                         <input type="text" name="repeat-password" required/>
                         <div className="username-error"> error</div>
                     </div>
-                    <a href="/login" style={{marginTop:"-20px"}}>Login here.</a>
+                    <a href="/login" style={{marginTop:"-20px"}}>{t('registerPage.loginPageRedirect')}</a>
                     <div className="registration-submit-button">
-                        <input type="submit" value="Zarejestruj się"/>
+                        <input type="submit" value={t('registerPage.submit')}/>
                         <span className="registration-form-ribbon-wrap">
                         <span className="registration-form-ribbon"></span>
                         </span>

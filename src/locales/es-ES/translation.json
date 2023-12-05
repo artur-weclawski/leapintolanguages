@@ -1,140 +1,160 @@
 {
   "loginPage": {
-    "title" : "Acceso",
+    "title": "Inicio de sesión",
     "username": {
-      "name": "Nazwa użytkownika",
-      "tooltip": "Podaj swoją Nazwe użytkownika"
+      "name": "Nombre de usuario",
+      "tooltip": "Ingrese su nombre de usuario"
     },
     "password": {
-      "name": "Hasło",
-      "tooltip": "Podaj swoje hasło"
+      "name": "Contraseña",
+      "repeatName": "Repita la contraseña",
+      "tooltip": "Ingrese su contraseña"
     },
     "errors": {
-      "wrongData": "Błędne dane logowania",
-      "emptyData": "Pole nie może być puste"
+      "wrongData": "Datos de inicio de sesión incorrectos",
+      "emptyData": "El campo no puede estar vacío"
     },
-    "submit": "Zaloguj się",
-    "registerPageRedirect": "Nie masz konta?",
-    "registerPageLink": "Kliknij tutaj!"
+    "submit": "Iniciar sesión",
+    "registerPageRedirect": "Regístrese aquí."
   },
   "registerPage": {
-    "title" : "Rejestracja",
+    "title": "Registro",
     "email": {
-      "name": "Email",
-      "tooltip": "Podaj swój email"
+      "name": "Correo electrónico",
+      "tooltip": "Ingrese su correo electrónico"
     },
     "username": {
-      "name": "Nazwa użytkownika",
-      "tooltip": "Nazwa użytkownika musi zawierać 8-12 znaków"
+      "name": "Nombre de usuario",
+      "tooltip": "El nombre de usuario debe tener entre 8 y 12 caracteres"
     },
     "password": {
-      "name": "Hasło",
-      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny"
+      "name": "Contraseña",
+      "tooltip": "La contraseña debe tener al menos 8 caracteres, incluir 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial"
     },
     "errors": {
-      "usernameIsUsed": "Użytkownik o takej nazwie już istnieje",
-      "emailIsUsed": "Ten adres email jest już w użyciu",
-      "wrongUsername": "Ta nazwa użytkownika jest niepoprawna",
-      "wrongPassword": "To hasło jest niepoprawne",
-      "wrongEmail": "To nie jest prawdziwy email",
-      "emptyData": "Pole nie może być puste"
+      "usernameIsUsed": "Nombre de usuario ya existe",
+      "emailIsUsed": "Esta dirección de correo electrónico ya está en uso",
+      "wrongUsername": "Nombre de usuario no válido",
+      "wrongPassword": "Contraseña no válida",
+      "wrongEmail": "Esto no es un correo electrónico válido",
+      "emptyData": "El campo no puede estar vacío"
     },
-    "submit": "Zarejstruj się",
-    "loginPageRedirect": "Masz już konto?",
-    "loginPageLink": "Kliknij tutaj!"
+    "submit": "Registrarse",
+    "loginPageRedirect": "Iniciar sesión."
   },
   "accountPage": {
-    "Username": "Nazwa użytkownika",
-    "changePassword":{
-      "button": "Zmień hasło",
-      "oldPassword": "Stare hasło",
-      "newPassword": "Nowe hasło",
-      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny",
+    "email": "Correo electrónico:",
+    "userName": "Nombre de usuario:",
+    "changePassword": {
+      "button": "Cambiar contraseña",
+      "oldPassword": "Contraseña anterior",
+      "newPassword": "Nueva contraseña",
+      "tooltip": "La contraseña debe tener al menos 8 caracteres, incluir 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial",
       "errors": {
-        "emptyData": "Pole nie może być puste",
-        "wrongPassword": "To hasło jest niepoprawne",
-        "badOldPassword": "To nie jest twoje hasło"
+        "emptyData": "El campo no puede estar vacío",
+        "wrongPassword": "Contraseña no válida",
+        "badOldPassword": "Esta no es tu contraseña"
       },
-      "submit": "Zmień hasło"
+      "submit": "Cambiar contraseña"
     },
-    "deleteAccount":{
-      "button": "Usuń konto",
-      "title": "Czy na pewno chcesz usunąć konto?",
-      "submit": "Tak",
-      "cancel": "Nie"
+    "deleteAccount": {
+      "button": "Eliminar cuenta",
+      "title": "¿Estás seguro de que deseas eliminar tu cuenta?",
+      "submit": "Sí",
+      "cancel": "No"
     },
     "coursesProgress": {
-      "polishToEnglish": "Kurs angielskiego po polsku",
-      "polishToSpanish": "Kurs hiszpańskiego po polsku",
-      "englishToPolish": "Kurs polskiego po angielsku",
-      "spanishToPolish": "Kurs polskiego po hiszpańsku",
-      "beginner": "Początkujący",
-      "medium": "Średni",
-      "advanced": "Zaawansowany",
-      "images": "Obrazki",
-      "puzzle": "Układanki",
-      "tasks": "Zadania"
+      "polishToEnglish": "Curso de polaco a inglés",
+      "polishToSpanish": "Curso de polaco a español",
+      "englishToPolish": "Curso de inglés a polaco",
+      "spanishToPolish": "Curso de español a polaco",
+      "beginner": "Principiante",
+      "medium": "Intermedio",
+      "advanced": "Avanzado",
+      "images": "Imágenes",
+      "puzzle": "Rompecabezas",
+      "tasks": "Tareas"
     }
   },
   "coursePage": {
     "toolBar": {
-      "beginner": "Początkujący",
-      "medium": "Średni",
-      "advanced": "Zaawansowany",
-      "images": "Obrazki",
-      "puzzle": "Układanki",
-      "tasks": "Zadania"
+      "beginner": "Principiante",
+      "medium": "Intermedio",
+      "advanced": "Avanzado",
+      "images": "Imágenes",
+      "puzzle": "Rompecabezas",
+      "sentences": "Escuchar",
+      "radio": "Completar",
+      "tasks": "Tareas",
+      "reset": "Reiniciar",
+      "uporzadkuj": "Pon las palabras en el orden correcto.",
+      "przejdzDalej": "Ir más lejos",
+      "nazwijObiekt": "Nombra el objeto en la imagen."
+
     },
     "images": {
-      "task": ""
+      "task": "",
+      "imagesInfo": "Nombrar el objeto en la imagen."
     },
     "puzzle": {
-      "task": "Uporzątkuj słowa w odpowiedniej kolejności"
+      "task": "Organizar palabras en el orden correcto",
+      "puzzleInfo": "Organizar palabras en el orden correcto."
     },
     "tasks": {
       "task": ""
     },
-    "submit": "Pzejdź dalej"
+    "listen": {
+      "listenInfo": "Escribe la frase que escuchas."
+    },
+    "radio": {
+      "radioChoose": "Elegir la respuesta correcta"
+    },
+    "submit": "Continuar"
   },
   "knowledgeBasePage": {
-    "title": "Baza wiedzy",
+    "title": "Base de conocimientos",
     "polish": {
-      "title": "Polski"
+      "title": "Polaco"
     },
     "english": {
-      "title": "Angielski"
+      "title": "Inglés"
     },
     "spanish": {
-      "title": "Hiszpański"
+      "title": "Español"
     }
   },
   "reportBug": {
-    "title": "Zgłoś błąd",
-    "subject": "Temat",
-    "content": "Opisz problem",
-    "submit": "Prześlij zgłoszenie"
+    "title": "Informar un error",
+    "subject": "Asunto",
+    "content": "Describe el problema",
+    "submit": "Enviar informe"
   },
   "accessibility": {
-    "title": "Dostępności",
-    "fontSize": "Rozmiar tekstu",
-    "contrast": "Kontrast",
+    "title": "Accesibilidad",
+    "fontSize": "Tamaño de texto",
+    "contrast": "Contraste",
     "sizes": {
-      "small": "Mały",
-      "medium": "Średni",
-      "big": "Duży"
+      "small": "Pequeño",
+      "medium": "Mediano",
+      "big": "Grande"
     }
   },
   "Navbar": {
-    "account": "Konto",
-    "courses": "Kursy",
-    "knowledgeBase": "Baza wiedzy",
-    "login": "Zaloguj się",
-    "register": "Zarejestruj się",
-    "logout": "Wyloguj się",
+    "account": "Cuenta",
+    "courses": "Cursos",
+    "knowledgeBase": "Base de conocimientos",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
     "localization": {
-      "polish": "Polski",
-      "english": "Angielski",
-      "spanish": "Hiszpański"
-    }
+      "polish": "Polaco",
+      "english": "Inglés",
+      "spanish": "Español"
+    },
+    "chooseLanguage": "Elige lengua"
+
+  },
+  "errorPage": {
+    "message": "¡Manos arriba y estamos de vuelta!"
   }
 }

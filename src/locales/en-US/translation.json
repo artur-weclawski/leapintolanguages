@@ -1,140 +1,160 @@
 {
   "loginPage": {
-    "title" : "Login",
+    "title": "Login",
     "username": {
-      "name": "Nazwa użytkownika",
-      "tooltip": "Podaj swoją Nazwe użytkownika"
+      "name": "Username",
+      "tooltip": "Enter your username"
     },
     "password": {
-      "name": "Hasło",
-      "tooltip": "Podaj swoje hasło"
+      "name": "Password",
+      "tooltip": "Enter your password"
     },
     "errors": {
-      "wrongData": "Błędne dane logowania",
-      "emptyData": "Pole nie może być puste"
+      "wrongData": "Incorrect login data",
+      "emptyData": "Field cannot be empty"
     },
-    "submit": "Zaloguj się",
-    "registerPageRedirect": "Nie masz konta?",
-    "registerPageLink": "Kliknij tutaj!"
+    "submit": "Log in",
+    "registerPageRedirect": "Register here."
   },
   "registerPage": {
-    "title" : "Rejestracja",
+    "title": "Registration",
     "email": {
       "name": "Email",
-      "tooltip": "Podaj swój email"
+      "tooltip": "Enter your email"
     },
     "username": {
-      "name": "Nazwa użytkownika",
-      "tooltip": "Nazwa użytkownika musi zawierać 8-12 znaków"
+      "name": "Username",
+      "tooltip": "Username must be 8-12 characters"
     },
     "password": {
-      "name": "Hasło",
-      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny"
+      "name": "Password",
+      "repeatName": "Repeat password",
+      "tooltip": "Password must be at least 8 characters long, include 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character"
     },
     "errors": {
-      "usernameIsUsed": "Użytkownik o takej nazwie już istnieje",
-      "emailIsUsed": "Ten adres email jest już w użyciu",
-      "wrongUsername": "Ta nazwa użytkownika jest niepoprawna",
-      "wrongPassword": "To hasło jest niepoprawne",
-      "wrongEmail": "To nie jest prawdziwy email",
-      "emptyData": "Pole nie może być puste"
+      "usernameIsUsed": "Username already exists",
+      "emailIsUsed": "This email address is already in use",
+      "wrongUsername": "Invalid username",
+      "wrongPassword": "Invalid password",
+      "wrongEmail": "Not a valid email",
+      "emptyData": "Field cannot be empty"
     },
-    "submit": "Zarejstruj się",
-    "loginPageRedirect": "Masz już konto?",
-    "loginPageLink": "Kliknij tutaj!"
+    "submit": "Register",
+    "loginPageRedirect": "Log in."
   },
   "accountPage": {
-    "Username": "Nazwa użytkownika",
-    "changePassword":{
-      "button": "Zmień hasło",
-      "oldPassword": "Stare hasło",
-      "newPassword": "Nowe hasło",
-      "tooltip": "Hasło musi zawierać przynajmniej 8 znaków, 1 dużą literę, 1 małą literę, 1 liczbę oraz 1 znak specjalny",
+    "email": "Email:",
+    "userName": "Username:",
+    "changePassword": {
+      "button": "Change Password",
+      "oldPassword": "Old Password",
+      "newPassword": "New Password",
+      "tooltip": "Password must be at least 8 characters long, include 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character",
       "errors": {
-        "emptyData": "Pole nie może być puste",
-        "wrongPassword": "To hasło jest niepoprawne",
-        "badOldPassword": "To nie jest twoje hasło"
+        "emptyData": "Field cannot be empty",
+        "wrongPassword": "Invalid password",
+        "badOldPassword": "This is not your password"
       },
-      "submit": "Zmień hasło"
+      "submit": "Change Password"
     },
-    "deleteAccount":{
-      "button": "Usuń konto",
-      "title": "Czy na pewno chcesz usunąć konto?",
-      "submit": "Tak",
-      "cancel": "Nie"
+    "deleteAccount": {
+      "button": "Delete Account",
+      "title": "Are you sure you want to delete your account?",
+      "submit": "Yes",
+      "cancel": "No"
     },
     "coursesProgress": {
-      "polishToEnglish": "Kurs angielskiego po polsku",
-      "polishToSpanish": "Kurs hiszpańskiego po polsku",
-      "englishToPolish": "Kurs polskiego po angielsku",
-      "spanishToPolish": "Kurs polskiego po hiszpańsku",
-      "beginner": "Początkujący",
-      "medium": "Średni",
-      "advanced": "Zaawansowany",
-      "images": "Obrazki",
-      "puzzle": "Układanki",
-      "tasks": "Zadania"
+      "polishToEnglish": "Polish to English Course",
+      "polishToSpanish": "Polish to Spanish Course",
+      "englishToPolish": "English to Polish Course",
+      "spanishToPolish": "Spanish to Polish Course",
+      "beginner": "Beginner",
+      "medium": "Intermediate",
+      "advanced": "Advanced",
+      "images": "Images",
+      "puzzle": "Puzzles",
+      "tasks": "Tasks"
     }
   },
   "coursePage": {
     "toolBar": {
-      "beginner": "Początkujący",
-      "medium": "Średni",
-      "advanced": "Zaawansowany",
-      "images": "Obrazki",
-      "puzzle": "Układanki",
-      "tasks": "Zadania"
+      "beginner": "Beginner",
+      "medium": "Intermediate",
+      "advanced": "Advanced",
+      "images": "Images",
+      "puzzle": "Puzzles",
+      "sentences": "Listening",
+      "radio": "Completion",
+      "tasks": "Tasks",
+      "reset": "Reset",
+      "uporzadkuj": "Put the words in the correct order.",
+      "przejdzDalej": "Go next",
+      "nazwijObiekt": "Name the object in the picture."
+
     },
     "images": {
-      "task": ""
+      "task": "",
+      "imagesInfo": "Name the object in the picture."
     },
     "puzzle": {
-      "task": "Uporzątkuj słowa w odpowiedniej kolejności"
+      "task": "Arrange words in the correct order",
+      "puzzleInfo": "Arrange words in the correct order."
     },
     "tasks": {
       "task": ""
     },
-    "submit": "Pzejdź dalej"
+    "listen": {
+      "listenInfo": "Write the sentence you hear."
+    },
+    "radio": {
+      "radioChoose": "Choose the correct answer"
+    },
+    "submit": "Continue"
   },
   "knowledgeBasePage": {
-    "title": "Baza wiedzy",
+    "title": "Knowledge Base",
     "polish": {
-      "title": "Polski"
+      "title": "Polish"
     },
     "english": {
-      "title": "Angielski"
+      "title": "English"
     },
     "spanish": {
-      "title": "Hiszpański"
+      "title": "Spanish"
     }
   },
   "reportBug": {
-    "title": "Zgłoś błąd",
-    "subject": "Temat",
-    "content": "Opisz problem",
-    "submit": "Prześlij zgłoszenie"
+    "title": "Report Bug",
+    "subject": "Subject",
+    "content": "Describe the problem",
+    "submit": "Submit report"
   },
   "accessibility": {
-    "title": "Dostępności",
-    "fontSize": "Rozmiar tekstu",
-    "contrast": "Kontrast",
+    "title": "Accessibility",
+    "fontSize": "Text Size",
+    "contrast": "Contrast",
     "sizes": {
-      "small": "Mały",
-      "medium": "Średni",
-      "big": "Duży"
+      "small": "Small",
+      "medium": "Medium",
+      "big": "Large"
     }
   },
   "Navbar": {
-    "account": "Konto",
-    "courses": "Kursy",
-    "knowledgeBase": "Baza wiedzy",
-    "login": "Zaloguj się",
-    "register": "Zarejestruj się",
-    "logout": "Wyloguj się",
+    "account": "Account",
+    "courses": "Courses",
+    "knowledgeBase": "Knowledge Base",
+    "login": "Log in",
+    "register": "Register",
+    "logout": "Log out",
     "localization": {
-      "polish": "Polski",
-      "english": "Angielski",
-      "spanish": "Hiszpański"
-    }
+      "polish": "Polish",
+      "english": "English",
+      "spanish": "Spanish"
+    },
+    "chooseLanguage": "Choose language"
+
+  },
+  "errorPage": {
+    "message": "Hands up, and we're back."
   }
 }

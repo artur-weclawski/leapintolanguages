@@ -8,13 +8,13 @@ function MobileCourseDifficultyWindow(){
             <div className="mobile-section">
                 <div className="course-difficulty-content">
                     <span className="easy-btn-wrap">
-                            <button className="easy-btn">Łatwy</button>
+                            <button className="easy-btn">{t('coursePage.toolBar.beginner')}</button>
                         </span>
                     <span className="medium-btn-wrap">
-                            <button className="medium-btn">Średni</button>
+                            <button className="medium-btn">{t('coursePage.toolBar.medium')}</button>
                         </span>
                     <span className="easy-btn-wrap">
-                            <button className="easy-btn">Zaawansowany</button>
+                            <button className="easy-btn">{t('coursePage.toolBar.advanced')}</button>
                         </span>
                 </div>
             </div>

@@ -12,25 +12,25 @@ function KnowledgeBaseWindow (){
                 <span className="left-contents-wrap">
                 <div className="left-contents">
                     <ul className="left-contents-ul">
-                        <li><a href="#Polski">Polski</a>
+                        <li><a href="#Polski">{t('knowledgeBasePage.polish.title')}</a>
                         <ul>
-                            <li><a href="#Polski-Pierwsze">Pierwsze</a></li>
-                            <li><a href="#Polski-Drugie">Drugie</a></li>
-                            <li><a href="#Polski-Trzecie">Trzecie</a></li>
+                            <li><a href="#Polski-Pierwsze">I</a></li>
+                            <li><a href="#Polski-Drugie">II</a></li>
+                            <li><a href="#Polski-Trzecie">III</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Angielski">Angielski</a>
+                        <li><a href="#Angielski">{t('knowledgeBasePage.english.title')}</a>
                         <ul>
-                            <li><a href="#Angielski-Pierwsze">First</a></li>
-                            <li><a href="#Angielski-Drugie">Second</a></li>
-                            <li><a href="#Angielski-Trzecie">Third</a></li>
+                            <li><a href="#Angielski-Pierwsze">I</a></li>
+                            <li><a href="#Angielski-Drugie">II</a></li>
+                            <li><a href="#Angielski-Trzecie">III</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Hiszpanski">Hiszpański</a>
+                        <li><a href="#Hiszpanski">{t('knowledgeBasePage.spanish.title')}</a>
                         <ul>
-                            <li><a href="#Hiszpanski-Pierwsze">Primo</a></li>
-                            <li><a href="#Hiszpanski-Drugie">Drugie Primo</a></li>
-                            <li><a href="#Hiszpanski-Trzecie">Trzecie Primo</a></li>
+                            <li><a href="#Hiszpanski-Pierwsze">I</a></li>
+                            <li><a href="#Hiszpanski-Drugie">II</a></li>
+                            <li><a href="#Hiszpanski-Trzecie">III</a></li>
                         </ul>
                         </li>
                     </ul>
@@ -40,7 +40,7 @@ function KnowledgeBaseWindow (){
 
             <div className="right-section">
                 <div className="right-section-content">
-                    <div id="Polski">Polski</div>
+                    <div id="Polski">{t('knowledgeBasePage.polish.title')}</div>
                     <div id="Polski-Pierwsze">
                         {knowledge_content}
                     </div>
@@ -50,7 +50,7 @@ function KnowledgeBaseWindow (){
                     <div id="Polski-Trzecie">
                         {knowledge_content}
                     </div>
-                    <div id="Angielski">Angielski</div>
+                    <div id="Angielski">{t('knowledgeBasePage.english.title')}</div>
                     <div id="Angielski-Pierwsze">
                         {knowledge_content}
                     </div>
@@ -60,7 +60,7 @@ function KnowledgeBaseWindow (){
                     <div id="Angielski-Trzecie">
                         {knowledge_content}
                     </div>
-                    <div id="Hiszpanski">Hiszpański</div>
+                    <div id="Hiszpanski">{t('knowledgeBasePage.spanish.title')}</div>
                     <div id="Hiszpanski-Pierwsze">
                         {knowledge_content}
                     </div>

@@ -1,7 +1,9 @@
 import "./Accesibilities.css"
 import ReactDOM from "react-dom";
 import {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
 const openAccesibilities = () =>{
+
     let element = document.getElementsByClassName('accesibilities-window')
     console.log(element)
     if(ReactDOM.findDOMNode(element[1]).style.visibility === "hidden"){
@@ -14,6 +16,8 @@ const openAccesibilities = () =>{
 }
 
 function Accesibilities() {
+    const {t, i18n} = useTranslation();
+
     const changeThemeToNormal=() =>{
         document.documentElement.style.setProperty('--page_color','#ffffff')
         document.documentElement.style.setProperty('--page_background', 'url("https://www.transparenttextures.com/patterns/cream-paper.png")');
@@ -124,24 +128,24 @@ function Accesibilities() {
     return (
         <div>
             <div className="accesibilities-window accesibilities-window">
-                <div className="accesibilities-window-typ">Rozmiar tekstu</div>
+                <div className="accesibilities-window-typ">{t('accesibility.sizes.fontSize')}</div>
                 <div className="accesibilities-window-text-size">
 
                     <div className="accesibilities-windows-text-small">
 
                     <input type="radio" id="small" value="small" name="text" className="radio" checked={textSize === 'small'} onChange={handleChangeText}/>
-                    <label> Small </label>
+                    <label> {t('accesibility.sizes.small')} </label>
                     </div>
                     <div className="accesibilities-windows-text-medium">
                         <input type="radio" id="normal" value="normal" name="text" className="radio" checked={textSize === 'normal'} onChange={handleChangeText}/>
-                        <label> Medium </label>
+                        <label> {t('accesibility.sizes.medium')} </label>
                     </div>
                     <div className="accesibilities-windows-text-big">
                         <input type="radio" id="big" value="big" name="text" className="radio" checked={textSize === 'big'} onChange={handleChangeText}/>
-                        <label > Big </label>
+                        <label > {t('accesibility.sizes.big')} </label>
                     </div>
                 </div>
-                <div className="accesibilities-window-kontrast">Kontrast</div>
+                <div className="accesibilities-window-kontrast">{t('accesibility.sizes.contrast')}</div>
                 <div className="accesibilities-window-contrast">
                     <div className="accesibilities-windows-contrast-normal">
                         <input type="radio" id="normal" value="normal" name="contrast" className="radio" checked={theme === 'normal'} onChange={handleChangeTheme}/>
@@ -159,7 +163,7 @@ function Accesibilities() {
             </div>
             <span className="accesibilities-wrap">
                 <div className="accesibilities">
-                <button onClick={openAccesibilities} className="accesibilities-btn" value="Dostępności">Dostępności</button>
+                <button onClick={openAccesibilities} className="accesibilities-btn" value="Dostępności">{t('accesibility.title')}</button>
                 </div>
             </span>
         </div>

@@ -30,9 +30,9 @@ function LoginWindow({token, setToken, user, setUser}){
                         <input type="text" name="password" required/>
                         <div className="username-error">{error.visible ? t(error.message) : ""}</div>
                     </div>
-                    <a href="/register">Register here.</a>
+                    <a href="/register">{t('loginPage.registerPageRedirect')}</a>
                     <div className="login-submit-button">
-                        <input type="submit" value="Zaloguj się"/>
+                        <input type="submit" value={t('loginPage.submit')}/>
                         <span className="login-form-ribbon-wrap">
                         <span className="login-form-ribbon"></span>
                         </span>

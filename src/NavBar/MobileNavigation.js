@@ -23,60 +23,60 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
             <div className="dropdown-content">
                 <h2 style={{color: 'white'}}>{routeName}</h2>
                     <div className="course-progress-beginner">
-                        <h2 style={{marginTop: '-50px'}}>Początkujacy</h2>
+                        <h2 style={{marginTop: '-50px'}}>{t('coursePage.toolBar.beginner')}</h2>
                         <div className="progresses">
                             <div className="progress-images">
-                                <h4>Obrazki</h4>
+                                <h4>{t('coursePage.toolBar.images')}</h4>
                                 <div className="beginner-progress-images"><div
                                     className="beginner-progress-images-bar"></div></div>
                             </div>
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="beginner-progress-radio"><div
                                     className="beginner-progress-radio-bar"></div></div>
                             </div>
                         </div>
                     </div>
                     <div className="course-progress-medium">
-                        <h2>Średni</h2>
+                        <h2>{t('coursePage.toolBar.medium')}</h2>
                         <div className="progresses">
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="medium-progress-radio"><div
                                     className="medium-progress-radio-bar"></div></div>
                             </div>
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="medium-progress-puzzle"><div
                                     className="medium-progress-puzzle-bar"></div></div>
                             </div>
                         </div>
                     </div>
                     <div className="course-progress-advanced">
-                        <h2>Zaawansowany</h2>
+                        <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="advanced-progress-puzzle"><div
                                     className="advanced-progress-puzzle-bar"></div></div>
                             </div>
                             <div className="progress-sentences">
-                                <h4>Słuchanie</h4>
+                                <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div
                                     className="advanced-progress-sentences-bar"></div></div>
                             </div>
                         </div>
                     </div>
-                <h2 style={{color:'white'}}> Wybór języka </h2>
+                <h2 style={{color:'white'}}> {t('Navabar.chooseLanguage')} </h2>
                     <span style={{display:'flex', borderBottom:'2px solid white', marginTop:'-15px'}}>
-                <a onClick={() => {handleSetLanguage('pl')}}> Polski </a>
-                <a onClick={() => {handleSetLanguage('en')}}> Angielski </a>
-                <a onClick={() => {handleSetLanguage('es')}}> Hiszpański </a>
+                <a onClick={() => {handleSetLanguage('pl')}}> {t('Navabar.localization.polish')} </a>
+                <a onClick={() => {handleSetLanguage('en')}}> {t('Navabar.localization.english')} </a>
+                <a onClick={() => {handleSetLanguage('es')}}> {t('Navabar.localization.spanish')} </a>
                     </span>
                 <a> Konto </a>
                 <a> Kursy </a>
                 <a> Baza wiedzy </a>
-                <a style={{marginBottom:'50px'}}> Wyloguj się </a>
+                <a style={{marginBottom:'50px'}}> {t('Navabar.logout')} </a>
             </div>
             </span>
                 </div>
@@ -96,39 +96,39 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <h2 style={{color: 'white'}}>{routeName}</h2>
                     <div className="left-contents">
                     <ul className="left-contents-ul">
-                        <li><a href="#Polskim" style={{marginTop:'-20px'}}>Polski</a>
+                        <li><a href="#Polskim" style={{marginTop:'-20px'}}>{t('knowledgeBasePage.polish.title')}</a>
                         <ul>
-                            <li><a href="#Polski-Pierwszem">Pierwsze</a></li>
-                            <li><a href="#Polski-Drugiem">Drugie</a></li>
-                            <li><a href="#Polski-Trzeciem">Trzecie</a></li>
+                            <li><a href="#Polski-Pierwszem">I</a></li>
+                            <li><a href="#Polski-Drugiem">II</a></li>
+                            <li><a href="#Polski-Trzeciem">III</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Angielskim">Angielski</a>
+                        <li><a href="#Angielskim">{t('knowledgeBasePage.english.title')}</a>
                         <ul>
-                            <li><a href="#Angielski-Pierwszem">First</a></li>
-                            <li><a href="#Angielski-Drugiem">Second</a></li>
-                            <li><a href="#Angielski-Trzeciem">Third</a></li>
+                            <li><a href="#Angielski-Pierwszem">I</a></li>
+                            <li><a href="#Angielski-Drugiem">II</a></li>
+                            <li><a href="#Angielski-Trzeciem">III</a></li>
                         </ul>
                         </li>
-                        <li><a href="#Hiszpanskim">Hiszpański</a>
+                        <li><a href="#Hiszpanskim">{t('knowledgeBasePage.spanish.title')}</a>
                         <ul>
-                            <li><a href="#Hiszpanski-Pierwszem">Primo</a></li>
-                            <li><a href="#Hiszpanski-Drugiem">Drugie Primo</a></li>
-                            <li><a href="#Hiszpanski-Trzeciem">Trzecie Primo</a></li>
+                            <li><a href="#Hiszpanski-Pierwszem">I</a></li>
+                            <li><a href="#Hiszpanski-Drugiem">II</a></li>
+                            <li><a href="#Hiszpanski-Trzeciem">III</a></li>
                         </ul>
                         </li>
                     </ul>
                 </div>
-                <h2 style={{color:'white'}}> Wybór języka </h2>
+                <h2 style={{color:'white'}}> {t('NavBar.chooseLanguage')} </h2>
                     <span style={{display:'flex', borderBottom:'2px solid white', marginTop:'-15px'}}>
-                <a onClick={() => {handleSetLanguage('pl')}}> Polski </a>
-                <a onClick={() => {handleSetLanguage('en')}}> Angielski </a>
-                <a onClick={() => {handleSetLanguage('es')}}> Hiszpański </a>
+                <a onClick={() => {handleSetLanguage('pl')}}> {t('knowledgeBasePage.polish.title')} </a>
+                <a onClick={() => {handleSetLanguage('en')}}> {t('knowledgeBasePage.english.title')} </a>
+                <a onClick={() => {handleSetLanguage('es')}}> {t('knowledgeBasePage.spanish.title')} </a>
                     </span>
-                <Link to="/account"> Konto </Link>
-                <Link to="/choosecourse"> Kursy </Link>
-                <Link to="/knowledgeBase"> Baza wiedzy</Link>
-                <a style={{marginBottom:'50px'}}> Wyloguj się </a>
+                <Link to="/account"> {t('NavBar.account')} </Link>
+                <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
+                <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
+                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>
@@ -145,18 +145,19 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
             </span>
                     <span className="dropdown-content-wrap">
             <div className="dropdown-content">
+                <div className="account-name">Peepo</div>
                 <h2 style={{color: 'white'}}>{routeName}</h2>
 
-                <h2 style={{color:'white'}}> Wybór języka </h2>
+                <h2 style={{color:'white'}}> {t('NavBar.chooseLanguage')} </h2>
                     <span style={{display:'flex', borderBottom:'2px solid white', marginTop:'-15px'}}>
-                        <a onClick={() => {handleSetLanguage('pl')}}> Polski </a>
-                        <a onClick={() => {handleSetLanguage('en')}}> Angielski </a>
-                        <a onClick={() => {handleSetLanguage('es')}}> Hiszpański </a>
+                        <a onClick={() => {handleSetLanguage('pl')}}> {t('NavBar.localization.polish')} </a>
+                        <a onClick={() => {handleSetLanguage('en')}}> {t('NavBar.localization.english')} </a>
+                        <a onClick={() => {handleSetLanguage('es')}}> {t('NavBar.localization.spanish')} </a>
                     </span>
-                <Link to="/account"> Konto </Link>
-                <Link to="/choosecourse"> Kursy </Link>
-                <Link to="/knowledgeBase"> Baza wiedzy</Link>
-                <a style={{marginBottom:'50px'}}> Wyloguj się </a>
+                <Link to="/account"> {t('NavBar.account')} </Link>
+                <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
+                <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
+                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>

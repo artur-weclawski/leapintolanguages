@@ -17,21 +17,21 @@ function CourseDifficultyWindow({handleSetDifficulty}){
                             <button className="easy-btn"
                                     onClick={() => {handleSetDifficulty('easy')}}
                             >
-                                Łatwy
+                                {t('coursePage.toolBar.beginner')}
                             </button>
                         </span>
                     <span className="medium-btn-wrap">
                             <button className="medium-btn"
                                     onClick={() => {handleSetDifficulty('medium')}}
                             >
-                                Średni
+                                {t('coursePage.toolBar.medium')}
                             </button>
                         </span>
                     <span className="easy-btn-wrap">
                             <button className="easy-btn"
                                     onClick={() => {handleSetDifficulty('hard')}}
                             >
-                                Zaawansowany
+                                {t('coursePage.toolBar.advanced')}
                             </button>
                         </span>
                 </div>

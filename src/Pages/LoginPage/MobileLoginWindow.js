@@ -16,17 +16,17 @@ function MobileLoginWindow({token, setToken, user, setUser}){
                     <form onSubmit={handleLogin}>
                         <h1>{t('loginPage.title')}</h1>
                         <div className="login-input">
-                            <label>Username</label>
+                            <label>{t('loginPage.username.name')}</label>
                             <input type="text" name="username" required/>
                         </div>
                         <div className="login-input">
-                            <label>Password</label>
+                            <label>{t('loginPage.password.name')}</label>
                             <input type="text" name="password" required/>
                             <div className="username-error">{error.visible ? error.message : ""}</div>
                         </div>
-                        <a href="/register">Register here.</a>
+                        <a href="/register">{t('loginPage.registerPageRedirect')}</a>
                         <div className="login-submit-button">
-                            <input type="submit" value="Zaloguj się"/>
+                            <input type="submit" value={t('loginPage.submit')}/>
                             <span className="login-form-ribbon-wrap">
                         <span className="login-form-ribbon"></span>
                         </span>

@@ -67,7 +67,7 @@ function MobileCourseWindow(){
                 <div className="puzzle-and-info">
                     {generatePuzzle("Ala ma kota kurewsko dużego kota.")}
                     <div className="info">
-                        <h2>Uporządkuj słowa w odpowiedniej kolejności.</h2>
+                        <h2>{t('coursePage.toolBar.uporzadkuj')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -78,7 +78,7 @@ function MobileCourseWindow(){
                         </div>
                         <input type="hidden" name="puzzleAnswer" value={puzzleAnswer.trim()}/>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -97,7 +97,7 @@ function MobileCourseWindow(){
                 <div className="image-and-info">
                     <img src={fridge_img} title="fridge" alt="fridge" className="image"/>
                     <div className="info">
-                        <h2>Nazwij obiekt znajdujący się na obrazku po angielsku.</h2>
+                        <h2>{t('coursePage.toolBar.nazwijObrazek')}</h2>
                         <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
                         <div className="username-error">error</div>
                     </div>
@@ -106,10 +106,10 @@ function MobileCourseWindow(){
                 <span className="image-content-form-btn-wrap">
                     <form className="image-content-form">
                         <div className="image-content-input">
-                            <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
+                            <input type="text" name="answer" placeholder={t('coursePage.radio.radioChoose')} required/>
                         </div>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -127,7 +127,7 @@ function MobileCourseWindow(){
                 <div className="listen-and-info">
                     <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
                     <div className="info">
-                        <h2>Napisz usłyszane zdanie po angielsku.</h2>
+                        <h2>{t('coursePage.listen.listenInfo')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -135,10 +135,10 @@ function MobileCourseWindow(){
                 <span className="image-content-form-btn-wrap">
                     <form className="image-content-form">
                         <div className="image-content-input">
-                            <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
+                            <input type="text" name="answer" placeholder={t('coursePage.radio.radioChoose')} required/>
                         </div>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -192,7 +192,7 @@ function MobileCourseWindow(){
                         </div>
                     </div>
                     <div className="info">
-                        <h2>Wybierz właściwą odpowiedź</h2>
+                        <h2>{t('coursePage.radio.radioInfo')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -203,7 +203,7 @@ function MobileCourseWindow(){
                         </div>
                         <input type="hidden" name="selectedRadio" value={selectedRadio}/>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>

@@ -9,7 +9,7 @@ function  MobileKnowledgeBaseWindow (){
         <div className="mobile-knowledge-base-window">
             <div className='mobile-section'>
                 <div className="right-section-content">
-                    <div id="Polskim">Polski</div>
+                    <div id="Polskim">{t('knowledgeBasePage.polish.title')}</div>
                     <div id="Polski-Pierwszem">
                         {knowledge_content}
                     </div>
@@ -19,7 +19,7 @@ function  MobileKnowledgeBaseWindow (){
                     <div id="Polski-Trzeciem">
                         {knowledge_content}
                     </div>
-                    <div id="Angielskim">Angielski</div>
+                    <div id="Angielskim">{t('knowledgeBasePage.english.title')}</div>
                     <div id="Angielski-Pierwszem">
                         {knowledge_content}
                     </div>
@@ -29,7 +29,7 @@ function  MobileKnowledgeBaseWindow (){
                     <div id="Angielski-Trzeciem">
                         {knowledge_content}
                     </div>
-                    <div id="Hiszpanskim">Hiszpański</div>
+                    <div id="Hiszpanskim">{t('knowledgeBasePage.spanish.title')}</div>
                     <div id="Hiszpanski-Pierwszem">
                         {knowledge_content}
                     </div>

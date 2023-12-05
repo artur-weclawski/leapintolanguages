@@ -58,24 +58,24 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                     <div className="account-content-left">
                         <div className="account-content-userinfo">
                             <div className="email-info">
-                                <h1>Email:</h1>
+                                <h1>{t('accountPage.email')}</h1>
                                 <h2>{user.username}</h2>
                             </div>
                             <div className="username-info">
-                                <h1>Username:</h1>
+                                <h1>{t('accountPage.userName')}</h1>
                                 <h2>{user.username}</h2>
                             </div>
                         </div>
                         <span className="account-content-edit-password-wrap">
                     <div className="account-content-edit-password">
                         <button className="account-content-edit-password-btn"
-                                onClick={openEditForm}>Zmień hasło</button>
+                                onClick={openEditForm}>{t('accountPage.changePassword.button')}</button>
                     </div>
                             </span>
                         <span className="account-content-delete-account-wrap">
                     <div className="account-content-delete-account">
                         <button className="account-content-delete-account-btn"
-                                onClick={openDeleteForm}>Usuń konto</button>
+                                onClick={openDeleteForm}>{t('accountPage.deleteAccount.button')}</button>
                     </div>
                         </span>
                     </div>
@@ -85,45 +85,45 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                         <div className="account-content-right-progress">
                             <h1>{courseName}</h1>
                             <div className="account-content-right-progress-beginner">
-                            <h2>Początkujacy</h2>
+                            <h2>{t('accountPage.coursesProgress.beginner')}</h2>
                         <div className="progresses">
                             <div className="progress-images">
-                                <h4>Obrazki</h4>
+                                <h4>{t('accountPage.coursesProgress.images')}</h4>
                                 <div className="beginner-progress-images"><div
                                     className="beginner-progress-images-bar"></div></div>
                             </div>
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.radio')}</h4>
                                 <div className="beginner-progress-radio"><div
                                     className="beginner-progress-radio-bar"></div></div>
                             </div>
                         </div>
                             </div>
                             <div className="account-content-right-progress-medium">
-                            <h2>Średni</h2>
+                            <h2>{t('coursePage.medium')}</h2>
                         <div className="progresses">
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.radio')}</h4>
                                 <div className="medium-progress-radio"><div
                                     className="medium-progress-radio-bar"></div></div>
                             </div>
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.puzzle')}</h4>
                                 <div className="medium-progress-puzzle"><div
                                     className="medium-progress-puzzle-bar"></div></div>
                             </div>
                         </div>
                             </div>
                             <div className="account-content-right-progress-advanced">
-                            <h2>Zaawansowany</h2>
+                            <h2>{t('coursePage.advanced')}</h2>
                         <div className="progresses">
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.puzzle')}</h4>
                                 <div className="advanced-progress-puzzle"><div
                                     className="advanced-progress-puzzle-bar"></div></div>
                             </div>
                             <div className="progress-sentences">
-                                <h4>Słuchanie</h4>
+                                <h4>{t('coursePage.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div
                                     className="advanced-progress-sentences-bar"></div></div>
                             </div>
@@ -132,43 +132,43 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                         </div>
                                 <div className="account-content-right-progress-buttons">
                                 <button className="progress-btn-ang-pol"
-                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>Kurs angielskiego po polsku</button>
+                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
                                 <button className="progress-btn-pol-ang"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.")}>Kurs polskiego po angielsku</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
                                 <button className="progress-btn-spn-pol"
-                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.")}>Kurs hiszpańskiego po polsku</button>
+                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
                                 <button className="progress-btn-pol-spn"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.")}>Kurs polskiego po hiszpansku</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
                                 </div>
                             </span>
                         <div className="edit-password-form">
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
                             <form>
                                 <div className="edit-password-form-input">
-                                    <label>Stare hasło</label>
+                                    <label>{t('accountPage.changePassword.oldPassword')}</label>
                                     <input type="text" id="old-password-input" name="old-password" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-input">
-                                    <label>Nowe hasło</label>
+                                    <label>{t('accountPage.changePassword.newPassowrd')}</label>
                                     <input type="text" id="new-password-input" name="new-password" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-submit-button">
-                                    <input type="submit" value="Zmień hasło"/>
+                                    <input type="submit" value={t('accountPage.changePassword.button')}/>
                                 </div>
                             </form>
                         </div>
                         <div className="approve-delete-form">
-                            <h1>Czy na pewno chcesz usunąć konto?</h1>
+                            <h1>{t('accountPage.deleteAccount.title')}</h1>
                             <span className="approve-delete-form-no-wrap">
                     <div className="approve-delete-form-no">
-                        <button className="approve-delete-form-no-btn" onClick={openDeleteForm}>Nie</button>
+                        <button className="approve-delete-form-no-btn" onClick={openDeleteForm}>{t('accountPage.deleteAccount.cancel')}</button>
                     </div>
                         </span>
                             <span className="approve-delete-form-yes-wrap">
                     <div className="approve-delete-form-yes">
-                        <button className="approve-delete-form-yes-btn">Tak</button>
+                        <button className="approve-delete-form-yes-btn">{t('accountPage.deleteAccount.submit')}</button>
                     </div>
                         </span>
                         </div>

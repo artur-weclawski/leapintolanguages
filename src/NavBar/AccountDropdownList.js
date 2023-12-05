@@ -12,10 +12,10 @@ function AccountDropdownList(){
             </span>
             <span className="dropdown-content-wrap">
             <div className="dropdown-content dropdown-content-account">
-                <Link to="/account"> Konto </Link>
-                <Link to="/choosecourse"> Kursy </Link>
-                <Link to="/knowledgeBase"> Baza wiedzy</Link>
-                <a> Wyloguj się </a>
+                <Link to="/account"> {t('NavBar.account')} </Link>
+                <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
+                <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
+                <a> {t('NavBar.logout')} </a>
             </div>
             </span>
         </div>

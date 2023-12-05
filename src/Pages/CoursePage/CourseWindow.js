@@ -59,7 +59,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                       <button className='puzzle-button' key={index} name={word} value={word} onClick={() => handlePuzzleButton(word)}>{word}</button>)
                     })}
                     </div>
-                    <button className='puzzle-reset-button' onClick={handleResetButton}>Reset</button>
+                    <button className='puzzle-reset-button' onClick={handleResetButton}>{t('coursePage.toolBar.reset')}</button>
                     <input className='puzzle-answer' value={puzzleAnswer} disabled/>
                 </div>
             )
@@ -69,7 +69,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <div className="puzzle-and-info">
                     {generatePuzzle("Ala ma kota kurewsko dużego kota.")}
                     <div className="info">
-                        <h2>Uporządkuj słowa w odpowiedniej kolejności.</h2>
+                        <h2>{t('coursePage.toolBar.uporzadkuj')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -80,7 +80,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                         </div>
                         <input type="hidden" name="puzzleAnswer" value={puzzleAnswer.trim()}/>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -99,7 +99,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <div className="image-and-info">
                     <img src={currentTask.pictureUrl} title={currentTask.question} alt={currentTask.question} className="image"/>
                     <div className="info">
-                        <h2>Nazwij obiekt znajdujący się na obrazku po angielsku.</h2>
+                        <h2>{t('coursePage.toolBar.nazwijObrazek')}</h2>
                         <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="asdsad"/></button>
                         <div className="username-error">{error}</div>
                     </div>
@@ -108,10 +108,10 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <span className="image-content-form-btn-wrap">
                     <form className="image-content-form" onSubmit={handleCheckTask}>
                         <div className="image-content-input">
-                            <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
+                            <input type="text" name="answer" placeholder={t('coursePage.radio.radioChoose')} required/>
                         </div>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -129,7 +129,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <div className="listen-and-info">
                     <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="sadsada"/></button>
                     <div className="info">
-                        <h2>Napisz usłyszane zdanie po angielsku.</h2>
+                        <h2>{t('coursePage.listen.listenInfo')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -137,10 +137,10 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <span className="image-content-form-btn-wrap">
                     <form className="image-content-form">
                         <div className="image-content-input">
-                            <input type="text" name="answer" placeholder="Wprowadź odpowiedź" required/>
+                            <input type="text" name="answer" placeholder={t('coursePage.radio.radioChoose')} required/>
                         </div>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -195,7 +195,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                         </div>
                     </div>
                     <div className="info">
-                        <h2>Wybierz właściwą odpowiedź</h2>
+                        <h2>{t('coursePage.radio.radioInfo')}</h2>
                         <div className="username-error">error</div>
                     </div>
 
@@ -206,7 +206,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                         </div>
                         <input type="hidden" name="selectedRadio" value={selectedRadio}/>
                         <div className="image-content-submit-button">
-                            <input type="submit" value="Przejdź dalej"/>
+                            <input type="submit" value={t('coursePage.toolBar.przejdzDalej')}/>
                         </div>
                     </form>
                 </span>
@@ -222,45 +222,45 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 <span className="course-progress-wrap">
                 <div className="course-progress">
                     <div className="course-progress-beginner">
-                        <h2>Początkujacy</h2>
+                        <h2>{t('coursePage.toolBar.beginner')}</h2>
                         <div className="progresses">
                             <div className="progress-images">
-                                <h4>Obrazki</h4>
+                                <h4>{t('coursePage.toolBar.images')}</h4>
                                 <div className="beginner-progress-images"><div
                                     className="beginner-progress-images-bar"></div></div>
                             </div>
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="beginner-progress-radio"><div
                                     className="beginner-progress-radio-bar"></div></div>
                             </div>
                         </div>
                     </div>
                     <div className="course-progress-medium">
-                        <h2>Średni</h2>
+                        <h2>{t('coursePage.toolBar.medium')}</h2>
                         <div className="progresses">
                             <div className="progress-radio">
-                                <h4>Uzupełnianie</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="medium-progress-radio"><div
                                     className="medium-progress-radio-bar"></div></div>
                             </div>
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="medium-progress-puzzle"><div
                                     className="medium-progress-puzzle-bar"></div></div>
                             </div>
                         </div>
                     </div>
                     <div className="course-progress-advanced">
-                        <h2>Zaawansowany</h2>
+                        <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
                             <div className="progress-puzzle">
-                                <h4>Układanki</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="advanced-progress-puzzle"><div
                                     className="advanced-progress-puzzle-bar"></div></div>
                             </div>
                             <div className="progress-sentences">
-                                <h4>Słuchanie</h4>
+                                <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div
                                     className="advanced-progress-sentences-bar"></div></div>
                             </div>
@@ -274,11 +274,11 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 {/*{radioContent()}*/}
                 {/*{puzzleContent()}*/}
                 {/*{listeningContent()}*/}
-                {currentTask.type === 'obraz' ? imageContent() : null}
-                {currentTask.type === 'radio' ? radioContent() : null}
-                {currentTask.type === 'listening' ? listeningContent() : null}
-                {currentTask.type === 'puzzle' ? puzzleContent() : null}
-                {currentTask === null ? imageContent() : null}
+                {/*{currentTask.type === 'obraz' ? imageContent() : null}*/}
+                {/*{currentTask.type === 'radio' ? radioContent() : null}*/}
+                {/*{currentTask.type === 'listening' ? listeningContent() : null}*/}
+                {/*{currentTask.type === 'puzzle' ? puzzleContent() : null}*/}
+                {/*{currentTask === null ? imageContent() : null}*/}
             </div>
         </div>
     )

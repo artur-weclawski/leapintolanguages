@@ -1,7 +1,9 @@
 import "./Accesibilities.css"
 import ReactDOM from 'react-dom';
 import report_bug_btn_image from "./report-bug-btn.png"
+import {useTranslation} from "react-i18next";
 function ReportBug(){
+    const {t, i18n} = useTranslation();
     const openForm = () =>{
         console.log(123)
         let element = document.getElementsByClassName('report-bug-form')
@@ -22,22 +24,22 @@ function ReportBug(){
         <div>
             <div className="report-bug-form">
                 <div className="naglowek">
-                    <h1>Zgłoś błąd</h1>
+                    <h1>{t('reportBug.title')}</h1>
                     <button onClick={closeForm} className="report-bug-form-close">X</button>
                 </div>
                 <form className="report-bug-form-body">
                     <div className="bug-input-temat">
-                        <label>Temat</label>
+                        <label>{t('reportBug.title')}</label>
                         <input type="text" name="temat" required/>
                         <div className="temat-error"> error</div>
                     </div>
                     <div className="bug-input-zawartosc">
-                        <label>Opisz problem</label>
+                        <label>{t('reportBug.contrast')}</label>
                         <textarea name="zawartosc" required/>
                         <div className="zawartosc-error"> error</div>
                     </div>
                     <div className="bug-submit-button">
-                        <input type="submit" value="Prześlij zgłoszenie"/>
+                        <input type="submit" value={t('reportBug.submit')}/>
                         <span className="report-bug-form-ribbon-wrap">
                         <span className="report-bug-form-ribbon"></span>
                         </span>
