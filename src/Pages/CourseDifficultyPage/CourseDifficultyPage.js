@@ -5,7 +5,7 @@ import MobileCourseDifficultyWindow from "./MobileCourseDifficultyWindow";
 import CourseHook from "../../Components/Hooks/CourseHook";
 const CourseDifficultyPage=({routeName, setRouteName, course, setCourse})=>{
     useEffect(() => {
-        setRouteName('Wybór trudności kursu')
+        setRouteName("wyborTrudnosciKursu")
     }, []);
 
     const {

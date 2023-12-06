@@ -5,7 +5,7 @@ import {useEffect} from "react";
 function RegistrationPage({routeName, setRouteName, token, setToken, user, setUser}){
     console.log(token)
     useEffect(() => {
-        setRouteName('Rejestracja');
+        setRouteName("Rejestracja");
     }, []);
     return(
         <body>

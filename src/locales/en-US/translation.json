@@ -158,5 +158,14 @@
   },
   "errorPage": {
     "message": "Hands up, and we're back."
+  },
+  "pageStatus": {
+    "logowanie": "Login",
+    "rejestracja": "Register",
+    "wyborKursu": "Choose course",
+    "wyborTrudnosciKursu": "Choose course difficulty",
+    "kurs": "Course",
+    "bazaWiedzy": "Knowledge base",
+    "konto": "Account"
   }
 }

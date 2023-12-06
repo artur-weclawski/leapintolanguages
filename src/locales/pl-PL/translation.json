@@ -155,5 +155,14 @@
   },
   "errorPage":{
     "message": "Rączki do góry i wracamy."
+  },
+  "pageStatus": {
+    "logowanie": "Logowanie",
+    "rejestracja": "Rejestracja",
+    "wyborKursu": "Wybór kursu",
+    "wyborTrudnosciKursu": "Wybór trudności kursu",
+    "kurs": "Kurs",
+    "bazaWiedzy": "Baza wiedzy",
+    "konto": "Konto"
   }
 }

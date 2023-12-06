@@ -158,5 +158,14 @@
   },
   "errorPage": {
     "message": "¡Manos arriba y estamos de vuelta!"
+  },
+  "pageStatus": {
+    "logowanie": "Iniciar sesión",
+    "rejestracja": "Registrarse",
+    "wyborKursu": "Selección de cursos",
+    "wyborTrudnosciKursu": "Elección del curso dificultad",
+    "kurs": "Curso",
+    "bazaWiedzy": "Base de conocimientos",
+    "konto": "Cuenta"
   }
 }

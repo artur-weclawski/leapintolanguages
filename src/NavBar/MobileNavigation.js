@@ -22,7 +22,7 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
         navigation("/login")
     }
 
-    if(routeName === 'Kurs')
+    if(routeName === 'kurs')
     {
         return(
             <div className="mobile-navigation">
@@ -34,7 +34,8 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
             </span>
                     <span className="dropdown-content-wrap">
             <div className="dropdown-content">
-                <h2 style={{color: 'white'}}>{routeName}</h2>
+                <h2 style={{color: 'white'}}>{t('pageStatus.'+{routeName}.routeName)}</h2>
+                <h2 style={{color: 'white'}}>Peepo</h2>
                     <div className="course-progress-beginner">
                         <h2 style={{marginTop: '-50px'}}>{t('coursePage.toolBar.beginner')}</h2>
                         <div className="progresses">
@@ -95,7 +96,7 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 </div>
             </div>
         );
-    }else if(routeName === 'Baza wiedzy'){
+    }else if(routeName === 'bazaWiedzy'){
         return(
             <div className="mobile-navigation">
                 <div className="dropdown dropdown-language">
@@ -106,7 +107,8 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
             </span>
                     <span className="dropdown-content-wrap">
             <div className="dropdown-content">
-                <h2 style={{color: 'white'}}>{routeName}</h2>
+                <h2 style={{color: 'white'}}>{t('pageStatus.'+{routeName}.routeName)}</h2>
+                <h2 style={{color: 'white'}}>Peepo</h2>
                     <div className="left-contents">
                     <ul className="left-contents-ul">
                         <li><a href="#Polskim" style={{marginTop:'-20px'}}>{t('knowledgeBasePage.polish.title')}</a>
@@ -158,9 +160,8 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
             </span>
                     <span className="dropdown-content-wrap">
             <div className="dropdown-content">
-                <div className="account-name">Peepo</div>
-                <h2 style={{color: 'white'}}>{routeName}</h2>
-
+                <h2 style={{color: 'white'}}>{t('pageStatus.'+{routeName}.routeName)}</h2>
+                <h2 style={{color: 'white'}}>Peepo</h2>
                 <h2 style={{color:'white'}}> {t('NavBar.chooseLanguage')} </h2>
                     <span style={{display:'flex', borderBottom:'2px solid white', marginTop:'-15px'}}>
                         <a onClick={() => {handleSetLanguage('pl')}}> {t('NavBar.localization.polish')} </a>

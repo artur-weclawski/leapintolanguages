@@ -5,7 +5,7 @@ import MobileCourseChooseWindow from "./MobileCourseChooseWindow";
 import CourseHook from "../../Components/Hooks/CourseHook";
 const CourseChoosePage = ({routeName, setRouteName, token, setToken, user, setUser, course, setCourse}) =>{
     useEffect(() => {
-        setRouteName('Wybór kursu')
+        setRouteName("wyborKursu")
     }, []);
 
 

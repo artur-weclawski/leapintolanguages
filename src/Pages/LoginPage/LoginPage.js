@@ -5,7 +5,7 @@ import MobileLoginWindow from "./MobileLoginWindow";
 import {useTranslation} from "react-i18next";
 function LoginPage({routeName, setRouteName, token, setToken, user, setUser}){
     useEffect(() => {
-        setRouteName('Logowanie');
+        setRouteName("logowanie");
     }, []);
     return(
         <body>

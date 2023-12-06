@@ -24,7 +24,7 @@ const CoursePage = ({routeName, setRouteName, token, setToken, user, setUser, co
 
 
     useEffect(() => {
-        setRouteName('Kurs')
+        setRouteName("kurs")
         handleGetTasks()
             .then(() => {
                 handleGetCourseProgress()

@@ -16,7 +16,7 @@ const AccountPage = ({routeName, setRouteName, token, setToken, user, setUser}) 
     } = ProfileHook(user, setUser, token, setToken)
 
     useEffect(() => {
-        setRouteName('Konto')
+        setRouteName("konto")
         handleGetAllCoursesProgress()
             .then((data) => {
                 setCoursesProgress(data)

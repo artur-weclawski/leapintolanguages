@@ -5,7 +5,7 @@ import MobileKnowledgeBaseWindow from "./MobileKnowledgeBaseWindow";
 
 const KnowledgeBasePage =({routeName, setRouteName}) =>{
     useEffect(() => {
-        setRouteName('Baza wiedzy');
+        setRouteName("bazaWiedzy");
     }, []);
     return(
         <body>
