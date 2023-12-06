@@ -10,7 +10,7 @@ const AccountWindow = ({
                            handleDeleteProfile, handleEditProfile, error
                        }) => {
 
-    const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
+    const [courseName, setCourseName] = useState('accountPage.coursesProgress.polishToEnglish');
     const {t, i18n} = useTranslation();
     const [currentCourseProgress, setCurrentCourseProgress] = useState(coursesProgress['Pol-Ang']);
     const changeLanguage = (name, courseTag) => {
@@ -95,7 +95,7 @@ const AccountWindow = ({
                     <div className="account-content-right">
                             <span className="account-content-right-progress-wrap">
                         <div className="account-content-right-progress">
-                            <h1>{courseName}</h1>
+                            <h1>{t(courseName)}</h1>
                             <div className="account-content-right-progress-beginner">
                             <h2>{t('accountPage.coursesProgress.beginner')}</h2>
                         <div className="progresses">
@@ -144,13 +144,13 @@ const AccountWindow = ({
                         </div>
                                 <div className="account-content-right-progress-buttons">
                                 <button className="progress-btn-ang-pol"
-                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.", "Ang-Pol")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
+                                        onClick={() => changeLanguage('accountPage.coursesProgress.polishToEnglish', "Ang-Pol")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
                                 <button className="progress-btn-pol-ang"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.", "Pol-Ang")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
+                                        onClick={() => changeLanguage('accountPage.coursesProgress.englishToPolish', "Pol-Ang")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
                                 <button className="progress-btn-spn-pol"
-                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.", "Spa-Pol")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
+                                        onClick={() => changeLanguage('accountPage.coursesProgress.polishToSpanish', "Spa-Pol")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
                                 <button className="progress-btn-pol-spn"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.", "Pol-Spa")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
+                                        onClick={() => changeLanguage('accountPage.coursesProgress.spanishToPolish', "Pol-Spa")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
                                 </div>
                             </span>
                             <div className="edit-password-form">
