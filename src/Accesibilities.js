@@ -1,4 +1,3 @@
-import "./Accesibilities.css"
 import ReactDOM from "react-dom";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
@@ -128,42 +127,42 @@ function Accesibilities() {
     return (
         <div>
             <div className="accesibilities-window accesibilities-window">
-                <div className="accesibilities-window-typ">{t('accesibility.sizes.fontSize')}</div>
+                <div className="accesibilities-window-typ">{t('accessibility.fontSize')}</div>
                 <div className="accesibilities-window-text-size">
 
                     <div className="accesibilities-windows-text-small">
 
                     <input type="radio" id="small" value="small" name="text" className="radio" checked={textSize === 'small'} onChange={handleChangeText}/>
-                    <label> {t('accesibility.sizes.small')} </label>
+                    <label for="small"> {t('accessibility.sizes.small')} </label>
                     </div>
                     <div className="accesibilities-windows-text-medium">
                         <input type="radio" id="normal" value="normal" name="text" className="radio" checked={textSize === 'normal'} onChange={handleChangeText}/>
-                        <label> {t('accesibility.sizes.medium')} </label>
+                        <label for="normal"> {t('accessibility.sizes.medium')} </label>
                     </div>
                     <div className="accesibilities-windows-text-big">
                         <input type="radio" id="big" value="big" name="text" className="radio" checked={textSize === 'big'} onChange={handleChangeText}/>
-                        <label > {t('accesibility.sizes.big')} </label>
+                        <label for="big"> {t('accessibility.sizes.big')} </label>
                     </div>
                 </div>
-                <div className="accesibilities-window-kontrast">{t('accesibility.sizes.contrast')}</div>
+                <div className="accesibilities-window-kontrast">{t('accessibility.contrast')}</div>
                 <div className="accesibilities-window-contrast">
                     <div className="accesibilities-windows-contrast-normal">
                         <input type="radio" id="normal" value="normal" name="contrast" className="radio" checked={theme === 'normal'} onChange={handleChangeTheme}/>
-                        <label> A </label>
+                        <label for="normal"> A </label>
                     </div>
                     <div className="accesibilities-windows-contrast-yellow">
                         <input type="radio" id="yellow" value="yellow" name="contrast" className="radio" checked={theme === 'yellow'} onChange={handleChangeTheme}/>
-                        <label> A </label>
+                        <label for="yellow"> A </label>
                     </div>
                     <div className="accesibilities-windows-contrast-black">
                         <input type="radio" id="black" value="black" name="contrast" className="radio" checked={theme === 'black'} onChange={handleChangeTheme}/>
-                        <label> A </label>
+                        <label for="black"> A </label>
                     </div>
                 </div>
             </div>
             <span className="accesibilities-wrap">
                 <div className="accesibilities">
-                <button onClick={openAccesibilities} className="accesibilities-btn" value="Dostępności">{t('accesibility.title')}</button>
+                <button onClick={openAccesibilities} className="accesibilities-btn" value="Dostępności">{t('accessibility.title')}</button>
                 </div>
             </span>
         </div>

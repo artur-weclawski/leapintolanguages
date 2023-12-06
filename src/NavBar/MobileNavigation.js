@@ -67,16 +67,16 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                             </div>
                         </div>
                     </div>
-                <h2 style={{color:'white'}}> {t('Navabar.chooseLanguage')} </h2>
+                <h2 style={{color:'white'}}> {t('NavBar.chooseLanguage')} </h2>
                     <span style={{display:'flex', borderBottom:'2px solid white', marginTop:'-15px'}}>
-                <a onClick={() => {handleSetLanguage('pl')}}> {t('Navabar.localization.polish')} </a>
-                <a onClick={() => {handleSetLanguage('en')}}> {t('Navabar.localization.english')} </a>
-                <a onClick={() => {handleSetLanguage('es')}}> {t('Navabar.localization.spanish')} </a>
+                <a onClick={() => {handleSetLanguage('pl')}}> {t('NavBar.localization.polish')} </a>
+                <a onClick={() => {handleSetLanguage('en')}}> {t('NavBar.localization.english')} </a>
+                <a onClick={() => {handleSetLanguage('es')}}> {t('NavBar.localization.spanish')} </a>
                     </span>
-                <a> Konto </a>
-                <a> Kursy </a>
-                <a> Baza wiedzy </a>
-                <a style={{marginBottom:'50px'}}> {t('Navabar.logout')} </a>
+                <Link to="/account"> {t('NavBar.account')} </Link>
+                <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
+                <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
+                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>

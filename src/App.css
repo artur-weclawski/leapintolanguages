@@ -3,7 +3,7 @@
   --page_color: #ffffff;
   --page_background: url("https://www.transparenttextures.com/patterns/cream-paper.png");
   --main_color: #880e23;
-  --main_border_color: none;
+  --main_border_color: #880e23;
   --shadow_color: #ffffff;
   --black_box_shadow_color: rgba(0, 0, 0, 0.5);
   --form_box_shadow_color: rgba(0, 0, 0, 0.2);
@@ -678,7 +678,7 @@ a:visited, a:active{
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  border: 5px dashed var(--main_border_color);
+  border: 5px dashed var(--main_color);
 }
 
 .image-and-info{
@@ -781,7 +781,7 @@ a:visited, a:active{
 .image-and-info .image{
   height: 90%;
   width: 50%;
-  border: 2px dashed var(--main_border_color);
+  border: 2px dashed var(--main_color);
   padding: 20px;
   margin-left: 20px;
 }

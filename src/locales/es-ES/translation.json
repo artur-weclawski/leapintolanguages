@@ -139,7 +139,7 @@
       "big": "Grande"
     }
   },
-  "Navbar": {
+  "NavBar": {
     "account": "Cuenta",
     "courses": "Cursos",
     "knowledgeBase": "Base de conocimientos",
@@ -147,6 +147,8 @@
     "register": "Registrarse",
     "logout": "Cerrar sesión",
     "localization": {
+      "language": "Español",
+
       "polish": "Polaco",
       "english": "Inglés",
       "spanish": "Español"

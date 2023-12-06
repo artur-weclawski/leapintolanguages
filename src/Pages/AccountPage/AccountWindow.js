@@ -98,37 +98,37 @@ const AccountWindow = ({
                                     className="beginner-progress-images-bar"></div></div>
                             </div>
                             <div className="progress-radio">
-                                <h4>{t('coursePage.radio')}</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="beginner-progress-radio"><div
                                     className="beginner-progress-radio-bar"></div></div>
                             </div>
                         </div>
                             </div>
                             <div className="account-content-right-progress-medium">
-                            <h2>{t('coursePage.medium')}</h2>
+                            <h2>{t('coursePage.toolBar.medium')}</h2>
                         <div className="progresses">
                             <div className="progress-radio">
-                                <h4>{t('coursePage.radio')}</h4>
+                                <h4>{t('coursePage.toolBar.radio')}</h4>
                                 <div className="medium-progress-radio"><div
                                     className="medium-progress-radio-bar"></div></div>
                             </div>
                             <div className="progress-puzzle">
-                                <h4>{t('coursePage.puzzle')}</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="medium-progress-puzzle"><div
                                     className="medium-progress-puzzle-bar"></div></div>
                             </div>
                         </div>
                             </div>
                             <div className="account-content-right-progress-advanced">
-                            <h2>{t('coursePage.advanced')}</h2>
+                            <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
                             <div className="progress-puzzle">
-                                <h4>{t('coursePage.puzzle')}</h4>
+                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
                                 <div className="advanced-progress-puzzle"><div
                                     className="advanced-progress-puzzle-bar"></div></div>
                             </div>
                             <div className="progress-sentences">
-                                <h4>{t('coursePage.sentences')}</h4>
+                                <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div
                                     className="advanced-progress-sentences-bar"></div></div>
                             </div>
@@ -154,7 +154,7 @@ const AccountWindow = ({
                                         <input type="password" id="old-password-input" name="oldPassword" required/>
                                     </div>
                                     <div className="edit-password-form-input">
-                                        <label>{t('accountPage.changePassword.newPassowrd')}</label>
+                                        <label>{t('accountPage.changePassword.newPassword')}</label>
                                         <input type="password" id="new-password-input" name="newPassword" required/>
                                         <div className="username-error">{error}</div>
                                     </div>

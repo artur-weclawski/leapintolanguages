@@ -97,8 +97,8 @@ function MobileCourseWindow(){
                 <div className="image-and-info">
                     <img src={fridge_img} title="fridge" alt="fridge" className="image"/>
                     <div className="info">
-                        <h2>{t('coursePage.toolBar.nazwijObrazek')}</h2>
-                        <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
+                        <h2>{t('coursePage.toolBar.nazwijObiekt')}</h2>
+                        <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="sadas"/></button>
                         <div className="username-error">error</div>
                     </div>
 
@@ -125,7 +125,7 @@ function MobileCourseWindow(){
         return(
             <div className="listen-content">
                 <div className="listen-and-info">
-                    <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg"/></button>
+                    <button onClick={readImage}><img src="https://upload.wikimedia.org/wikipedia/commons/archive/2/21/20060623063418%21Speaker_Icon.svg" alt="sadada"/></button>
                     <div className="info">
                         <h2>{t('coursePage.listen.listenInfo')}</h2>
                         <div className="username-error">error</div>
@@ -176,23 +176,23 @@ function MobileCourseWindow(){
                         <h2>You ___ special.</h2>
                         <div className="accesibilities-windows-text-medium">
                             <input type="radio" id="A" value="A" name="course-radios" className="radio" onChange={handleRadioChange}/>
-                            <label> are </label>
+                            <label for="A"> are </label>
                         </div>
                         <div className="accesibilities-windows-text-medium" style={{marginTop: 10 + 'px'}}>
                             <input type="radio" id="B" value="B" name="course-radios" className="radio" onChange={handleRadioChange}/>
-                            <label> is </label>
+                            <label for='B'> is </label>
                         </div>
                         <div className="accesibilities-windows-text-medium" style={{marginTop: 10 + 'px'}}>
                             <input type="radio" id="C" value="C" name="course-radios" className="radio" onChange={handleRadioChange}/>
-                            <label> be </label>
+                            <label for="C"> be </label>
                         </div>
                         <div className="accesibilities-windows-text-medium" style={{marginTop: 10 + 'px'}}>
                             <input type="radio" id="D" value="D" name="course-radios" className="radio" onChange={handleRadioChange}/>
-                            <label> to be </label>
+                            <label for="D"> to be </label>
                         </div>
                     </div>
                     <div className="info">
-                        <h2>{t('coursePage.radio.radioInfo')}</h2>
+                        <h2>{t('coursePage.radio.radioChoose')}</h2>
                         <div className="username-error">error</div>
                     </div>
 

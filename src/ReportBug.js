@@ -1,4 +1,3 @@
-import "./Accesibilities.css"
 import ReactDOM from 'react-dom';
 import report_bug_btn_image from "./report-bug-btn.png"
 import {useTranslation} from "react-i18next";
@@ -29,13 +28,13 @@ function ReportBug(){
                 </div>
                 <form className="report-bug-form-body">
                     <div className="bug-input-temat">
-                        <label>{t('reportBug.title')}</label>
-                        <input type="text" name="temat" required/>
+                        <label for="temat">{t('reportBug.title')}</label>
+                        <input type="text" name="temat" required id="temat"/>
                         <div className="temat-error"> error</div>
                     </div>
                     <div className="bug-input-zawartosc">
-                        <label>{t('reportBug.contrast')}</label>
-                        <textarea name="zawartosc" required/>
+                        <label for="zawartosc">{t('reportBug.content')}</label>
+                        <textarea name="zawartosc" required id="zawartosc"/>
                         <div className="zawartosc-error"> error</div>
                     </div>
                     <div className="bug-submit-button">
@@ -48,7 +47,7 @@ function ReportBug(){
             </div>
         <span className="report-bug-wrap">
         <div className="report-bug">
-            <button onClick={openForm} className="report-bug-btn"><img src={report_bug_btn_image}/></button>
+            <button onClick={openForm} className="report-bug-btn"><img src={report_bug_btn_image} alt={'reporb-btn'}/></button>
         </div>
         </span>
         </div>

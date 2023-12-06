@@ -10,18 +10,18 @@ function MobileCourseChooseWindow(){
                 <div className="course-choose-content">
                     <div className="english-courses">
                         <span className="pol-eng-btn-wrap">
-                            <button className="pol-eng-btn">{t('courseProgress.polishToEnglish')}</button>
+                            <button className="pol-eng-btn">{t('accountPage.coursesProgress.polishToEnglish')}</button>
                         </span>
                         <span className="eng-pol-btn-wrap">
-                            <button className="eng-pol-btn">{t('courseProgress.englishToPolish')}</button>
+                            <button className="eng-pol-btn">{t('accountPage.coursesProgress.englishToPolish')}</button>
                         </span>
                     </div>
                     <div className="spanish-courses">
                         <span className="pol-eng-btn-wrap">
-                            <button className="pol-eng-btn">{t('courseProgress.polishToSpanish')}</button>
+                            <button className="pol-eng-btn">{t('accountPage.coursesProgress.polishToSpanish')}</button>
                         </span>
                         <span className="eng-pol-btn-wrap">
-                            <button className="eng-pol-btn">{t('courseProgress.spanishToPolish')}</button>
+                            <button className="eng-pol-btn">{t('accountPage.coursesProgress.spanishToPolish')}</button>
                         </span>
                     </div>
                 </div>

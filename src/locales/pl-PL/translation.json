@@ -138,7 +138,7 @@
       "big": "Duży"
     }
   },
-  "Navbar": {
+  "NavBar": {
     "account": "Konto",
     "courses": "Kursy",
     "knowledgeBase": "Baza wiedzy",
@@ -146,6 +146,7 @@
     "register": "Zarejestruj się",
     "logout": "Wyloguj się",
     "localization": {
+      "language": "Polski",
       "polish": "Polski",
       "english": "Angielski",
       "spanish": "Hiszpański"

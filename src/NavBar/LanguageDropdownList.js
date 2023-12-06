@@ -8,24 +8,12 @@ const LanguageDropdownList = () => {
     }, []);
     const handleSetLanguage = (lng) =>{
         i18n.changeLanguage(lng)
-        setLanguage(lng)
-    }
-    const [language, setLanguage] = useState('pl')
-    const dropbtnLanguage=(language)=>{
-        if(language === 'pl')
-        {
-            return t('NavBar.localization.polish')
-        }else if(language === 'en'){
-            return t('NavBar.localization.english')
-        }else{
-            return t('NavBar.localization.spanish')
-        }
     }
     return(
         <div className="dropdown dropdown-language">
             <span className="dropbtn-wrap">
             <button className="dropbtn">
-                <div className="language">{dropbtnLanguage}</div>
+                <div className="language">{t('NavBar.localization.language')}</div>
                 <div className="vbtn"> V </div>
             </button>
             </span>

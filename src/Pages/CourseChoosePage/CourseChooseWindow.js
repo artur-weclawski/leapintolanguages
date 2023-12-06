@@ -17,14 +17,14 @@ function CourseChooseWindow({handleSetCourse}){
                             <button className="pol-eng-btn" onClick={() => {
                                 handleSetCourse('Pol-Ang')
                             }}>
-                                {t('courseProgress.polishToEnglish')}
+                                {t('accountPage.coursesProgress.polishToEnglish')}
                             </button>
                         </span>
                         <span className="eng-pol-btn-wrap">
                             <button className="eng-pol-btn" onClick={() => {
                                 handleSetCourse('Ang-Pol')
                             }}>
-                                {t('courseProgress.englishToPolish')}
+                                {t('accountPage.coursesProgress.englishToPolish')}
                             </button>
                         </span>
                     </div>
@@ -33,14 +33,14 @@ function CourseChooseWindow({handleSetCourse}){
                             <button className="pol-eng-btn" onClick={() => {
                                 handleSetCourse('Pol-Spa')
                             }}>
-                                {t('courseProgress.polishToSpanish')}
+                                {t('accountPage.coursesProgress.polishToSpanish')}
                             </button>
                         </span>
                         <span className="eng-pol-btn-wrap">
                             <button className="eng-pol-btn" onClick={() => {
                                 handleSetCourse('Spa-Pol')
                             }}>
-                                {t('courseProgress.spanishToPolish')}
+                                {t('accountPage.coursesProgress.spanishToPolish')}
                             </button>
                         </span>
                     </div>
