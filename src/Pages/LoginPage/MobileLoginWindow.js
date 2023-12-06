@@ -21,7 +21,7 @@ function MobileLoginWindow({token, setToken, user, setUser}){
                         </div>
                         <div className="login-input">
                             <label for="password">{t('loginPage.password.name')}</label>
-                            <input type="text" name="password" required id="password"/>
+                            <input type="password" name="password" required id="password"/>
                             <div className="username-error">{error.visible ? error.message : ""}</div>
                         </div>
                         <a href="/register">{t('loginPage.registerPageRedirect')}</a>

@@ -146,12 +146,12 @@ const MobileAccountWindow = ({
                             <form onSubmit={handleEditProfile}>
                                 <div className="edit-password-form-input">
                                     <label>{t('accountPage.changePassword.oldPassword')}</label>
-                                    <input type="text" id="old-password-input" name="oldPassword" required/>
+                                    <input type="password" id="old-password-input" name="oldPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-input">
                                     <label>{t('accountPage.changePassword.newPassword')}</label>
-                                    <input type="text" id="new-password-input" name="newPassword" required/>
+                                    <input type="password" id="new-password-input" name="newPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-submit-button">
