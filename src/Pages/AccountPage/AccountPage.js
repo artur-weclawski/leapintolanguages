@@ -33,16 +33,19 @@ const AccountPage = ({routeName, setRouteName, token, setToken, user, setUser}) 
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
             <div className="account-body">
                 <AccountWindow
-                    token={token} setToken={setToken}
-                    user={user} setUser={setUser}
+                    user={user}
                     coursesProgress={coursesProgress}
                     handleDeleteProfile={handleDeleteProfile}
                     handleEditProfile={handleEditProfile}
                     error={error}
                 />
                 <MobileAccountWindow
-                    token={token} setToken={setToken}
-                    user={user} setUser={setUser}/>
+                    user={user}
+                    coursesProgress={coursesProgress}
+                    handleDeleteProfile={handleDeleteProfile}
+                    handleEditProfile={handleEditProfile}
+                    error={error}
+                />
             </div>
             </body>
         );

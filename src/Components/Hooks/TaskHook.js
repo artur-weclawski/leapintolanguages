@@ -22,18 +22,14 @@ const TaskHook = (user, token, course, tasks, setTasks, currentTask, setCurrentT
 
     const handleCheckTask = (event) =>{
         event.preventDefault()
-        console.log(event.target.answer.value)
         const _answer = event.target.answer.value
-        console.log(currentTask)
         if (currentTask.answer === _answer){
             handleTaskPassed()
         } else setError("bledna odpowiedz")
     }
 
     const handleTaskPassed = async () => {
-        console.log(currentTask)
         const _body = {user_id: user.id, task_id: currentTask.id}
-        console.log(_body)
         const response = await handleUpdate(token, _body, "api/task/complete")
         console.log(response)
         setCurrentTask(currentTask.isCompleted === true)
@@ -48,14 +44,8 @@ const TaskHook = (user, token, course, tasks, setTasks, currentTask, setCurrentT
         setCurrentTask(handleCurrentTask(tasks.tasksResponse))
     }
 
-    const handlePostTask = async () => {
-
-
-    }
-
     return{
         handleGetTasks,
-        handlePostTask,
         handleCurrentTask,
         handleCheckTask,
         error

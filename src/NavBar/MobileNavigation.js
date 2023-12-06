@@ -1,6 +1,7 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useEffect} from "react";
+import {useLocalStorage} from "../Components/LocalStorage/HandleLocalStorage";
 const MobileNavigation = ({routeName, setRouteName}) =>{
     const {t, i18n} = useTranslation();
     useEffect(() => {
@@ -9,6 +10,18 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
     const handleSetLanguage = (lng) =>{
         i18n.changeLanguage(lng)
     }
+
+    const navigation = useNavigate()
+
+    const [user, setUser] = useLocalStorage("user", null)
+    const [token, setToken] = useLocalStorage("token", null)
+
+    const handleLogOut = () => {
+        setToken(null)
+        setUser(null)
+        navigation("/login")
+    }
+
     if(routeName === 'Kurs')
     {
         return(
@@ -76,7 +89,7 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <Link to="/account"> {t('NavBar.account')} </Link>
                 <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
                 <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
-                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
+                <a style={{marginBottom:'50px'}} onClick={() => {handleLogOut()}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>
@@ -128,7 +141,7 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <Link to="/account"> {t('NavBar.account')} </Link>
                 <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
                 <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
-                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
+                <a style={{marginBottom:'50px'}} onClick={() => {handleLogOut()}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>
@@ -157,7 +170,7 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
                 <Link to="/account"> {t('NavBar.account')} </Link>
                 <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
                 <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
-                <a style={{marginBottom:'50px'}}> {t('NavBar.logout')} </a>
+                <a style={{marginBottom:'50px'}} onClick={() => {handleLogOut()}}> {t('NavBar.logout')} </a>
             </div>
             </span>
                 </div>

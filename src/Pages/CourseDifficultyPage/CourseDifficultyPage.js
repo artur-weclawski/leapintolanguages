@@ -17,7 +17,7 @@ const CourseDifficultyPage=({routeName, setRouteName, course, setCourse})=>{
         <NavBar routeName={routeName} setRouteName={setRouteName}/>
         <div className="course-difficulty-body">
             <CourseDifficultyWindow handleSetDifficulty={handleSetDifficulty}/>
-            <MobileCourseDifficultyWindow/>
+            <MobileCourseDifficultyWindow handleSetDifficulty={handleSetDifficulty}/>
         </div>
         </body>
     );

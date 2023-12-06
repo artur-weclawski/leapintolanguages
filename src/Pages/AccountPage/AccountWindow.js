@@ -2,19 +2,26 @@ import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import ReactDOM from "react-dom";
 import {useState} from "react";
-import ProfileHook from "../../Components/Hooks/ProfileHook";
 import {useTranslation} from "react-i18next";
 
 const AccountWindow = ({
-        user,
-        coursesProgress,
-        handleDeleteProfile, handleEditProfile, error
-}) => {
+                           user,
+                           coursesProgress,
+                           handleDeleteProfile, handleEditProfile, error
+                       }) => {
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
     const {t, i18n} = useTranslation();
-    const changeLanguage = (name) => {
+    const [currentCourseProgress, setCurrentCourseProgress] = useState(coursesProgress['Pol-Ang']);
+    const changeLanguage = (name, courseTag) => {
+        setCurrentCourseProgress(coursesProgress[courseTag])
         setCourseName(name);
+        // document.documentElement.style.setProperty('--beginner-progress-images-bar_width',currentCourseProgress.easy.obraz.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',currentCourseProgress.easy.radio.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',currentCourseProgress.medium.puzzle.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--medium-progress-radio-bar_width',currentCourseProgress.medium.radio.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--advanced-progress-puzzle-bar_width',currentCourseProgress.hard.puzzle.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',currentCourseProgress.hard.listening.completionPercentage + '%')
     }
         const openEditForm = () => {
             let element = document.getElementsByClassName('edit-password-form')
@@ -77,15 +84,15 @@ const AccountWindow = ({
                                 onClick={() => openEditForm()}>{t('accountPage.changePassword.button')}</button>
                     </div>
                             </span>
-                            <span className="account-content-delete-account-wrap">
+                        <span className="account-content-delete-account-wrap">
                     <div className="account-content-delete-account">
                         <button className="account-content-delete-account-btn"
                                 onClick={() => openDeleteForm()}>{t('accountPage.deleteAccount.button')}</button>
                     </div>
                         </span>
-                        </div>
-                        <span className="shadow"></span>
-                        <div className="account-content-right">
+                    </div>
+                    <span className="shadow"></span>
+                    <div className="account-content-right">
                             <span className="account-content-right-progress-wrap">
                         <div className="account-content-right-progress">
                             <h1>{courseName}</h1>
@@ -137,13 +144,13 @@ const AccountWindow = ({
                         </div>
                                 <div className="account-content-right-progress-buttons">
                                 <button className="progress-btn-ang-pol"
-                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.", "Ang-Pol")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
                                 <button className="progress-btn-pol-ang"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.", "Pol-Ang")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
                                 <button className="progress-btn-spn-pol"
-                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.", "Spa-Pol")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
                                 <button className="progress-btn-pol-spn"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.", "Pol-Spa")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
                                 </div>
                             </span>
                             <div className="edit-password-form">
@@ -170,19 +177,18 @@ const AccountWindow = ({
                         <button className="approve-delete-form-no-btn" onClick={() => openDeleteForm()}>{t('accountPage.deleteAccount.cancel')}</button>
                     </div>
                         </span>
-                                <span className="approve-delete-form-yes-wrap">
+                            <span className="approve-delete-form-yes-wrap">
                     <div className="approve-delete-form-yes">
                         <button className="approve-delete-form-yes-btn" onClick={() => {
-                            console.log("eo1")
                             handleDeleteProfile()
                         }}>{t('accountPage.deleteAccount.submit')}</button>
                     </div>
                         </span>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        );
+        </div>
+    );
 }
 export default AccountWindow;

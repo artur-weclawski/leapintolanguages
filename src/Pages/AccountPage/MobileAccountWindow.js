@@ -1,28 +1,28 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import {useState} from "react";
-import ProfileHook from "../../Components/Hooks/ProfileHook";
 import ReactDOM from "react-dom";
 import {useTranslation} from "react-i18next";
 
-function MobileAccountWindow({token, setToken, user, setUser}){
+const MobileAccountWindow = ({
+                                 user,
+                                 coursesProgress,
+                                 handleDeleteProfile, handleEditProfile, error
+                             }) => {
 
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
+    const [currentCourseProgress, setCurrentCourseProgress] = useState(coursesProgress['Ang-Pol']);
     const {t, i18n} = useTranslation();
-    const changeLanguage = (name) => {
+    const changeLanguage = (name, courseTag) => {
+        setCurrentCourseProgress(coursesProgress[courseTag])
         setCourseName(name);
+        // document.documentElement.style.setProperty('--beginner-progress-images-bar_width',currentCourseProgress.easy.obraz.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',currentCourseProgress.easy.radio.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',currentCourseProgress.medium.puzzle.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--medium-progress-radio-bar_width',currentCourseProgress.medium.radio.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--advanced-progress-puzzle-bar_width',currentCourseProgress.hard.puzzle.completionPercentage + '%')
+        // document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',currentCourseProgress.hard.listening.completionPercentage + '%')
     }
-
-    const {
-        coursesData,
-        message,
-        error,
-        profileData,
-        handleEditProfile,
-        handleDeleteProfile,
-        // handleGetCoursesProgress,
-        isLoaded
-    } = ProfileHook()
 
 
     const openEditForm = () => {
@@ -51,7 +51,7 @@ function MobileAccountWindow({token, setToken, user, setUser}){
             ReactDOM.findDOMNode(element3[1]).style.display = "flex"
         }
     }
-    return(
+    return (
         <div className="mobile-account-window">
             <div className="mobile-section">
                 <div className="account-content">
@@ -132,26 +132,26 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                         </div>
                                 <div className="account-content-right-progress-buttons">
                                 <button className="progress-btn-ang-pol"
-                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka angielskiego po polsku.", "Ang-Pol")}>{t('accountPage.coursesProgress.polishToEnglish')}</button>
                                 <button className="progress-btn-pol-ang"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po angielsku.", "Pol-Ang")}>{t('accountPage.coursesProgress.englishToPolish')}</button>
                                 <button className="progress-btn-spn-pol"
-                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka hiszpańskiego po polsku.", "Spa-Pol")}>{t('accountPage.coursesProgress.polishToSpanish')}</button>
                                 <button className="progress-btn-pol-spn"
-                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
+                                        onClick={() => changeLanguage("Kurs języka polskiego po hiszpańsku.", "Pol-Spa")}>{t('accountPage.coursesProgress.spanishToPolish')}</button>
                                 </div>
                             </span>
                         <div className="edit-password-form">
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
-                            <form>
+                            <form onSubmit={handleEditProfile}>
                                 <div className="edit-password-form-input">
                                     <label>{t('accountPage.changePassword.oldPassword')}</label>
-                                    <input type="text" id="old-password-input" name="old-password" required/>
+                                    <input type="text" id="old-password-input" name="oldPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-input">
                                     <label>{t('accountPage.changePassword.newPassword')}</label>
-                                    <input type="text" id="new-password-input" name="new-password" required/>
+                                    <input type="text" id="new-password-input" name="newPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-submit-button">
@@ -168,7 +168,9 @@ function MobileAccountWindow({token, setToken, user, setUser}){
                         </span>
                             <span className="approve-delete-form-yes-wrap">
                     <div className="approve-delete-form-yes">
-                        <button className="approve-delete-form-yes-btn">{t('accountPage.deleteAccount.submit')}</button>
+                        <button className="approve-delete-form-yes-btn" onClick={() => {
+                            handleDeleteProfile()
+                        }}>{t('accountPage.deleteAccount.submit')}</button>
                     </div>
                         </span>
                         </div>

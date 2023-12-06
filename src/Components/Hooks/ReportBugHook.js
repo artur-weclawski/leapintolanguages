@@ -2,7 +2,7 @@ import Bug from "../Entites/Bug";
 import ReportBugController from "../Controllers/ReportBugController";
 
 
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const ReportBugHook = () => {
     const [message, setMessage] = useState("")

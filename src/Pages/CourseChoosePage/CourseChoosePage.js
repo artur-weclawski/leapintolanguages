@@ -18,7 +18,7 @@ const CourseChoosePage = ({routeName, setRouteName, token, setToken, user, setUs
             <NavBar routeName={routeName} setRouteName={setRouteName}/>
             <div className="course-choose-body">
                 <CourseChooseWindow handleSetCourse={handleSetCourse}/>
-                <MobileCourseChooseWindow/>
+                <MobileCourseChooseWindow handleSetCourse={handleSetCourse}/>
             </div>
         </body>
     )

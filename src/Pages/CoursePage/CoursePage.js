@@ -13,7 +13,6 @@ const CoursePage = ({routeName, setRouteName, token, setToken, user, setUser, co
 
     const {
         handleGetTasks,
-        handlePostTask,
         handleCurrentTask,
         handleCheckTask,
         error
@@ -29,6 +28,14 @@ const CoursePage = ({routeName, setRouteName, token, setToken, user, setUser, co
         handleGetTasks()
             .then(() => {
                 handleGetCourseProgress()
+                    .then(() => {
+                        // document.documentElement.style.setProperty('--beginner-progress-images-bar_width',courseProgress.easy.obraz.completionPercentage + '%')
+                        // document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',courseProgress.easy.radio.completionPercentage + '%')
+                        // document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',courseProgress.medium.puzzle.completionPercentage + '%')
+                        // document.documentElement.style.setProperty('--medium-progress-radio-bar_width',courseProgress.medium.radio.completionPercentage + '%')
+                        // document.documentElement.style.setProperty('--advanced-progress-puzzle-bar_width',courseProgress.hard.puzzle.completionPercentage + '%')
+                        // document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',courseProgress.hard.listening.completionPercentage + '%')
+                    })
                     .then(() => {
                         setIsLoaded(true)
                     })
