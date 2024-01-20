@@ -2,7 +2,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useEffect} from "react";
 import {useLocalStorage} from "../Components/LocalStorage/HandleLocalStorage";
-const MobileNavigation = ({routeName, setRouteName}) =>{
+const MobileNavigation = ({routeName, setRouteName, setUser, setToken}) =>{
     const {t, i18n} = useTranslation();
     useEffect(() => {
         i18n.changeLanguage(localStorage.getItem('i18nextLng'))
@@ -13,8 +13,6 @@ const MobileNavigation = ({routeName, setRouteName}) =>{
 
     const navigation = useNavigate()
 
-    const [user, setUser] = useLocalStorage("user", null)
-    const [token, setToken] = useLocalStorage("token", null)
 
     const handleLogOut = () => {
         setToken(null)

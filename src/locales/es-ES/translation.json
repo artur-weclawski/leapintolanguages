@@ -36,6 +36,7 @@
       "emailIsUsed": "Esta dirección de correo electrónico ya está en uso",
       "wrongUsername": "Nombre de usuario no válido",
       "wrongPassword": "Contraseña no válida",
+      "passwordNotSame": "Las contraseñas son diferentes.",
       "wrongEmail": "Esto no es un correo electrónico válido",
       "emptyData": "El campo no puede estar vacío"
     },

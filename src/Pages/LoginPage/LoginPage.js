@@ -9,7 +9,7 @@ function LoginPage({routeName, setRouteName, token, setToken, user, setUser}){
     }, []);
     return(
         <body>
-            <NavBar routeName={routeName} setRouteName={setRouteName}/>
+            <NavBar routeName={routeName} setRouteName={setRouteName} setUser={setUser} setToken={setToken}/>
             <div className="login-body">
                 <LoginWindow token={token} setToken={setToken} user={user} setUser={setUser}/>
                 <MobileLoginWindow token={token} setToken={setToken} user={user} setUser={setUser}/>

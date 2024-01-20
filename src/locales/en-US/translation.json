@@ -36,6 +36,7 @@
       "emailIsUsed": "This email address is already in use",
       "wrongUsername": "Invalid username",
       "wrongPassword": "Invalid password",
+      "passwordNotSame": "The passwords are different",
       "wrongEmail": "Not a valid email",
       "emptyData": "Field cannot be empty"
     },

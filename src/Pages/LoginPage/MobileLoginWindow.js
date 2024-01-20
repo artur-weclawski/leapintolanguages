@@ -7,7 +7,7 @@ function MobileLoginWindow({token, setToken, user, setUser}){
     const {
         error,
         handleLogin
-    } = LoginHook()
+    } = LoginHook(token, setToken, user, setUser)
     const {t, i18n} = useTranslation();
     return(
         <div className="mobile-login-window">
@@ -22,7 +22,7 @@ function MobileLoginWindow({token, setToken, user, setUser}){
                         <div className="login-input">
                             <label for="password">{t('loginPage.password.name')}</label>
                             <input type="password" name="password" required id="password"/>
-                            <div className="username-error">{error.visible ? error.message : ""}</div>
+                            <div className="username-error">{error.visible ? t(error.message) : ""}</div>
                         </div>
                         <a href="/register">{t('loginPage.registerPageRedirect')}</a>
                         <div className="login-submit-button">

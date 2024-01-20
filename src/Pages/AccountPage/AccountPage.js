@@ -30,7 +30,7 @@ const AccountPage = ({routeName, setRouteName, token, setToken, user, setUser}) 
     if (isLoaded){
         return(
             <body>
-            <NavBar routeName={routeName} setRouteName={setRouteName}/>
+            <NavBar routeName={routeName} setRouteName={setRouteName} setUser={setUser} setToken={setToken}/>
             <div className="account-body">
                 <AccountWindow
                     user={user}

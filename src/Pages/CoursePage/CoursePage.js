@@ -45,7 +45,7 @@ const CoursePage = ({routeName, setRouteName, token, setToken, user, setUser, co
     if (isLoaded){
         return(
             <body>
-            <NavBar routeName={routeName} setRouteName={setRouteName}/>
+            <NavBar routeName={routeName} setRouteName={setRouteName} setUser={setUser} setToken={setToken}/>
             <div className="course-body">
                 <CourseWindow token={token} user={user} currentTask={currentTask} handleCheckTask={handleCheckTask} error={error}/>
                 <MobileCourseWindow token={token} setToken={setToken} user={user} setUser={setUser}/>

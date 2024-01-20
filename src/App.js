@@ -22,20 +22,46 @@ const App = () => {
     const [token, setToken] = useLocalStorage("token", null)
     const [course, setCourse] = useLocalStorage('course', {name: null, difficulty: null})
     const [routeName, setRouteName] = useState("login");
-    return(
+    return (
         <Routes>
             <Route element={<NoProtecedRoutes user={user}/>}>
-                <Route index element={<LoginPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-                <Route path="login" element={<LoginPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-                <Route path="register" element={<RegistrationPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
+                <Route index element={
+                    <LoginPage routeName={routeName} setRouteName={setRouteName}
+                               token={token} setToken={setToken}
+                               user={user} setUser={setUser}/>}/>
+                <Route path="login" element={<LoginPage
+                    routeName={routeName} setRouteName={setRouteName}
+                    token={token} setToken={setToken}
+                    user={user} setUser={setUser}/>}/>
+                <Route path="register" element={<RegistrationPage
+                    routeName={routeName} setRouteName={setRouteName}
+                    token={token} setToken={setToken}
+                    user={user} setUser={setUser}/>}/>
             </Route>
-            <Route element={<ProtectedRoute user ={user}/>}>
-                <Route index element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-                <Route path="knowledgeBase" element={<KnowledgeBasePage routeName={routeName} setRouteName={setRouteName}/>}/>
-                <Route path="account" element={<AccountPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
-                <Route path="choosecourse" element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/>}/>
-                <Route path="difficultycourse" element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/> }/>
-                <Route path="course" element={<CoursePage routeName={routeName} setRouteName={setRouteName} token={token} setToken={setToken} user={user} setUser={setUser} course={course} setCourse={setCourse}/>}/>
+            <Route element={<ProtectedRoute user={user}/>}>
+                <Route index element={<AccountPage
+                    routeName={routeName} setRouteName={setRouteName}
+                    token={token} setToken={setToken}
+                    user={user} setUser={setUser}/>}/>
+                <Route path="knowledgeBase" element={<KnowledgeBasePage
+                    routeName={routeName} setRouteName={setRouteName}
+                    token={token} setToken={setToken}
+                    user={user} setUser={setUser}/>}/>
+                <Route path="account" element={<AccountPage
+                    routeName={routeName} setRouteName={setRouteName}
+                    token={token} setToken={setToken} user={user} setUser={setUser}/>}/>
+                <Route path="choosecourse"
+                       element={<CourseChoosePage routeName={routeName} setRouteName={setRouteName} token={token}
+                                                  setToken={setToken} user={user} setUser={setUser} course={course}
+                                                  setCourse={setCourse}/>}/>
+                <Route path="difficultycourse"
+                       element={<CourseDifficultyPage routeName={routeName} setRouteName={setRouteName} token={token}
+                                                      setToken={setToken} user={user} setUser={setUser} course={course}
+                                                      setCourse={setCourse}/>}/>
+                <Route path="course"
+                       element={<CoursePage routeName={routeName} setRouteName={setRouteName} token={token}
+                                            setToken={setToken} user={user} setUser={setUser} course={course}
+                                            setCourse={setCourse}/>}/>
             </Route>
             <Route path="*" element={<ErrorPage/>}/>
         </Routes>

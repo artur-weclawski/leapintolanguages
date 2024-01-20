@@ -1,21 +1,14 @@
 import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-import {useLocalStorage} from "../Components/LocalStorage/HandleLocalStorage";
-function AccountDropdownList(){
+function AccountDropdownList({setUser, setToken}){
     const {t, i18n} = useTranslation();
 
     const navigation = useNavigate()
 
-    const [user, setUser] = useLocalStorage("user", null)
-    const [token, setToken] = useLocalStorage("token", null)
 
     const handleLogOut = () => {
-        console.log(user)
-        console.log(token)
         setToken(null)
         setUser(null)
-        console.log(user)
-        console.log(token)
         navigation("/login")
     }
 
@@ -32,7 +25,7 @@ function AccountDropdownList(){
                 <Link to="/account"> {t('NavBar.account')} </Link>
                 <Link to="/choosecourse"> {t('NavBar.courses')} </Link>
                 <Link to="/knowledgeBase"> {t('NavBar.knowledgeBase')}</Link>
-                <a onClick={() => {handleLogOut()}}> {t('NavBar.logout')} </a>
+                <a onClick={handleLogOut}> {t('NavBar.logout')} </a>
             </div>
             </span>
         </div>
