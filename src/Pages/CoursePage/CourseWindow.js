@@ -270,7 +270,7 @@ function CourseWindow({token, user, currentTask, handleCheckTask, error}){
                 </span>
             </div>
             <div className="right-section">
-                {/*{imageContent()}*/}
+                {imageContent()}
                 {/*{radioContent()}*/}
                 {/*{puzzleContent()}*/}
                 {/*{listeningContent()}*/}

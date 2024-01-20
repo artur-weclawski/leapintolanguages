@@ -37,6 +37,14 @@ function Accesibilities() {
         document.documentElement.style.setProperty('--navbar_box_shadow', '#282c34');
         document.documentElement.style.setProperty('--invert_image', 'none');
         document.documentElement.style.setProperty('--login-register_text_color', '#880e23');
+        document.documentElement.style.setProperty('--wrap_shadow_size', '6px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_7px', '7px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_28px', '28px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_5px', '5px');
+        document.documentElement.style.setProperty('--background-image_login', 'url(http://localhost:3000/static/media/pepe-cover.d6663127719595cc6441.jpg)')
+        document.documentElement.style.setProperty('--background-image_register', 'url(http://localhost:3000/static/media/pepe_cover.abaa6ee1fffd9e0639d9.png)')
+        document.documentElement.style.setProperty('--shadow_50px', '50px')
+        document.documentElement.style.setProperty('--shadow_30px', '30px')
     }
     const changeThemeToYellow = () =>{
         document.documentElement.style.setProperty('--page_color', 'yellow');
@@ -58,6 +66,14 @@ function Accesibilities() {
         document.documentElement.style.setProperty('--navbar_box_shadow', 'yellow');
         document.documentElement.style.setProperty('--invert_image', 'invert()');
         document.documentElement.style.setProperty('--login-register_text_color', 'black');
+        document.documentElement.style.setProperty('--wrap_shadow_size', '1px')
+        document.documentElement.style.setProperty('--wrap_shadow_size_7px', '1px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_28px', '1px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_5px', '1px');
+        document.documentElement.style.setProperty('--background-image_login', 'none')
+        document.documentElement.style.setProperty('--background-image_register', 'none')
+        document.documentElement.style.setProperty('--shadow_50px', '0px')
+        document.documentElement.style.setProperty('--shadow_30px', '0px')
     }
     const changeThemetoBlack = () =>{
         document.documentElement.style.setProperty('--page_color', '#000000');
@@ -78,7 +94,16 @@ function Accesibilities() {
         document.documentElement.style.setProperty('--navbar_border_color', '#000');
         document.documentElement.style.setProperty('--navbar_box_shadow', '#000');
         document.documentElement.style.setProperty('--invert_image', 'invert()');
-        document.documentElement.style.setProperty('--login-register_text_color', 'white');
+        document.documentElement.style.setProperty('--login-register_text_color', 'black');
+        document.documentElement.style.setProperty('--wrap_shadow_size', '1px')
+        document.documentElement.style.setProperty('--wrap_shadow_size_7px', '1px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_28px', '1px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_5px', '1px');
+        document.documentElement.style.setProperty('--wrap_shadow_size_5px', '1px');
+        document.documentElement.style.setProperty('--background-image_login', 'none')
+        document.documentElement.style.setProperty('--background-image_register', 'none')
+        document.documentElement.style.setProperty('--shadow_50px', '0px')
+        document.documentElement.style.setProperty('--shadow_30px', '0px')
     }
 
     const changeTextToSmall = () => {
