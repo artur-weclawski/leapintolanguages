@@ -18,6 +18,7 @@ function Accesibilities() {
     const {t, i18n} = useTranslation();
 
     const changeThemeToNormal=() =>{
+
         document.documentElement.style.setProperty('--page_color','#ffffff')
         document.documentElement.style.setProperty('--page_background', 'url("https://www.transparenttextures.com/patterns/cream-paper.png")');
         document.documentElement.style.setProperty('--main_color', '#880e23');

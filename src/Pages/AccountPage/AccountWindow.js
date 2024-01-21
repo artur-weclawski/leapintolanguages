@@ -1,7 +1,7 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
 import ReactDOM from "react-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
 const AccountWindow = ({
@@ -13,15 +13,20 @@ const AccountWindow = ({
     const [courseName, setCourseName] = useState('accountPage.coursesProgress.polishToEnglish');
     const {t, i18n} = useTranslation();
     const [currentCourseProgress, setCurrentCourseProgress] = useState(coursesProgress['Pol-Ang']);
+    console.log(currentCourseProgress)
+    useEffect(() => {
+        changeLanguage('accountPage.coursesProgress.polishToEnglish', "Ang-Pol")
+    }, []);
+
     const changeLanguage = (name, courseTag) => {
         setCurrentCourseProgress(coursesProgress[courseTag])
+
         setCourseName(name);
-        // document.documentElement.style.setProperty('--beginner-progress-images-bar_width',currentCourseProgress.easy.obraz.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',currentCourseProgress.easy.radio.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',currentCourseProgress.medium.puzzle.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--medium-progress-radio-bar_width',currentCourseProgress.medium.radio.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--advanced-progress-puzzle-bar_width',currentCourseProgress.hard.puzzle.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',currentCourseProgress.hard.listening.completionPercentage + '%')
+        document.documentElement.style.setProperty('--beginner-progress-images-bar_width',currentCourseProgress.easy.obraz.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',currentCourseProgress.easy.radius.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',currentCourseProgress.medium.ukladanka.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--medium-progress-radio-bar_width',currentCourseProgress.medium.radius.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',currentCourseProgress.hard.sluchanie.completionPercentage * 100 + '%')
     }
         const openEditForm = () => {
             let element = document.getElementsByClassName('edit-password-form')
@@ -129,11 +134,6 @@ const AccountWindow = ({
                             <div className="account-content-right-progress-advanced">
                             <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
-                            <div className="progress-puzzle">
-                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
-                                <div className="advanced-progress-puzzle"><div
-                                    className="advanced-progress-puzzle-bar"></div></div>
-                            </div>
                             <div className="progress-sentences">
                                 <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div

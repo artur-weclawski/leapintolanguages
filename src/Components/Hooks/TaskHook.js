@@ -1,8 +1,11 @@
 import TRead from "../CRUD/Secure/TRead";
 import {useState} from "react";
 import TUpdate from "../CRUD/Secure/TUpdate";
+import {useNavigate} from "react-router-dom";
 
 const TaskHook = (user, token, course, tasks, setTasks, currentTask, setCurrentTask) => {
+
+    const navigate = useNavigate()
 
     const {
         handleRead
@@ -20,18 +23,17 @@ const TaskHook = (user, token, course, tasks, setTasks, currentTask, setCurrentT
         }))
     }
 
-    const handleCheckTask = (event) =>{
-        event.preventDefault()
-        const _answer = event.target.answer.value
-        if (currentTask.answer === _answer){
-            handleTaskPassed()
+    const handleCheckTask = (answer) =>{
+        if (currentTask.answer === answer){
+            handleTaskPassed().then(() => {
+                window.location.reload(true)
+            })
         } else setError("bledna odpowiedz")
     }
 
     const handleTaskPassed = async () => {
         const _body = {user_id: user.id, task_id: currentTask.id}
         const response = await handleUpdate(token, _body, "api/task/complete")
-        console.log(response)
         setCurrentTask(currentTask.isCompleted === true)
         handleCurrentTask(tasks)
     }

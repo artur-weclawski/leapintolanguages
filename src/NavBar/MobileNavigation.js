@@ -67,11 +67,6 @@ const MobileNavigation = ({routeName, setRouteName, setUser, setToken}) =>{
                     <div className="course-progress-advanced">
                         <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
-                            <div className="progress-puzzle">
-                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
-                                <div className="advanced-progress-puzzle"><div
-                                    className="advanced-progress-puzzle-bar"></div></div>
-                            </div>
                             <div className="progress-sentences">
                                 <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div

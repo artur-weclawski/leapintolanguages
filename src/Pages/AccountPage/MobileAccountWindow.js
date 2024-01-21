@@ -1,6 +1,6 @@
 import ReportBug from "../../ReportBug";
 import Accesibilities from "../../Accesibilities";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import {useTranslation} from "react-i18next";
 
@@ -13,15 +13,17 @@ const MobileAccountWindow = ({
     const [courseName, setCourseName] = useState("Kurs języka angielskiego po polsku.");
     const [currentCourseProgress, setCurrentCourseProgress] = useState(coursesProgress['Ang-Pol']);
     const {t, i18n} = useTranslation();
+    useEffect(() => {
+        changeLanguage('accountPage.coursesProgress.polishToEnglish', "Ang-Pol")
+    }, []);
     const changeLanguage = (name, courseTag) => {
         setCurrentCourseProgress(coursesProgress[courseTag])
         setCourseName(name);
-        // document.documentElement.style.setProperty('--beginner-progress-images-bar_width',currentCourseProgress.easy.obraz.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--beginner-progress-radio-bar_width',currentCourseProgress.easy.radio.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width',currentCourseProgress.medium.puzzle.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--medium-progress-radio-bar_width',currentCourseProgress.medium.radio.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--advanced-progress-puzzle-bar_width',currentCourseProgress.hard.puzzle.completionPercentage + '%')
-        // document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width',currentCourseProgress.hard.listening.completionPercentage + '%')
+        document.documentElement.style.setProperty('--beginner-progress-images-bar_width', currentCourseProgress.easy.obraz.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--beginner-progress-radio-bar_width', currentCourseProgress.easy.radius.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--medium-progress-puzzle-bar_width', currentCourseProgress.medium.ukladanka.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--medium-progress-radio-bar_width', currentCourseProgress.medium.radius.completionPercentage * 100 + '%')
+        document.documentElement.style.setProperty('--advanced-progress-sentences-bar_width', currentCourseProgress.hard.sluchanie.completionPercentage * 100 + '%')
     }
 
 
@@ -117,11 +119,7 @@ const MobileAccountWindow = ({
                             <div className="account-content-right-progress-advanced">
                             <h2>{t('coursePage.toolBar.advanced')}</h2>
                         <div className="progresses">
-                            <div className="progress-puzzle">
-                                <h4>{t('coursePage.toolBar.puzzle')}</h4>
-                                <div className="advanced-progress-puzzle"><div
-                                    className="advanced-progress-puzzle-bar"></div></div>
-                            </div>
+
                             <div className="progress-sentences">
                                 <h4>{t('coursePage.toolBar.sentences')}</h4>
                                 <div className="advanced-progress-sentences"><div
@@ -145,12 +143,14 @@ const MobileAccountWindow = ({
                             <button className="edit-password-form-close" onClick={openEditForm}>X</button>
                             <form onSubmit={handleEditProfile}>
                                 <div className="edit-password-form-input">
-                                    <label for="old-password-input">{t('accountPage.changePassword.oldPassword')}</label>
+                                    <label
+                                        for="old-password-input">{t('accountPage.changePassword.oldPassword')}</label>
                                     <input type="password" id="old-password-input" name="oldPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
                                 <div className="edit-password-form-input">
-                                    <label for="new-password-input">{t('accountPage.changePassword.newPassword')}</label>
+                                    <label
+                                        for="new-password-input">{t('accountPage.changePassword.newPassword')}</label>
                                     <input type="password" id="new-password-input" name="newPassword" required/>
                                     <div className="username-error"> error</div>
                                 </div>
@@ -163,7 +163,8 @@ const MobileAccountWindow = ({
                             <h1>{t('accountPage.deleteAccount.title')}</h1>
                             <span className="approve-delete-form-no-wrap">
                     <div className="approve-delete-form-no">
-                        <button className="approve-delete-form-no-btn" onClick={openDeleteForm}>{t('accountPage.deleteAccount.cancel')}</button>
+                        <button className="approve-delete-form-no-btn"
+                                onClick={openDeleteForm}>{t('accountPage.deleteAccount.cancel')}</button>
                     </div>
                         </span>
                             <span className="approve-delete-form-yes-wrap">

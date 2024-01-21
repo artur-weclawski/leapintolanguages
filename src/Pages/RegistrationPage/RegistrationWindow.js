@@ -36,12 +36,12 @@ function RegistrationWindow({token, setToken, user, setUser}) {
                         </div>
                         <div className="registration-input">
                             <label for="password">{t('registerPage.password.name')}</label>
-                            <input type="text" name="password" required id="password"/>
+                            <input type="password" name="password" required id="password"/>
                             <div className="username-error">{errors[1].visible ? t(errors[1].message) : ""}</div>
                         </div>
                         <div className="registration-input">
                             <label for="rPassword">{t('registerPage.password.repeatName')}</label>
-                            <input type="text" name="repeat-password" required id="rPassword"/>
+                            <input type="password" name="repeat-password" required id="rPassword"/>
                             <div className="username-error">{errors[1].visible ? t(errors[1].message) : ""}</div>
                         </div>
                         <a href="/login" style={{marginTop: "-20px"}}>{t('registerPage.loginPageRedirect')}</a>
