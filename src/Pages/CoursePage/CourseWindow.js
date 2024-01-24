@@ -269,6 +269,7 @@ function CourseWindow({currentTask, handleCheckTask, error}) {
                 </div>
                 </span>
             </div>
+
             <div className="right-section">
                 {
                     currentTask.type === null ? window.location.replace("/account") :
